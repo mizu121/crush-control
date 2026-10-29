@@ -1,0 +1,725 @@
+{
+  "metadata": {
+    "schemaVersion": 1,
+    "product": "Crush Control",
+    "coversAppVersions": [
+      "1.0.0-beta.5",
+      "1.0.0-beta.6",
+      "1.0.0-beta.7",
+      "1.0.0-beta.8"
+    ],
+    "runtimeVersion": "Electron45.1.0 / Chromium156.0.8078.49",
+    "status": "Local source material assembly; not publicly distributed; build/replacement untested",
+    "completeCorrespondingSourceCertified": false,
+    "buildExecuted": false,
+    "libraryReplacementExecuted": false,
+    "sourceAvailablePublicly": false,
+    "chromiumCommit": "29eb03535d5f2f4f899b95f22a92413ffde5284e",
+    "electronCommit": "45d20ec03000aac41e73b2abdb707936b4f98ed0",
+    "assemblyScope": "Exact upstream source trees and downstream patches for covered candidates, with direct FFmpeg build dependencies. Not a complete self-contained Electron/Chromium rebuild checkout.",
+    "assemblyChecks": {
+      "ffmpegUpstreamTreeComplete": true,
+      "directFfmpegOpusNasmSourcesPresent": true,
+      "electronCompletePatchStacksPresent": true,
+      "chromiumBuildScriptsPresent": true,
+      "chromiumFullRepositoryPresent": false,
+      "nodeAndV8FullRepositoriesPresent": false,
+      "fullGnDependencyClosureVerified": false,
+      "compiledWindowsComponentBomComplete": false,
+      "binaryRebuildExecuted": false,
+      "modifiedLibraryReplacementExecuted": false
+    },
+    "outstanding": [
+      "Source/publication not authorized or performed",
+      "Combined-runtime LGPL relink source/object delivery arrangement not certified; full Chromium/Node/V8 checkout not local",
+      "GN/build and modified-library compatibility tests not executed (verification limits, not independent proof of a licence breach)"
+    ]
+  },
+  "classification": [
+    {
+      "components": [
+        "Android NDK",
+        "glibc",
+        "gtk",
+        "libbrlapi",
+        "libsecret",
+        "plasma-wayland-protocols",
+        "Speech Dispatcher",
+        "v4l-utils"
+      ],
+      "status": "Platform-specific notice candidates, not identified in Windows runtime files; not assumed Windows linked",
+      "remaining": "Confirm with Windows compiled-component graph before a complete BOM claim"
+    },
+    {
+      "components": [
+        "ScreenAI Library"
+      ],
+      "status": "Chromium metadata states component downloaded separately by Chrome; test-only binary target; no ScreenAI library in actual app file inventory",
+      "remaining": "No proprietary ScreenAI source acquired or claimed to be distributed"
+    },
+    {
+      "components": [
+        "Braille Translation Library"
+      ],
+      "status": "Chromium README describes ChromeVox wasm; Linux-conditioned source checkout; no standalone liblouis wasm in app inventory",
+      "remaining": "Preserve classification evidence; no claim of Windows-linked library"
+    },
+    {
+      "components": [
+        "JSZip"
+      ],
+      "status": "Explicit MIT OR GPLv3 alternative in delivered notice; MIT selected, no corresponding-source duty from that selection"
+    },
+    {
+      "components": [
+        "DirectX-Shader-Compiler"
+      ],
+      "status": "Broad notice GPL text identifies autoconf/config.guess and exceptions; no evidence GPL compiled into DXC DLL",
+      "remaining": "Full notice preserved; executable-source licence attribution remains version-pinned upstream metadata"
+    }
+  ],
+  "materials": [
+    {
+      "id": "electron",
+      "component": "Electron complete source tree",
+      "revision": "45d20ec03000aac41e73b2abdb707936b4f98ed0",
+      "licence": "MIT; nested licences retained",
+      "reason": "Exact Electron source, complete downstream patch stacks and build/config scripts",
+      "format": "tar.gz",
+      "url": "https://codeload.github.com/electron/electron/tar.gz/45d20ec03000aac41e73b2abdb707936b4f98ed0",
+      "localPath": "sources/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0.tar.gz",
+      "maxBytes": 125829120
+    },
+    {
+      "id": "ffmpeg",
+      "component": "Chromium FFmpeg complete source tree",
+      "revision": "9db86ce5b5b454dfc96c435f9f0723012980c37f",
+      "licence": "LGPL-2.1-or-later for actual Windows configuration; unused GPL parts retained with own licences",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/third_party/ffmpeg/+archive/9db86ce5b5b454dfc96c435f9f0723012980c37f.tar.gz",
+      "localPath": "sources/ffmpeg-9db86ce5b5b454dfc96c435f9f0723012980c37f.tar.gz",
+      "cachedInput": "artifacts/license-audit/upstream-evidence/ffmpeg-9db86ce5b5b454dfc96c435f9f0723012980c37f.tar.gz",
+      "cachedSha256": "eacf8a44315ceb69d7770738fee936db2a817fcef9ca8bbefa76a61f15b88a28"
+    },
+    {
+      "id": "chromium-build",
+      "component": "build",
+      "revision": "156.0.8078.49",
+      "licence": "BSD and nested licences",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/build.tar.gz",
+      "localPath": "sources/chromium-build-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "chromium-buildtools",
+      "component": "buildtools",
+      "revision": "156.0.8078.49",
+      "licence": "BSD and nested licences",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/buildtools.tar.gz",
+      "localPath": "sources/chromium-buildtools-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "chromium-generate-stubs",
+      "component": "tools/generate_stubs",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/tools/generate_stubs.tar.gz",
+      "localPath": "sources/chromium-generate-stubs-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "chromium-clang-tools",
+      "component": "tools/clang",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/tools/clang.tar.gz",
+      "localPath": "sources/chromium-clang-tools-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "chromium-rust-tools",
+      "component": "tools/rust",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/tools/rust.tar.gz",
+      "localPath": "sources/chromium-rust-tools-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "opus",
+      "component": "third_party/opus",
+      "revision": "156.0.8078.49",
+      "licence": "BSD-3-Clause",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/opus.tar.gz",
+      "localPath": "sources/opus-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "axe-core",
+      "component": "third_party/axe-core",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/axe-core.tar.gz",
+      "localPath": "sources/axe-core-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "eigen-wrapper",
+      "component": "third_party/eigen3",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/eigen3.tar.gz",
+      "localPath": "sources/eigen-wrapper-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "grpc",
+      "component": "third_party/grpc",
+      "revision": "156.0.8078.49",
+      "licence": "Apache-2.0, BSD-3-Clause, MPL-2.0",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/grpc.tar.gz",
+      "localPath": "sources/grpc-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "hunspell",
+      "component": "third_party/hunspell",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/hunspell.tar.gz",
+      "localPath": "sources/hunspell-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "hyphenation-patterns",
+      "component": "third_party/hyphenation-patterns",
+      "revision": "156.0.8078.49",
+      "licence": "File-specific LGPL/MPL/permissive terms",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/hyphenation-patterns.tar.gz",
+      "localPath": "sources/hyphenation-patterns-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "isimpledom",
+      "component": "third_party/isimpledom",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/isimpledom.tar.gz",
+      "localPath": "sources/isimpledom-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "libusb",
+      "component": "third_party/libusb",
+      "revision": "156.0.8078.49",
+      "licence": "LGPL-2.1-or-later",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/libusb.tar.gz",
+      "localPath": "sources/libusb-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "mozilla-security-manager",
+      "component": "net/third_party/mozilla_security_manager",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/net/third_party/mozilla_security_manager.tar.gz",
+      "localPath": "sources/mozilla-security-manager-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "mozilla-win",
+      "component": "net/third_party/mozilla_win",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/net/third_party/mozilla_win.tar.gz",
+      "localPath": "sources/mozilla-win-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "nspr",
+      "component": "base/third_party/nspr",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/base/third_party/nspr.tar.gz",
+      "localPath": "sources/nspr-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "url-mozilla",
+      "component": "url/third_party/mozilla",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/url/third_party/mozilla.tar.gz",
+      "localPath": "sources/url-mozilla-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "blink-common",
+      "component": "third_party/blink/common",
+      "revision": "156.0.8078.49",
+      "licence": "BSD/LGPL file-specific",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/blink/common.tar.gz",
+      "localPath": "sources/blink-common-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "blink-public",
+      "component": "third_party/blink/public",
+      "revision": "156.0.8078.49",
+      "licence": "BSD/LGPL file-specific",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/blink/public.tar.gz",
+      "localPath": "sources/blink-public-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "blink-renderer",
+      "component": "third_party/blink/renderer",
+      "revision": "156.0.8078.49",
+      "licence": "BSD/LGPL file-specific",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/blink/renderer.tar.gz",
+      "localPath": "sources/blink-renderer-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "chromium-DEPS",
+      "component": "DEPS",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/DEPS?format=TEXT",
+      "localPath": "sources/chromium-DEPS-156.0.8078.49.txt"
+    },
+    {
+      "id": "chromium-root-BUILD",
+      "component": "BUILD.gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/BUILD.gn?format=TEXT",
+      "localPath": "sources/chromium-root-BUILD-156.0.8078.49.txt"
+    },
+    {
+      "id": "chromium-root-gn",
+      "component": ".gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/.gn?format=TEXT",
+      "localPath": "sources/chromium-root-gn-156.0.8078.49.txt"
+    },
+    {
+      "id": "chromium-LICENSE",
+      "component": "LICENSE",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/LICENSE?format=TEXT",
+      "localPath": "sources/chromium-LICENSE-156.0.8078.49.txt"
+    },
+    {
+      "id": "blink-license",
+      "component": "third_party/blink/LICENSE_FOR_ABOUT_CREDITS",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/blink/LICENSE_FOR_ABOUT_CREDITS?format=TEXT",
+      "localPath": "sources/blink-license-156.0.8078.49.txt"
+    },
+    {
+      "id": "blink-DEPS",
+      "component": "third_party/blink/DEPS",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/blink/DEPS?format=TEXT",
+      "localPath": "sources/blink-DEPS-156.0.8078.49.txt"
+    },
+    {
+      "id": "rust-cargo-lock",
+      "component": "third_party/rust/chromium_crates_io/Cargo.lock",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/rust/chromium_crates_io/Cargo.lock?format=TEXT",
+      "localPath": "sources/rust-cargo-lock-156.0.8078.49.txt"
+    },
+    {
+      "id": "rust-cargo-toml",
+      "component": "third_party/rust/chromium_crates_io/Cargo.toml",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/rust/chromium_crates_io/Cargo.toml?format=TEXT",
+      "localPath": "sources/rust-cargo-toml-156.0.8078.49.txt"
+    },
+    {
+      "id": "rust-gnrt-config",
+      "component": "third_party/rust/chromium_crates_io/gnrt_config.toml",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/rust/chromium_crates_io/gnrt_config.toml?format=TEXT",
+      "localPath": "sources/rust-gnrt-config-156.0.8078.49.txt"
+    },
+    {
+      "id": "screen-ai-readme",
+      "component": "third_party/screen-ai/README.chromium",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/screen-ai/README.chromium?format=TEXT",
+      "localPath": "sources/screen-ai-readme-156.0.8078.49.txt"
+    },
+    {
+      "id": "screen-ai-BUILD",
+      "component": "third_party/screen-ai/BUILD.gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/screen-ai/BUILD.gn?format=TEXT",
+      "localPath": "sources/screen-ai-BUILD-156.0.8078.49.txt"
+    },
+    {
+      "id": "liblouis-readme",
+      "component": "third_party/liblouis/README.chromium",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/liblouis/README.chromium?format=TEXT",
+      "localPath": "sources/liblouis-readme-156.0.8078.49.txt"
+    },
+    {
+      "id": "liblouis-BUILD",
+      "component": "third_party/liblouis/BUILD.gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/liblouis/BUILD.gn?format=TEXT",
+      "localPath": "sources/liblouis-BUILD-156.0.8078.49.txt"
+    },
+    {
+      "id": "symphonia",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-v0_6.tar.gz",
+      "localPath": "sources/symphonia-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-gn",
+      "component": "third_party/rust/symphonia",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia.tar.gz",
+      "localPath": "sources/symphonia-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-bundle-flac",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-bundle-flac-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-bundle-flac-v0_6.tar.gz",
+      "localPath": "sources/symphonia-bundle-flac-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-bundle-flac-gn",
+      "component": "third_party/rust/symphonia_bundle_flac",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_bundle_flac.tar.gz",
+      "localPath": "sources/symphonia-bundle-flac-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-bundle-mp3",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-bundle-mp3-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-bundle-mp3-v0_6.tar.gz",
+      "localPath": "sources/symphonia-bundle-mp3-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-bundle-mp3-gn",
+      "component": "third_party/rust/symphonia_bundle_mp3",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_bundle_mp3.tar.gz",
+      "localPath": "sources/symphonia-bundle-mp3-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-codec-pcm",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-codec-pcm-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-codec-pcm-v0_6.tar.gz",
+      "localPath": "sources/symphonia-codec-pcm-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-codec-pcm-gn",
+      "component": "third_party/rust/symphonia_codec_pcm",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_codec_pcm.tar.gz",
+      "localPath": "sources/symphonia-codec-pcm-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-codec-vorbis",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-codec-vorbis-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-codec-vorbis-v0_6.tar.gz",
+      "localPath": "sources/symphonia-codec-vorbis-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-codec-vorbis-gn",
+      "component": "third_party/rust/symphonia_codec_vorbis",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_codec_vorbis.tar.gz",
+      "localPath": "sources/symphonia-codec-vorbis-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-common",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-common-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-common-v0_6.tar.gz",
+      "localPath": "sources/symphonia-common-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-common-gn",
+      "component": "third_party/rust/symphonia_common",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_common.tar.gz",
+      "localPath": "sources/symphonia-common-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-core",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-core-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-core-v0_6.tar.gz",
+      "localPath": "sources/symphonia-core-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-core-gn",
+      "component": "third_party/rust/symphonia_core",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_core.tar.gz",
+      "localPath": "sources/symphonia-core-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-isomp4",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-isomp4-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-isomp4-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-isomp4-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-isomp4-gn",
+      "component": "third_party/rust/symphonia_format_isomp4",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_isomp4.tar.gz",
+      "localPath": "sources/symphonia-format-isomp4-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-mkv",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-mkv-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-mkv-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-mkv-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-mkv-gn",
+      "component": "third_party/rust/symphonia_format_mkv",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_mkv.tar.gz",
+      "localPath": "sources/symphonia-format-mkv-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-ogg",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-ogg-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-ogg-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-ogg-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-ogg-gn",
+      "component": "third_party/rust/symphonia_format_ogg",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_ogg.tar.gz",
+      "localPath": "sources/symphonia-format-ogg-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-riff",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-riff-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-riff-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-riff-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-format-riff-gn",
+      "component": "third_party/rust/symphonia_format_riff",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_riff.tar.gz",
+      "localPath": "sources/symphonia-format-riff-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-metadata",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-metadata-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-metadata-v0_6.tar.gz",
+      "localPath": "sources/symphonia-metadata-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "symphonia-metadata-gn",
+      "component": "third_party/rust/symphonia_metadata",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_metadata.tar.gz",
+      "localPath": "sources/symphonia-metadata-gn-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "eigen",
+      "component": "external/gitlab.com/libeigen/eigen",
+      "revision": "04bfe22876d3bab4260f39491cce7a8df17daa40",
+      "licence": "MPL-2.0 and file-specific alternatives",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/external/gitlab.com/libeigen/eigen/+archive/04bfe22876d3bab4260f39491cce7a8df17daa40.tar.gz",
+      "localPath": "sources/eigen-04bfe22876d3bab4260f39491cce7a8df17daa40.tar.gz",
+      "reason": "Exact external DEPS checkout absent from Chromium parent subtree tar archives"
+    },
+    {
+      "id": "hunspell-dictionaries",
+      "component": "chromium/deps/hunspell_dictionaries",
+      "revision": "cee14e319bb7603a1157bb4d1e216be64ee82b77",
+      "licence": "Mixed per-dictionary terms; preserve whole licence set",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/deps/hunspell_dictionaries/+archive/cee14e319bb7603a1157bb4d1e216be64ee82b77.tar.gz",
+      "localPath": "sources/hunspell-dictionaries-cee14e319bb7603a1157bb4d1e216be64ee82b77.tar.gz",
+      "reason": "Exact external DEPS checkout absent from Chromium parent subtree tar archives"
+    },
+    {
+      "id": "nasm",
+      "component": "chromium/deps/nasm",
+      "revision": "525a09a813be0f75b646ee93fc2a31c27b87d722",
+      "licence": "BSD-2-Clause and file-specific tools",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/deps/nasm/+archive/525a09a813be0f75b646ee93fc2a31c27b87d722.tar.gz",
+      "localPath": "sources/nasm-525a09a813be0f75b646ee93fc2a31c27b87d722.tar.gz",
+      "reason": "Exact external DEPS checkout absent from Chromium parent subtree tar archives"
+    },
+    {
+      "id": "chromium-build-overrides",
+      "component": "build_overrides",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Shared GN compiler configuration imports build_overrides/build.gni",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/build_overrides.tar.gz",
+      "localPath": "sources/chromium-build-overrides-156.0.8078.49.tar.gz"
+    },
+    {
+      "id": "axe-core-original-source",
+      "component": "axe-core preferred modular source and build scripts",
+      "revision": "281653df3794f429b71327fe3afa37ca0fadb1c7",
+      "licence": "MPL-2.0",
+      "reason": "Chromium README pins this upstream source revision; include preferred modular source in addition to Chromium axe.js/axe.min.js build outputs",
+      "format": "tar.gz",
+      "url": "https://codeload.github.com/dequelabs/axe-core/tar.gz/281653df3794f429b71327fe3afa37ca0fadb1c7",
+      "localPath": "sources/axe-core-281653df3794f429b71327fe3afa37ca0fadb1c7.tar.gz"
+    }
+  ]
+}

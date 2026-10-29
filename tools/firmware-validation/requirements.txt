@@ -1,0 +1,3 @@
+# Dependencies are separately installed; none of their sources are vendored.
+unicorn==2.1.4
+capstone==5.0.7

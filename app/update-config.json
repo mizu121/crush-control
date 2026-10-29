@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "provider": "github",
+  "owner": "mizu121",
+  "repo": "crush-control-releases",
+  "channel": "beta",
+  "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAmYWjzCfb5e+cFRZp/ZcCKbUjMNmDlXijr74vR/YrMkM=\n-----END PUBLIC KEY-----\n"
+}

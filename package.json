@@ -1,0 +1,51 @@
+{
+  "name": "crush80-control",
+  "version": "1.0.0-beta.9",
+  "private": true,
+  "description": "Desktop control app and SignalRGB sync for the WOBKEY Crush 80 Pro",
+  "main": "app/entry.js",
+  "scripts": {
+    "setup:runtime": "node node_modules/electron/install.js",
+    "start": "electron .",
+    "test": "node --test tools/test-pkrg.cjs tools/test-preset-library.cjs tools/test-rgb-controller.cjs tools/test-via-transport.cjs tools/test-battery.cjs tools/test-receiver-link.cjs tools/test-update-security.cjs tools/test-app-updater.cjs tools/test-support-reminder.cjs tools/test-windows-shortcuts.cjs",
+    "build:icons": "node tools/build-ui-icons.cjs",
+    "test:package": "node --test tools/test-release-packaging.cjs tools/test-installer-process-check.cjs tools/test-installer-templates.cjs tools/test-legal-assets.cjs",
+    "test:store": "node --test tools/test-store-packaging.cjs tools/test-store-runtime.cjs",
+    "test:plugin": "node tools/test-signalrgb-plugin.mjs",
+    "test:pkrg-firmware": "node --test tools/test-pkrg-firmware.cjs",
+    "package:check": "node tools/release-build.cjs --check",
+    "dist:dir": "node tools/release-build.cjs --dir",
+    "dist:win": "node tools/release-build.cjs --installer",
+    "dist:verify": "node tools/verify-release.cjs",
+    "store:check": "node tools/store-build.cjs --check",
+    "store:test": "node tools/store-build.cjs --test"
+  },
+  "keywords": [],
+  "author": {
+    "name": "mi0ir",
+    "url": "https://mi0ir.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tabler/core": "^1.7.1",
+    "electron-updater": "6.8.11",
+    "node-hid": "^3.4.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@electron/asar": "3.4.1",
+    "@electron/fuses": "1.8.0",
+    "@tabler/icons": "^3.50.0",
+    "electron": "^45.1.0",
+    "electron-builder": "26.18.0",
+    "esbuild": "0.27.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mizu121/crush-control.git"
+  },
+  "homepage": "https://mizu121.github.io/crush-control-releases/",
+  "bugs": {
+    "url": "https://github.com/mizu121/crush-control/issues"
+  }
+}

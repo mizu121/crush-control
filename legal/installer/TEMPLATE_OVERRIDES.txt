@@ -1,0 +1,34 @@
+Project-owned installer template overrides
+
+The local installer uses three narrowly modified electron-builder 26.18.0
+templates. Original code is MIT licensed; the full license is reproduced in
+LICENSES/electron-builder-MIT.txt. Input and output hashes are recorded in
+build/installer-templates/UPSTREAM.json, and the generation/check script refuses
+changed upstream input until reviewed. No node_modules files are edited.
+The default entry script and builder's two-pass uninstaller generation remain
+in use. The project include uses documented NSIS !cd and !addincludedir behavior
+to select the three overrides, with upstream templates as fallback. An unchanged,
+hash-pinned copy of builder's multiUser.nsh is also in the project template
+directory, so compiler cwd selects it before NSIS's unrelated MultiUser.nsh.
+This works with the pinned compiler, which does not support /PREPEND.
+
+The standard NSIS MUI progress page replaces the optional SpiderBanner window.
+The exact installation directory, executable name, app identifier, updater
+arguments and graceful process checks remain unchanged.
+
+WinShell plugin calls are removed. The existing installer-owned shortcut
+CreateShortCut, Rename and Delete operations remain. The packaged app verifies
+its shortcut's executable target and sets the same AppUserModelID on first
+launch using Electron's Windows shortcut API. A shortcut created by setup has
+that explicit ID after the first packaged app launch, not before it.
+
+Uninstall no longer automatically unpins user-managed Windows shortcuts or
+clears the application's Jump List. Windows may retain a stale pin after
+uninstall; the user can unpin it normally. This is an intentional limitation,
+not a claim that those removed cleanup operations succeeded. No other app's
+shortcuts, pins or Jump Lists are removed.
+
+These changes remove dependencies whose author pages permit or describe
+installer use but whose downloads lack a precise separate license for their
+implementation. This is not an assertion that the removed plugins are GPL or
+that their authors alleged infringement.

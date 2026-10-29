@@ -1,0 +1,74 @@
+Installer library source and build inputs
+Source assembly reviewed 2026-10-29. No native library was rebuilt in this audit.
+
+A separate installer-dependency-sources.zip was assembled locally for the
+installer libraries. That archive is not included in this application source
+repository and has not been published. This directory provides its notices,
+build instructions and SOURCE_MANIFEST.json, with file hashes and exact upstream
+archive references. It does not contain firmware. The original application and
+installer changes are published as source under their stated licences.
+
+StdUtils 1.14
+The source comes from the Sources.tar inside the author's 2018-10-27 release.
+Its archive comment pins revision 4e1117321001e54dcd2c52f72d3c359d5215e426.
+The shipped Unicode DLL matches the official release byte for byte:
+b72e9013a6204e9f01076dc38dabbf30870d44dfc66962adbf73619d4331601e
+
+The original project is StdUtils-1.14/Contrib/StdUtils/StdUtils.sln. Upstream's
+make_pack.bat identifies Visual Studio 2010 and its x86 tools. Build the
+Release_Unicode / Win32 configuration. A compatible licensed Windows SDK and
+Microsoft compiler/runtime import libraries are prerequisites. In particular
+the project references msvcrt_vc6.lib. That proprietary Microsoft compiler
+input is not redistributed in this package; obtain it through an appropriately
+licensed legacy Microsoft toolchain, or review and validate a modern-toolchain
+port separately. Do not silently substitute a different runtime and call it
+the original binary.
+
+The original NSIS plugin API .lib binaries are omitted. Additional preferred
+C/header source is supplied under pluginapi-source/ from Jim Park's Unicode
+NSIS repository, pinned in the manifest. Its pluginapi.h matches StdUtils's
+Unicode header after line-ending normalization. To build the Unicode helper
+from an x86 compiler prompt, use the equivalent of:
+  cl /nologo /c /O1 /GS- /DUNICODE /D_UNICODE
+     /IContrib\StdUtils\include\unicode\nsis
+     /IContrib\StdUtils\include\common
+     /FoContrib\StdUtils\lib\pluginapi_unicode.obj pluginapi-source\pluginapi.c
+  lib /nologo /out:Contrib\StdUtils\lib\nsis_pluginapi_unicode.lib
+      Contrib\StdUtils\lib\pluginapi_unicode.obj
+Create the lib directory first. These multiline examples show arguments; join
+each command onto one line when using cmd.exe. Then build the solution:
+  MSBuild Contrib\StdUtils\StdUtils.sln /p:Configuration=Release_Unicode
+      /p:Platform=Win32 /t:Rebuild
+The exact historical helper object's equivalence has not been reconstructed.
+No byte-for-byte rebuilt DLL equivalence is claimed. An exact DLL can be
+obtained unmodified from the pinned official release recorded in the manifest.
+
+Date.exe and Zip.exe are optional upstream release-packing utilities, not DLL
+build inputs; they and generated IDE caches/settings are omitted. The original
+packing batch file is retained as evidence, but cannot be run unchanged without
+those optional tools. They are unnecessary for rebuilding the Unicode DLL.
+
+Nsis7z 19.00
+The Nsis7z-19.00 tree combines the official wrapper/project source with the
+C, CPP, Asm and DOC folders from LZMA SDK 19.00. Original files are retained
+unchanged. The upstream 19.00 instructions specify Visual Studio 2017:
+  Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/Nsis7z.sln
+Use its Release Unicode / Win32 configuration (as named in the solution),
+matching the supplied x86-unicode DLL. Inspect the project before invoking it;
+Windows SDK and Microsoft Visual C++ development tools are required.
+The cached DLL matches the official x86-unicode 19.00 release:
+b393f05e8ff919ef071181050e1873c9a776e1a0ae8329aefff7007d0cadf592
+
+Integration and replacement
+These two libraries remain separate NSIS plugin DLLs and are used unmodified.
+They are not linked into Crush Control's application code. Rebuild/test an
+interface-compatible replacement in an isolated NSIS plugin directory and
+recompile the installer against it. Never overwrite a shared builder cache as
+an unreviewed update step. The project installer .nsh sources and pinned electron-builder templates in
+build/ describe their use. Any rebuilt installer
+requires a new integrity hash/signature and separate testing before delivery.
+
+Publishing the application source does not complete source delivery for the
+installer libraries or remediate prior beta installers. Library-source delivery
+and native testing of the replacement process checker remain separate binary
+release gates. Beta.9 installer publication is still blocked.

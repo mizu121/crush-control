@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self' 'sha256-h18PRh6necmYHs5C9lqyLxj7WYKjJH2yc1bJsYKlUkg='; connect-src 'self'">
+<title>Crush Control</title>
+<link rel="stylesheet" href="../../node_modules/@tabler/core/dist/css/tabler.min.css"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Tabler Icons, MIT license: node_modules/@tabler/icons/LICENSE -->
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="i-light" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+  <path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3" />
+  <path d="M9.7 17l4.6 0" />
+</symbol>
+<symbol id="i-keyboard" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M2 8a2 2 0 0 1 2 -2h16a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-16a2 2 0 0 1 -2 -2l0 -8" />
+  <path d="M6 10l0 .01" />
+  <path d="M10 10l0 .01" />
+  <path d="M14 10l0 .01" />
+  <path d="M18 10l0 .01" />
+  <path d="M6 14l0 .01" />
+  <path d="M18 14l0 .01" />
+  <path d="M10 14l4 .01" />
+</symbol>
+<symbol id="i-sync" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" />
+  <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" />
+</symbol>
+<symbol id="i-settings" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033" />
+  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+</symbol>
+<symbol id="i-cube" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718" />
+  <path d="M12 22v-10" />
+  <path d="M12 12l8.73 -5.04" />
+  <path d="M3.27 6.96l8.73 5.04" />
+</symbol>
+<symbol id="i-top" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M4 6a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2l0 -12" />
+  <path d="M4 9h8" />
+  <path d="M12 15h8" />
+  <path d="M12 4v16" />
+</symbol>
+<symbol id="i-bottom" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12l18 0" />
+  <path d="M7 16l10 0l-10 5l0 -5" />
+  <path d="M7 8l10 0l-10 -5l0 5" />
+</symbol>
+<symbol id="i-presets" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4" />
+</symbol>
+<symbol id="i-reset" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M4.05 11a8 8 0 1 1 .5 4m-.5 5v-5h5" />
+</symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M4 6l8 0" />
+  <path d="M16 6l4 0" />
+  <path d="M6 12a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M4 12l2 0" />
+  <path d="M10 12l10 0" />
+  <path d="M15 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+  <path d="M4 18l11 0" />
+  <path d="M19 18l1 0" />
+</symbol>
+<symbol id="i-sun" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+</symbol>
+<symbol id="i-moon" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454l0 .008" />
+</symbol>
+<symbol id="i-speed" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+  <path d="M13.41 10.59l2.59 -2.59" />
+  <path d="M7 12a5 5 0 0 1 5 -5" />
+</symbol>
+<symbol id="i-info" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+  <path d="M12 9h.01" />
+  <path d="M11 12h1v4h1" />
+</symbol>
+<symbol id="i-plug" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5" />
+  <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5" />
+  <path d="M3 21l2.5 -2.5" />
+  <path d="M18.5 5.5l2.5 -2.5" />
+  <path d="M10 11l-2 2" />
+  <path d="M13 14l-2 2" />
+</symbol>
+<symbol id="i-trash" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M4 7l16 0" />
+  <path d="M10 11l0 6" />
+  <path d="M14 11l0 6" />
+  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+</symbol>
+<symbol id="i-plus" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M12 5l0 14" />
+  <path d="M5 12l14 0" />
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M5 12l5 5l10 -10" />
+</symbol>
+<symbol id="i-download" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />
+  <path d="M7 11l5 5l5 -5" />
+  <path d="M12 4l0 12" />
+</symbol>
+<symbol id="i-folder" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2" />
+</symbol>
+<symbol id="i-power" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 6a7.75 7.75 0 1 0 10 0" />
+  <path d="M12 4l0 8" />
+</symbol>
+<symbol id="i-solid" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+</symbol>
+<symbol id="i-breathe" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M21 12h-2c-.894 0 -1.662 -.857 -1.761 -2c-.296 -3.45 -.749 -6 -2.749 -6s-2.5 3.582 -2.5 8s-.5 8 -2.5 8s-2.452 -2.547 -2.749 -6c-.1 -1.147 -.867 -2 -1.763 -2h-2" />
+</symbol>
+<symbol id="i-wave" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 7c3 -2 6 -2 9 0s6 2 9 0" />
+  <path d="M3 17c3 -2 6 -2 9 0s6 2 9 0" />
+  <path d="M3 12c3 -2 6 -2 9 0s6 2 9 0" />
+</symbol>
+<symbol id="i-bar" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M3 13a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -6" />
+  <path d="M15 9a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -10" />
+  <path d="M9 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -14" />
+  <path d="M4 20h14" />
+</symbol>
+<symbol id="i-cloud" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878" />
+</symbol>
+<symbol id="i-vortex" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M10 12.057a1.9 1.9 0 0 0 .614 .743c1.06 .713 2.472 .112 3.043 -.919c.839 -1.513 -.022 -3.368 -1.525 -4.08c-2 -.95 -4.371 .154 -5.24 2.086c-1.095 2.432 .29 5.248 2.71 6.246c2.931 1.208 6.283 -.418 7.438 -3.255c1.36 -3.343 -.557 -7.134 -3.896 -8.41c-3.855 -1.474 -8.2 .68 -9.636 4.422c-1.63 4.253 .823 9.024 5.082 10.576c4.778 1.74 10.118 -.941 11.833 -5.59a9.354 9.354 0 0 0 .577 -2.813" />
+</symbol>
+<symbol id="i-mix" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M2.5 17a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+  <path d="M13.5 17a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+</symbol>
+<symbol id="i-stone" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033" />
+</symbol>
+<symbol id="i-laser" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+</symbol>
+<symbol id="i-starry" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6" />
+</symbol>
+<symbol id="i-flowers" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+  <path d="M12 2a3 3 0 0 1 3 3c0 .562 -.259 1.442 -.776 2.64l-.724 1.36l1.76 -1.893c.499 -.6 .922 -1 1.27 -1.205a2.968 2.968 0 0 1 4.07 1.099a3.011 3.011 0 0 1 -1.09 4.098c-.374 .217 -.99 .396 -1.846 .535l-2.664 .366l2.4 .326c1 .145 1.698 .337 2.11 .576a3.011 3.011 0 0 1 1.09 4.098a2.968 2.968 0 0 1 -4.07 1.098c-.348 -.202 -.771 -.604 -1.27 -1.205l-1.76 -1.893l.724 1.36c.516 1.199 .776 2.079 .776 2.64a3 3 0 0 1 -6 0c0 -.562 .259 -1.442 .776 -2.64l.724 -1.36l-1.76 1.893c-.499 .601 -.922 1 -1.27 1.205a2.968 2.968 0 0 1 -4.07 -1.098a3.011 3.011 0 0 1 1.09 -4.098c.374 -.218 .99 -.396 1.846 -.536l2.664 -.366l-2.4 -.325c-1 -.145 -1.698 -.337 -2.11 -.576a3.011 3.011 0 0 1 -1.09 -4.099a2.968 2.968 0 0 1 4.07 -1.099c.348 .203 .771 .604 1.27 1.205l1.76 1.894c-1 -2.292 -1.5 -3.625 -1.5 -4a3 3 0 0 1 3 -3" />
+</symbol>
+<symbol id="i-traverse" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 8l-4 4l4 4" />
+  <path d="M17 8l4 4l-4 4" />
+  <path d="M3 12l18 0" />
+</symbol>
+<symbol id="i-meteor" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M21 3l-5 9h5l-6.891 7.086a6.5 6.5 0 1 1 -8.855 -9.506l7.746 -6.58l-1 5l9 -5" />
+  <path d="M7 14.5a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0 -5 0" />
+</symbol>
+<symbol id="i-rain" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7" />
+  <path d="M11 13v2m0 3v2m4 -5v2m0 3v2" />
+</symbol>
+<symbol id="i-scan" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M5 12h14" />
+  <path d="M3 7v-2a2 2 0 0 1 2 -2h2" />
+  <path d="M3 17v2a2 2 0 0 0 2 2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M17 21h2a2 2 0 0 0 2 -2v-2" />
+</symbol>
+<symbol id="i-spread" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M16 4l4 0l0 4" />
+  <path d="M14 10l6 -6" />
+  <path d="M8 20l-4 0l0 -4" />
+  <path d="M4 20l6 -6" />
+  <path d="M16 20l4 0l0 -4" />
+  <path d="M14 14l6 6" />
+  <path d="M8 4l-4 0l0 4" />
+  <path d="M4 4l6 6" />
+</symbol>
+<symbol id="i-trigger" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+  <path d="M8 13v-8.5a1.5 1.5 0 0 1 3 0v7.5" />
+  <path d="M11 11.5v-2a1.5 1.5 0 0 1 3 0v2.5" />
+  <path d="M14 10.5a1.5 1.5 0 0 1 3 0v1.5" />
+  <path d="M17 11.5a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1 -6 6h-2h.208a6 6 0 0 1 -5.012 -2.7l-.196 -.3c-.312 -.479 -1.407 -2.388 -3.286 -5.728a1.5 1.5 0 0 1 .536 -2.022a1.867 1.867 0 0 1 2.28 .28l1.47 1.47" />
+  <path d="M5 3l-1 -1" />
+  <path d="M4 7h-1" />
+  <path d="M14 3l1 -1" />
+  <path d="M15 6h1" />
+</symbol>
+</defs></svg>
+<header class="titlebar"><div class="brand"><span class="brand-mark">C80</span><span>Crush Control</span></div><div class="header-device"><button type="button" class="btn header-update-button" id="btn-header-updates" aria-haspopup="dialog" aria-controls="updates-dialog" hidden>Update available</button><div class="conn" id="conn"><span class="dot"></span><span class="conn-text">Connecting</span></div><div class="battery-status" id="battery-status" data-state="unknown" role="status" aria-label="Battery level unavailable"><svg class="battery-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="17" height="12" rx="2"/><path d="M22 10v4"/><rect id="battery-fill" x="4" y="8" width="0" height="8" rx=".5"/></svg><svg class="battery-clock" viewBox="0 0 24 24" aria-hidden="true" hidden><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg><span id="battery-label">Battery —</span></div></div></header>
+<div class="app-shell">
+<aside class="navigation-rail"><nav class="tabs nav" id="tabs" aria-label="Workspace">
+<button class="nav-link active" data-view="lighting" aria-current="page" title="Lighting"><svg><use href="#i-light"/></svg><span>Lighting</span></button>
+<button class="nav-link" data-view="keymap" title="Key mapping"><svg><use href="#i-keyboard"/></svg><span>Keymap</span></button>
+<button class="nav-link" data-view="signalrgb" title="SignalRGB"><svg><use href="#i-sync"/></svg><span>SignalRGB</span></button>
+<button class="nav-link" data-view="settings" title="Settings"><svg><use href="#i-settings"/></svg><span>Settings</span></button>
+</nav></aside>
+<div class="workspace"><main>
+<div id="banners" aria-live="polite"></div><div class="connection-empty" id="empty" hidden><svg><use href="#i-plug"/></svg><strong>Keyboard disconnected</strong><span>Use USB, or a linked 2.4 GHz dongle for lighting. Link your dongle in Settings.</span></div>
+<section class="view" id="view-lighting" aria-label="Lighting workspace">
+<div class="view-heading"><h1>Crush 80</h1><button class="btn" id="btn-open-looks"><svg><use href="#i-presets"/></svg>Presets</button></div>
+<div class="lighting-workbench">
+<div class="preview-panel" id="preview-panel" data-theme="dark" data-preview="2d">
+<div class="preview-top"><span class="preview-label sr-only" id="preview-mode">2D keyboard layout</span><button class="btn preview-theme" id="btn-preview-theme" aria-label="Dark preview" aria-pressed="true" title="Switch to light preview"><svg><use href="#i-moon"/></svg><span>Dark</span></button><div class="preview-switch" role="group" aria-label="Preview mode"><button class="btn active" id="btn-preview-2d" aria-pressed="true">2D</button><button class="btn" id="btn-preview-3d" aria-pressed="false">3D</button></div><div class="view-controls" id="camera-controls" aria-label="Preview camera" hidden>
+<button id="btn-view-perspective" class="btn active" aria-label="Perspective view" aria-pressed="true" title="Perspective"><svg><use href="#i-cube"/></svg></button>
+<button id="btn-view-top" class="btn" aria-label="Top view" aria-pressed="false" title="Top"><svg><use href="#i-top"/></svg></button>
+<button id="btn-view-bottom" class="btn" aria-label="Underside view" aria-pressed="false" title="Underside"><svg><use href="#i-bottom"/></svg></button>
+<button id="btn-view-reset" class="btn" aria-label="Reset camera" title="Reset camera"><svg><use href="#i-reset"/></svg></button>
+</div></div>
+<div id="keyboard-3d" aria-label="Interactive silver Crush 80 model" hidden></div>
+<div class="board-fallback blueprint-stage" id="board-fallback" role="group" tabindex="0" aria-label="Keyboard selection. Drag to select keys. Shift-click adds keys. Control+A selects all keys. Escape clears selection."><div class="board-wrap"><div class="board light" id="light-board"></div></div><div id="selection-marquee" aria-hidden="true" hidden></div></div>
+<div class="preview-bottom"><span id="preview-gesture">Drag to select · Shift-click to add</span><div id="selection-actions" hidden><span id="selection-count" role="status">All keys</span><button class="btn" id="btn-select-all-keys" title="Select all mapped keys; rear lights stay unchanged">Select all</button><button class="btn" id="btn-clear-selection" hidden>All keys</button></div><button class="btn" id="btn-rear-lights"><svg><use href="#i-light"/></svg>Rear lights</button></div>
+<div class="sr-only"><span id="fx-name">Solid</span><span id="fx-detail">Orange</span><span id="orbit-hint">Use 2D for selection. Enable 3D for the model.</span><span id="preview-status">Visual approximation</span></div>
+</div>
+<aside class="color-panel" aria-label="Lighting controls">
+<label class="rgb-target-control" id="rgb-target-control" hidden><span>Color</span><select class="form-select" id="rgb-target" aria-label="Color target"><option value="all">All keys</option></select></label>
+<div class="color-head"><div class="color-swatch" id="color-swatch"></div><div class="color-name" id="color-name">Orange</div><button class="btn btn-icon" id="btn-power" aria-label="Turn lights off" aria-pressed="true" title="Turn lights off"><svg><use href="#i-power"/></svg></button></div>
+<div class="color-wheel" id="color-wheel" role="group" tabindex="0" aria-label="Color picker" aria-describedby="wheel-help"><div class="wheel-disc" aria-hidden="true"></div><span class="wheel-thumb" aria-hidden="true"></span></div>
+<div class="sr-only" id="wheel-help">Left and right adjust hue. Up and down adjust saturation. Hold Shift for larger steps.</div>
+<div class="swatches" id="swatches" aria-label="Quick colors"></div>
+<div hidden><span id="color-hex"></span><span id="color-sub"></span><span id="hue-val"></span><span id="sat-val"></span><input type="range" id="hue" min="0" max="359" step="1"><input type="range" id="sat" min="0" max="255" step="1"></div>
+<div class="intensity-group">
+<label class="field"><span class="field-row"><span>Brightness</span><b id="bri-val">78%</b></span><input class="form-range" type="range" id="bri" min="0" max="9" step="1" aria-label="Brightness"></label>
+<label class="field" id="speed-field"><span class="field-row"><span>Speed</span><b id="spd-val">3 / 5</b></span><input class="form-range" type="range" id="spd" min="0" max="4" step="1" aria-label="Animation speed"></label>
+</div>
+<footer class="savebar"><div class="save-state" id="save-state"><span class="dot"></span><span id="save-label">Preview mode</span><small class="sr-only" id="save-help">Connect your keyboard to apply lighting.</small></div><div class="save-actions"><button id="btn-revert" class="btn btn-icon" aria-label="Revert lighting changes" title="Revert"><svg><use href="#i-reset"/></svg></button><button class="btn btn-primary" id="btn-save">Save to keyboard</button><span class="rgb-live-note" id="rgb-live-note" hidden>Live colors · resets at power-off</span></div></footer>
+</aside>
+<div class="effect-panel"><div id="quick-effects" aria-label="Common lighting effects"></div><button class="btn effect-more" id="btn-all-effects" title="All lighting effects"><svg><use href="#i-sliders"/></svg><span>All effects</span></button></div>
+</div>
+</section>
+<section class="view" id="view-keymap" hidden>
+<div class="view-heading"><div class="device-heading"><h1>Key mapping</h1><span class="device-meta">Crush 80 Pro</span></div><span class="heading-note">Choose a key to edit its function</span></div>
+<p class="keymap-connection-note" id="keymap-connection-note" role="status" hidden>Use USB to edit, back up or restore keys. Lighting controls work over the linked dongle.</p>
+<div class="toolbar"><div class="segmented btn-group" id="layers"></div><div class="spacer"></div><button class="btn btn-sm" id="btn-backup"><svg><use href="#i-download"/></svg>Back up</button><select class="form-select form-select-sm" id="backup-list" aria-label="Saved keymap backups" title="Saved backups"></select><button class="btn btn-sm" id="btn-restore">Restore</button><button class="btn btn-sm btn-icon" id="btn-open-backups" title="Open backups folder" aria-label="Open backups folder"><svg><use href="#i-folder"/></svg></button></div>
+<div class="keymap-stage"><div class="board-wrap"><div class="board keys" id="key-board"></div></div></div>
+<div class="editor card"><div class="key-info" id="key-info"></div><div class="picker"><div class="picker-head"><input class="form-control form-control-sm" id="kc-search" aria-label="Search key functions" placeholder="Search functions…" autocomplete="off"><form class="inline-form" id="hex-form"><input class="form-control form-control-sm" id="hex-input" aria-label="Hexadecimal keycode" placeholder="0x0000" maxlength="6" autocomplete="off"><button class="btn btn-sm" type="submit">Set code</button></form></div><div class="cat-tabs" id="kc-cats"></div><div class="kc-grid" id="kc-grid"></div><div class="picker-pagination"><span id="kc-page-info"></span><div><button class="btn btn-sm" id="kc-prev" aria-label="Previous key functions">Previous</button><button class="btn btn-sm" id="kc-next" aria-label="Next key functions">Next</button></div></div></div></div>
+</section>
+<section class="view" id="view-signalrgb" hidden>
+<div class="view-heading"><div class="device-heading"><h1>SignalRGB</h1><span class="device-meta">Lighting integration</span></div></div>
+<div class="grid two"><div class="card detail-card"><div class="detail-icon"><svg><use href="#i-sync"/></svg></div><h2>One lighting setup</h2><p class="muted">Sync your keyboard with SignalRGB. Onboard effects handle the animation.</p><ul class="checks" id="srgb-checks"></ul><div class="action-row"><button class="btn btn-primary" id="btn-install">Install / update plugin</button><button class="btn" id="btn-srgb-refresh">Refresh</button></div><div class="notice" id="srgb-notice" hidden></div></div><div class="card detail-card"><h2>Using the plugin</h2><dl class="instructions"><dt>Animation</dt><dd>Choose Wave, Meteor, Rain or Starry in SignalRGB’s Keyboard Animation setting.</dd><dt>Solid color</dt><dd>Follows SignalRGB’s color and brightness across the whole keyboard.</dd><dt>Rainbow lock</dt><dd>Press <kbd>Fn</kbd> + <kbd>Enter</kbd> once if the board stays rainbow.</dd></dl><p class="control-note">Direct per-key RGB streaming is unavailable on stock firmware.</p></div></div>
+</section>
+<section class="view" id="view-settings" hidden>
+<div class="view-heading"><div class="device-heading"><h1>Settings</h1><span class="device-meta">Application & device</span></div></div>
+<div class="grid two"><div class="card detail-card"><h2>Application</h2><label class="form-check form-switch"><input class="form-check-input" type="checkbox" id="login-toggle" aria-describedby="login-support-note"><span class="form-check-label">Start with Windows</span></label><p class="muted" id="login-support-note" hidden></p><p class="muted">Closing the window keeps the app in the tray.</p><button class="btn settings-about-button" id="btn-about">About &amp; support</button><div class="settings-update-row"><div><h3>App updates</h3><p id="updates-settings-state">Not checked</p></div><button class="btn" id="btn-app-updates" aria-label="Open app updates">Open</button></div><div class="panel-divider"></div><h2>Device</h2><dl class="info" id="device-info"></dl><button class="btn settings-firmware-button" id="btn-firmware-setup">Firmware setup</button></div><div class="card detail-card"><h2>Keyboard behavior</h2><dl class="instructions"><dt>Color calibration</dt><dd>Uses the hue measurements taken on your Crush 80.</dd><dt>Lighting storage</dt><dd>Presets keep your look on this PC. Per-key colors apply live and reset when the keyboard loses power.</dd><dt>Key mapping</dt><dd>Use USB to remap keys or back up and restore your layout. Each write is verified.</dd><dt>Firmware</dt><dd>Check compatibility in Firmware setup. Installation is not available in this build.</dd></dl><div class="receiver-link-row" id="receiver-link-row"><div class="receiver-link-heading"><h3>2.4 GHz receiver</h3><span id="receiver-link-state">Not checked</span></div><p id="receiver-link-reason">Connect this Crush 80 Pro by USB and insert its paired dongle once.</p><div class="receiver-link-actions"><button class="btn" id="btn-link-receiver" disabled>Link your dongle</button><button class="btn" id="btn-refresh-receiver" aria-label="Refresh receiver status">Refresh</button></div><p id="receiver-link-error" role="alert" hidden></p></div></div></div>
+</section>
+<aside class="support-reminder" id="support-reminder" aria-label="Support Crush Control" hidden><span>Enjoying Crush Control?</span><div class="support-reminder-actions"><button type="button" id="btn-reminder-github">Star on GitHub</button><button type="button" id="btn-reminder-donate">Support development</button></div><button type="button" class="btn-close" id="btn-reminder-dismiss" aria-label="Dismiss support reminder permanently" title="Don't show again"></button><p id="support-reminder-error" role="status" hidden></p></aside>
+</main></div></div>
+<dialog id="effects-dialog" aria-labelledby="effects-title"><div class="modal-header"><h2 class="modal-title" id="effects-title">Lighting effects</h2><button type="button" class="btn-close" id="btn-close-effects" aria-label="Close effects"></button></div><div class="chips" id="effects" aria-label="Lighting effects"></div></dialog>
+<dialog id="looks-dialog" aria-labelledby="looks-title"><div class="modal-header"><h2 class="modal-title" id="looks-title">Presets</h2><button type="button" class="btn-close" id="btn-close-looks" aria-label="Close presets"></button></div><div class="modal-body"><div class="starter-looks" id="starter-looks"></div><p id="preset-message" class="preset-message" role="status">Choose a look, then click any key to make it yours.</p><div class="saved-presets" hidden><select class="form-select" id="presets" aria-label="Saved presets"><option value="">Saved presets</option></select><button class="btn" id="btn-apply-preset">Apply</button><button class="btn btn-icon" id="btn-delete-preset" aria-label="Delete selected preset" title="Delete selected preset"><svg><use href="#i-trash"/></svg></button></div><button class="btn" id="btn-new-preset"><svg><use href="#i-plus"/></svg>Save current look</button></div></dialog>
+<dialog id="preset-dialog" aria-labelledby="preset-dialog-title"><form id="preset-form" class="modal-content"><div class="modal-header"><h2 class="modal-title" id="preset-dialog-title">Save a preset</h2><button type="button" class="btn-close" id="btn-close-preset" aria-label="Close"></button></div><div class="modal-body"><p id="preset-storage-note">Saves your key colors and brightness on this PC.</p><label class="form-label" for="preset-name">Name</label><input class="form-control" id="preset-name" placeholder="e.g. Evening desk" maxlength="32" autocomplete="off" required autofocus><p id="preset-save-error" class="preset-message error" role="alert" hidden></p></div><div class="modal-footer"><button type="button" class="btn" id="btn-cancel-preset">Cancel</button><button class="btn btn-primary" type="submit">Save preset</button></div></form></dialog>
+<dialog id="updates-dialog" aria-labelledby="updates-title" aria-describedby="updates-version">
+  <div class="modal-header"><div><h2 class="modal-title" id="updates-title">App updates</h2><p id="updates-version">Windows app only</p></div><button type="button" class="btn-close" id="btn-close-updates" aria-label="Close app updates"></button></div>
+  <div class="modal-body">
+    <div class="updates-current" id="updates-current" data-state="idle" role="status" aria-live="polite"><span class="updates-state-dot" aria-hidden="true"></span><div><h3 id="updates-state-title">Check for a new version</h3><p id="updates-state-detail">Check when you’re ready. Downloads and installation are your choice.</p><span id="updates-available-version" hidden></span></div></div>
+    <div id="updates-progress-section" hidden><progress id="updates-progress" max="100" aria-label="Update download progress"></progress><p id="updates-progress-label" role="status">Downloading…</p></div>
+    <section id="updates-notes-section" aria-labelledby="updates-notes-title" hidden><h3 id="updates-notes-title">What’s new</h3><div id="updates-notes" tabindex="0"></div></section>
+    <p id="updates-checked" hidden></p>
+    <p class="updates-scope">Updates the Windows app. Keyboard firmware stays unchanged.</p>
+    <p id="updates-install-note" hidden>Closes Crush Control to install. Your presets are kept.</p>
+  </div>
+  <div class="modal-footer"><div class="updates-actions"><button class="btn" id="btn-updates-check" disabled>Check for updates</button><button class="btn" id="btn-updates-refresh" hidden>Retry status</button><button class="btn btn-primary" id="btn-updates-download" hidden disabled>Download update</button><button class="btn btn-primary" id="btn-updates-install" hidden disabled>Restart and install</button><button class="btn btn-primary" id="btn-updates-open-store" hidden disabled>Open Microsoft Store</button></div><button class="btn" id="btn-updates-done">Done</button></div>
+</dialog>
+<dialog id="firmware-dialog" aria-labelledby="firmware-title" aria-describedby="firmware-subtitle">
+  <div class="modal-header"><div><h2 class="modal-title" id="firmware-title">Firmware setup</h2><p id="firmware-subtitle">Compatibility check · USB only</p></div><button type="button" class="btn-close" id="btn-close-firmware" aria-label="Close firmware setup"></button></div>
+  <div class="modal-body">
+    <div class="firmware-current" id="firmware-current" data-state="checking" role="status" aria-live="polite"><span class="firmware-state-dot" aria-hidden="true"></span><div><h3 id="firmware-state-title">Checking compatibility…</h3><p id="firmware-state-detail">Reading the current connection.</p></div></div>
+    <p class="firmware-connection"><svg aria-hidden="true"><use href="#i-plug"/></svg><span>Use a USB cable and select wired mode with <kbd>Fn</kbd> + <kbd>Tab</kbd>. Setup over wireless is unavailable.</span></p>
+    <p id="firmware-warning">Use only with the same Crush 80 Pro hardware and firmware revision as the tested unit. Incompatible firmware can brick the keyboard.</p>
+    <div class="firmware-install-note"><strong>Installation unavailable</strong><p id="firmware-install-reason">A verified installer and recovery flow are not included in this build.</p></div>
+    <p id="firmware-error" role="alert" hidden></p>
+  </div>
+  <div class="modal-footer"><button class="btn" id="btn-refresh-firmware">Refresh</button><button class="btn" id="btn-firmware-done">Done</button></div>
+</dialog>
+<dialog id="about-dialog" aria-labelledby="about-title" aria-describedby="about-device-scope">
+  <div class="modal-header"><div><h2 class="modal-title" id="about-title">Crush Control</h2><p id="about-version" class="about-version">App information</p></div><button type="button" class="btn-close" id="btn-close-about" aria-label="Close about and support"></button></div>
+  <div class="modal-body">
+    <p id="about-device-scope" class="about-device-scope">For Windows · WOBKEY Crush 80 Pro</p>
+    <p id="about-developer" class="about-developer" hidden></p>
+    <ul class="about-features" aria-label="Features">
+      <li><strong>2D keyboard editor</strong><span>Drag and Shift-click to select keys</span></li>
+      <li><strong>Optional 3D preview</strong><span>Loads only when you enable it</span></li>
+      <li><strong>8 built-in presets</strong><span>Save your own lighting looks on this PC</span></li>
+      <li><strong>Four keymap layers</strong><span>Remap keys, back up and restore</span></li>
+    </ul>
+    <p class="about-compatibility"><strong>Firmware compatibility</strong>Per-key colors and rear-light sync require the exact custom firmware verified by this app. Stock firmware supports whole-board lighting. Use USB for key mapping and setup; linked receiver lighting is experimental.</p>
+    <div class="about-actions"><button class="btn" id="btn-about-support" hidden>Developer website</button><button class="btn" id="btn-about-github" hidden>Star on GitHub</button><button class="btn btn-primary" id="btn-about-donate" disabled>Support development</button><span id="about-donation-note">Link not configured</span></div>
+    <p id="about-error" class="about-error" role="alert" hidden></p>
+    <p id="about-license" class="about-license">Third-party software notices are available below.</p>
+    <p class="about-independent">Original app © 2026 mi0ir. Independent of WOBKEY.</p>
+  </div>
+  <div class="modal-footer"><button class="btn" id="btn-about-notices">Third-party notices</button><button class="btn" id="btn-about-done">Done</button></div>
+</dialog>
+<dialog id="rear-dialog" aria-labelledby="rear-title"><div class="modal-header"><h2 class="modal-title" id="rear-title">Rear lights</h2><button type="button" class="btn-close" id="btn-close-rear" aria-label="Close rear lights"></button></div><div class="modal-body"><p>These lights have their own controls on the keyboard.</p><dl class="rear-shortcuts"><div><dt>Effect</dt><dd><kbd>Fn</kbd><span>+</span><kbd>;</kbd></dd></div><div><dt>Color</dt><dd><kbd>Fn</kbd><span>+</span><kbd>'</kbd></dd></div><div><dt>On / off</dt><dd><kbd>Fn</kbd><span>+</span><kbd>/</kbd></dd></div></dl><p class="rear-tip">Cycle the effect to a steady light, then choose a color.</p><p class="rear-limit">The app cannot read or change this zone over VIA. The rear preview shows rainbow independently of the key lighting.</p></div><div class="modal-footer"><button type="button" class="btn" id="btn-rear-view"><svg><use href="#i-bottom"/></svg>View underside</button><button type="button" class="btn btn-primary" id="btn-rear-done">Done</button></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="importmap">{"imports":{"three":"../../node_modules/three/build/three.module.js"}}</script><script type="module" src="app.js"></script>
+</body></html>

@@ -1,0 +1,1549 @@
+{
+  "schemaVersion": 1,
+  "firmware": {
+    "stockSha256": "f8042ea15d9edaa1ce66fb898ac3cb0e1e5626fc96399d16e5ea42c45f72bd66",
+    "combinedSha256": "231487100de5207306ba306fe9c528b5ecfe0abf13c884e6d99c40bc8d9a12a2",
+    "combinedCrc": 1432804850
+  },
+  "evidence": {
+    "layoutSha256": "092568d86e84ba142c2b89c16ce1a685b9adb77261720e583ed42df5f549a730",
+    "matrixToLedTableOffset": "0x1B90C",
+    "keyEventTableRead": "0x12738..0x1273C",
+    "nativeReactiveStateBase": "0x815B8",
+    "nativeReactiveRenderer": "0x908C..0x919E",
+    "framebufferBase": "0x81C74",
+    "proof": "artifacts/rgb-keymap/verification.json",
+    "physicalEvidence": "Esc and F1–F4 observed during the live full-RGB trial; other keys are firmware-derived and CPU-verified, not individually observed."
+  },
+  "keys": [
+    {
+      "name": "Esc",
+      "layoutName": "Esc",
+      "layoutIndex": 0,
+      "slot": 0,
+      "slots": [
+        0
+      ],
+      "matrix": [
+        [
+          0,
+          0
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": true
+    },
+    {
+      "name": "F1",
+      "layoutName": "F1",
+      "layoutIndex": 1,
+      "slot": 1,
+      "slots": [
+        1
+      ],
+      "matrix": [
+        [
+          0,
+          1
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": true
+    },
+    {
+      "name": "F2",
+      "layoutName": "F2",
+      "layoutIndex": 2,
+      "slot": 2,
+      "slots": [
+        2
+      ],
+      "matrix": [
+        [
+          0,
+          2
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": true
+    },
+    {
+      "name": "F3",
+      "layoutName": "F3",
+      "layoutIndex": 3,
+      "slot": 3,
+      "slots": [
+        3
+      ],
+      "matrix": [
+        [
+          0,
+          3
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": true
+    },
+    {
+      "name": "F4",
+      "layoutName": "F4",
+      "layoutIndex": 4,
+      "slot": 4,
+      "slots": [
+        4
+      ],
+      "matrix": [
+        [
+          0,
+          4
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": true
+    },
+    {
+      "name": "F5",
+      "layoutName": "F5",
+      "layoutIndex": 5,
+      "slot": 5,
+      "slots": [
+        5
+      ],
+      "matrix": [
+        [
+          0,
+          5
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F6",
+      "layoutName": "F6",
+      "layoutIndex": 6,
+      "slot": 6,
+      "slots": [
+        6
+      ],
+      "matrix": [
+        [
+          0,
+          6
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F7",
+      "layoutName": "F7",
+      "layoutIndex": 7,
+      "slot": 7,
+      "slots": [
+        7
+      ],
+      "matrix": [
+        [
+          0,
+          7
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F8",
+      "layoutName": "F8",
+      "layoutIndex": 8,
+      "slot": 8,
+      "slots": [
+        8
+      ],
+      "matrix": [
+        [
+          0,
+          8
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F9",
+      "layoutName": "F9",
+      "layoutIndex": 9,
+      "slot": 9,
+      "slots": [
+        9
+      ],
+      "matrix": [
+        [
+          0,
+          9
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F10",
+      "layoutName": "F10",
+      "layoutIndex": 10,
+      "slot": 10,
+      "slots": [
+        10
+      ],
+      "matrix": [
+        [
+          0,
+          10
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F11",
+      "layoutName": "F11",
+      "layoutIndex": 11,
+      "slot": 11,
+      "slots": [
+        11
+      ],
+      "matrix": [
+        [
+          0,
+          11
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F12",
+      "layoutName": "F12",
+      "layoutIndex": 12,
+      "slot": 12,
+      "slots": [
+        12
+      ],
+      "matrix": [
+        [
+          0,
+          12
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F13",
+      "layoutName": "F13",
+      "layoutIndex": 13,
+      "slot": 13,
+      "slots": [
+        13
+      ],
+      "matrix": [
+        [
+          4,
+          12
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Print",
+      "layoutName": "Print",
+      "layoutIndex": 14,
+      "slot": 14,
+      "slots": [
+        14
+      ],
+      "matrix": [
+        [
+          0,
+          13
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Scroll",
+      "layoutName": "Scroll",
+      "layoutIndex": 15,
+      "slot": 15,
+      "slots": [
+        15
+      ],
+      "matrix": [
+        [
+          0,
+          14
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Pause",
+      "layoutName": "Pause",
+      "layoutIndex": 16,
+      "slot": 16,
+      "slots": [
+        16
+      ],
+      "matrix": [
+        [
+          0,
+          15
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "`",
+      "layoutName": "`",
+      "layoutIndex": 17,
+      "slot": 17,
+      "slots": [
+        17
+      ],
+      "matrix": [
+        [
+          1,
+          0
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "1",
+      "layoutName": "1",
+      "layoutIndex": 18,
+      "slot": 18,
+      "slots": [
+        18
+      ],
+      "matrix": [
+        [
+          1,
+          1
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "2",
+      "layoutName": "2",
+      "layoutIndex": 19,
+      "slot": 19,
+      "slots": [
+        19
+      ],
+      "matrix": [
+        [
+          1,
+          2
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "3",
+      "layoutName": "3",
+      "layoutIndex": 20,
+      "slot": 20,
+      "slots": [
+        20
+      ],
+      "matrix": [
+        [
+          1,
+          3
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "4",
+      "layoutName": "4",
+      "layoutIndex": 21,
+      "slot": 21,
+      "slots": [
+        21
+      ],
+      "matrix": [
+        [
+          1,
+          4
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "5",
+      "layoutName": "5",
+      "layoutIndex": 22,
+      "slot": 22,
+      "slots": [
+        22
+      ],
+      "matrix": [
+        [
+          1,
+          5
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "6",
+      "layoutName": "6",
+      "layoutIndex": 23,
+      "slot": 23,
+      "slots": [
+        23
+      ],
+      "matrix": [
+        [
+          1,
+          6
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "7",
+      "layoutName": "7",
+      "layoutIndex": 24,
+      "slot": 24,
+      "slots": [
+        24
+      ],
+      "matrix": [
+        [
+          1,
+          7
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "8",
+      "layoutName": "8",
+      "layoutIndex": 25,
+      "slot": 25,
+      "slots": [
+        25
+      ],
+      "matrix": [
+        [
+          1,
+          8
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "9",
+      "layoutName": "9",
+      "layoutIndex": 26,
+      "slot": 26,
+      "slots": [
+        26
+      ],
+      "matrix": [
+        [
+          1,
+          9
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "0",
+      "layoutName": "0",
+      "layoutIndex": 27,
+      "slot": 27,
+      "slots": [
+        27
+      ],
+      "matrix": [
+        [
+          1,
+          10
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "-",
+      "layoutName": "-",
+      "layoutIndex": 28,
+      "slot": 28,
+      "slots": [
+        28
+      ],
+      "matrix": [
+        [
+          1,
+          11
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "=",
+      "layoutName": "=",
+      "layoutIndex": 29,
+      "slot": 29,
+      "slots": [
+        29
+      ],
+      "matrix": [
+        [
+          1,
+          12
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Backspace",
+      "layoutName": "Backspace",
+      "layoutIndex": 30,
+      "slot": 30,
+      "slots": [
+        30
+      ],
+      "matrix": [
+        [
+          1,
+          13
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Insert",
+      "layoutName": "Insert",
+      "layoutIndex": 31,
+      "slot": 31,
+      "slots": [
+        31
+      ],
+      "matrix": [
+        [
+          1,
+          14
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Home",
+      "layoutName": "Home",
+      "layoutIndex": 32,
+      "slot": 32,
+      "slots": [
+        32
+      ],
+      "matrix": [
+        [
+          1,
+          15
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "PgUp",
+      "layoutName": "PgUp",
+      "layoutIndex": 33,
+      "slot": 33,
+      "slots": [
+        33
+      ],
+      "matrix": [
+        [
+          3,
+          14
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Tab",
+      "layoutName": "Tab",
+      "layoutIndex": 34,
+      "slot": 34,
+      "slots": [
+        34
+      ],
+      "matrix": [
+        [
+          2,
+          0
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Q",
+      "layoutName": "Q",
+      "layoutIndex": 35,
+      "slot": 35,
+      "slots": [
+        35
+      ],
+      "matrix": [
+        [
+          2,
+          1
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "W",
+      "layoutName": "W",
+      "layoutIndex": 36,
+      "slot": 36,
+      "slots": [
+        36
+      ],
+      "matrix": [
+        [
+          2,
+          2
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "E",
+      "layoutName": "E",
+      "layoutIndex": 37,
+      "slot": 37,
+      "slots": [
+        37
+      ],
+      "matrix": [
+        [
+          2,
+          3
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "R",
+      "layoutName": "R",
+      "layoutIndex": 38,
+      "slot": 38,
+      "slots": [
+        38
+      ],
+      "matrix": [
+        [
+          2,
+          4
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "T",
+      "layoutName": "T",
+      "layoutIndex": 39,
+      "slot": 39,
+      "slots": [
+        39
+      ],
+      "matrix": [
+        [
+          2,
+          5
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Y",
+      "layoutName": "Y",
+      "layoutIndex": 40,
+      "slot": 40,
+      "slots": [
+        40
+      ],
+      "matrix": [
+        [
+          2,
+          6
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "U",
+      "layoutName": "U",
+      "layoutIndex": 41,
+      "slot": 41,
+      "slots": [
+        41
+      ],
+      "matrix": [
+        [
+          2,
+          7
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "I",
+      "layoutName": "I",
+      "layoutIndex": 42,
+      "slot": 42,
+      "slots": [
+        42
+      ],
+      "matrix": [
+        [
+          2,
+          8
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "O",
+      "layoutName": "O",
+      "layoutIndex": 43,
+      "slot": 43,
+      "slots": [
+        43
+      ],
+      "matrix": [
+        [
+          2,
+          9
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "P",
+      "layoutName": "P",
+      "layoutIndex": 44,
+      "slot": 44,
+      "slots": [
+        44
+      ],
+      "matrix": [
+        [
+          2,
+          10
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "[",
+      "layoutName": "[",
+      "layoutIndex": 45,
+      "slot": 45,
+      "slots": [
+        45
+      ],
+      "matrix": [
+        [
+          2,
+          11
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "]",
+      "layoutName": "]",
+      "layoutIndex": 46,
+      "slot": 46,
+      "slots": [
+        46
+      ],
+      "matrix": [
+        [
+          2,
+          12
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "\\",
+      "layoutName": "\\",
+      "layoutIndex": 47,
+      "slot": 47,
+      "slots": [
+        47
+      ],
+      "matrix": [
+        [
+          2,
+          13
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Delete",
+      "layoutName": "Delete",
+      "layoutIndex": 48,
+      "slot": 48,
+      "slots": [
+        48
+      ],
+      "matrix": [
+        [
+          2,
+          14
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "End",
+      "layoutName": "End",
+      "layoutIndex": 49,
+      "slot": 49,
+      "slots": [
+        49
+      ],
+      "matrix": [
+        [
+          2,
+          15
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "PgDn",
+      "layoutName": "PgDn",
+      "layoutIndex": 50,
+      "slot": 50,
+      "slots": [
+        50
+      ],
+      "matrix": [
+        [
+          3,
+          15
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Caps",
+      "layoutName": "Caps",
+      "layoutIndex": 51,
+      "slot": 51,
+      "slots": [
+        51,
+        52
+      ],
+      "matrix": [
+        [
+          3,
+          0
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "A",
+      "layoutName": "A",
+      "layoutIndex": 52,
+      "slot": 53,
+      "slots": [
+        53
+      ],
+      "matrix": [
+        [
+          3,
+          1
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "S",
+      "layoutName": "S",
+      "layoutIndex": 53,
+      "slot": 54,
+      "slots": [
+        54
+      ],
+      "matrix": [
+        [
+          3,
+          2
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "D",
+      "layoutName": "D",
+      "layoutIndex": 54,
+      "slot": 55,
+      "slots": [
+        55
+      ],
+      "matrix": [
+        [
+          3,
+          3
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "F",
+      "layoutName": "F",
+      "layoutIndex": 55,
+      "slot": 56,
+      "slots": [
+        56
+      ],
+      "matrix": [
+        [
+          3,
+          4
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "G",
+      "layoutName": "G",
+      "layoutIndex": 56,
+      "slot": 57,
+      "slots": [
+        57
+      ],
+      "matrix": [
+        [
+          3,
+          5
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "H",
+      "layoutName": "H",
+      "layoutIndex": 57,
+      "slot": 58,
+      "slots": [
+        58
+      ],
+      "matrix": [
+        [
+          3,
+          6
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "J",
+      "layoutName": "J",
+      "layoutIndex": 58,
+      "slot": 59,
+      "slots": [
+        59
+      ],
+      "matrix": [
+        [
+          3,
+          7
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "K",
+      "layoutName": "K",
+      "layoutIndex": 59,
+      "slot": 60,
+      "slots": [
+        60
+      ],
+      "matrix": [
+        [
+          3,
+          8
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "L",
+      "layoutName": "L",
+      "layoutIndex": 60,
+      "slot": 61,
+      "slots": [
+        61
+      ],
+      "matrix": [
+        [
+          3,
+          9
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": ";",
+      "layoutName": ";",
+      "layoutIndex": 61,
+      "slot": 62,
+      "slots": [
+        62
+      ],
+      "matrix": [
+        [
+          3,
+          10
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "'",
+      "layoutName": "'",
+      "layoutIndex": 62,
+      "slot": 63,
+      "slots": [
+        63
+      ],
+      "matrix": [
+        [
+          3,
+          11
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Enter",
+      "layoutName": "Enter",
+      "layoutIndex": 63,
+      "slot": 65,
+      "slots": [
+        65
+      ],
+      "matrix": [
+        [
+          3,
+          13
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Left Shift",
+      "layoutName": "Shift",
+      "layoutIndex": 64,
+      "slot": 66,
+      "slots": [
+        66
+      ],
+      "matrix": [
+        [
+          4,
+          0
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Z",
+      "layoutName": "Z",
+      "layoutIndex": 65,
+      "slot": 67,
+      "slots": [
+        67
+      ],
+      "matrix": [
+        [
+          4,
+          2
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "X",
+      "layoutName": "X",
+      "layoutIndex": 66,
+      "slot": 68,
+      "slots": [
+        68
+      ],
+      "matrix": [
+        [
+          4,
+          3
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "C",
+      "layoutName": "C",
+      "layoutIndex": 67,
+      "slot": 69,
+      "slots": [
+        69
+      ],
+      "matrix": [
+        [
+          4,
+          4
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "V",
+      "layoutName": "V",
+      "layoutIndex": 68,
+      "slot": 70,
+      "slots": [
+        70
+      ],
+      "matrix": [
+        [
+          4,
+          5
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "B",
+      "layoutName": "B",
+      "layoutIndex": 69,
+      "slot": 71,
+      "slots": [
+        71
+      ],
+      "matrix": [
+        [
+          4,
+          6
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "N",
+      "layoutName": "N",
+      "layoutIndex": 70,
+      "slot": 72,
+      "slots": [
+        72
+      ],
+      "matrix": [
+        [
+          4,
+          7
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "M",
+      "layoutName": "M",
+      "layoutIndex": 71,
+      "slot": 73,
+      "slots": [
+        73
+      ],
+      "matrix": [
+        [
+          4,
+          8
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": ",",
+      "layoutName": ",",
+      "layoutIndex": 72,
+      "slot": 74,
+      "slots": [
+        74
+      ],
+      "matrix": [
+        [
+          4,
+          9
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": ".",
+      "layoutName": ".",
+      "layoutIndex": 73,
+      "slot": 75,
+      "slots": [
+        75
+      ],
+      "matrix": [
+        [
+          4,
+          10
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "/",
+      "layoutName": "/",
+      "layoutIndex": 74,
+      "slot": 76,
+      "slots": [
+        76
+      ],
+      "matrix": [
+        [
+          4,
+          11
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Right Shift",
+      "layoutName": "Shift",
+      "layoutIndex": 75,
+      "slot": 77,
+      "slots": [
+        77
+      ],
+      "matrix": [
+        [
+          4,
+          13
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Up",
+      "layoutName": "Up",
+      "layoutIndex": 76,
+      "slot": 78,
+      "slots": [
+        78
+      ],
+      "matrix": [
+        [
+          4,
+          14
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Left Ctrl",
+      "layoutName": "Ctrl",
+      "layoutIndex": 77,
+      "slot": 79,
+      "slots": [
+        79
+      ],
+      "matrix": [
+        [
+          5,
+          0
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Win",
+      "layoutName": "Win",
+      "layoutIndex": 78,
+      "slot": 80,
+      "slots": [
+        80
+      ],
+      "matrix": [
+        [
+          5,
+          1
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Left Alt",
+      "layoutName": "Alt",
+      "layoutIndex": 79,
+      "slot": 81,
+      "slots": [
+        81
+      ],
+      "matrix": [
+        [
+          5,
+          2
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Space",
+      "layoutName": "Space",
+      "layoutIndex": 80,
+      "slot": 83,
+      "slots": [
+        82,
+        83,
+        84
+      ],
+      "matrix": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Right Alt",
+      "layoutName": "Alt",
+      "layoutIndex": 81,
+      "slot": 85,
+      "slots": [
+        85
+      ],
+      "matrix": [
+        [
+          5,
+          9
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Fn",
+      "layoutName": "Fn",
+      "layoutIndex": 82,
+      "slot": 86,
+      "slots": [
+        86
+      ],
+      "matrix": [
+        [
+          5,
+          10
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Super",
+      "layoutName": "Super",
+      "layoutIndex": 83,
+      "slot": 87,
+      "slots": [
+        87
+      ],
+      "matrix": [
+        [
+          5,
+          11
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Right Ctrl",
+      "layoutName": "Ctrl",
+      "layoutIndex": 84,
+      "slot": 88,
+      "slots": [
+        88
+      ],
+      "matrix": [
+        [
+          5,
+          12
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Left",
+      "layoutName": "Left",
+      "layoutIndex": 85,
+      "slot": 89,
+      "slots": [
+        89
+      ],
+      "matrix": [
+        [
+          5,
+          13
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Down",
+      "layoutName": "Down",
+      "layoutIndex": 86,
+      "slot": 90,
+      "slots": [
+        90
+      ],
+      "matrix": [
+        [
+          5,
+          14
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    },
+    {
+      "name": "Right",
+      "layoutName": "Right",
+      "layoutIndex": 87,
+      "slot": 91,
+      "slots": [
+        91
+      ],
+      "matrix": [
+        [
+          5,
+          15
+        ]
+      ],
+      "evidence": "stock-table-and-native-cpu-path",
+      "physicallyObserved": false
+    }
+  ],
+  "unassignedSlots": [
+    {
+      "slot": 64,
+      "matrix": [
+        3,
+        12
+      ],
+      "reason": "OEM alternate matrix position absent from the current ANSI physical layout. Its physical location has not been verified; no individual key target is exposed."
+    }
+  ],
+  "excludedZones": [
+    {
+      "firstSlot": 92,
+      "lastSlot": 103,
+      "purpose": "Rear feet; controlled by the separate follow-color path."
+    },
+    {
+      "firstSlot": 104,
+      "lastSlot": 108,
+      "purpose": "Native status/logo indicators; excluded from per-key frames."
+    }
+  ]
+}

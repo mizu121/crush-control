@@ -1,0 +1,1350 @@
+{
+  "schemaVersion": 1,
+  "version": "1.0.0-beta.9",
+  "published": true,
+  "repository": "https://github.com/mizu121/crush-control",
+  "scope": "Application development source only; no beta.9 binary or firmware release",
+  "licenceScope": "MIT original app; file-specific GPL and third-party terms retained",
+  "generatedFiles": [
+    "SOURCE-MANIFEST.json"
+  ],
+  "publicationEdits": [
+    "LICENSE_SCOPE.md",
+    "README.md",
+    "THIRD_PARTY_NOTICES.txt",
+    "docs/APP_UPDATES.md",
+    "docs/FEATURES.md",
+    "docs/RELEASE.md",
+    "legal/installer/BUILDING.txt",
+    "legal/installer/NOTICE.txt",
+    "legal/release-status.json",
+    "legal/third-party/runtime/NOTICE.txt",
+    "legal/third-party/runtime/SOURCE_ACCESS.md",
+    "legal/third-party/runtime/SOURCE_INDEX.md",
+    "package.json",
+    "tools/per-key-firmware/NOTICE.md"
+  ],
+  "credentialScan": "private-key headers and common GitHub token patterns; not an exhaustive secret/provenance audit",
+  "files": [
+    {
+      "file": ".gitignore",
+      "sha256": "4000c2141d4cfd3de0d15ac1fd1e7e4f1596489667fe8693dd350c1efe3a3909",
+      "bytes": 158
+    },
+    {
+      "file": "LICENSE.txt",
+      "sha256": "1353d7ce28c1e10221bfc431cbe6e21b2978b8cb2308813a0d74156f93d3924d",
+      "bytes": 1063
+    },
+    {
+      "file": "LICENSE_SCOPE.md",
+      "sha256": "32bfc9b91df73f31bc4f32c8cf9edf4f1b2c4885005dfe9e00bdf32cb017deb0",
+      "bytes": 2215
+    },
+    {
+      "file": "README.md",
+      "sha256": "30ea85a3b43e1df19e04055f32885d174ca4f4a4d7f9a5fb24e7df10a83fee13",
+      "bytes": 4521
+    },
+    {
+      "file": "THIRD_PARTY_NOTICES.txt",
+      "sha256": "efccac5da211c00bae40ae8b27d91f19aefdc5344fdcd7d6ee1f2d7ce6348f11",
+      "bytes": 57201
+    },
+    {
+      "file": "app/app-updater.js",
+      "sha256": "4cdd490257f415a605f5b7e186071c23f4de6ec4b9292e28eba21d6eac2ece55",
+      "bytes": 16034
+    },
+    {
+      "file": "app/battery-presentation.js",
+      "sha256": "48ceb2936f848ba485b5e01f0a4a1e6bc2f6e4f9fab5033561ec14066b4ebf5c",
+      "bytes": 355
+    },
+    {
+      "file": "app/battery.js",
+      "sha256": "d094eb68a8b9cc8ff17ee3938058c4cc431060ae2e5d5cff6a65abb1253527c8",
+      "bytes": 5485
+    },
+    {
+      "file": "app/crush80.js",
+      "sha256": "abf6bf95bce37085cafdacd38f03c8d58bf988e82685317f8c589e1a203a7734",
+      "bytes": 12668
+    },
+    {
+      "file": "app/distribution.js",
+      "sha256": "74635f900c80968d1c2d2ac1fc2d2dcfcdab71f2684c956f98bac729f7acb9b6",
+      "bytes": 4808
+    },
+    {
+      "file": "app/entry.js",
+      "sha256": "d21d570efc8b85c9c509abdac3bc7f6c77fd341b496cfd3d86ea13cf9454a4de",
+      "bytes": 412
+    },
+    {
+      "file": "app/firmware-identity.js",
+      "sha256": "d8468318b6596c32205bb17a2b3eec824e9256e6d497cc110398460adc63b26c",
+      "bytes": 1464
+    },
+    {
+      "file": "app/firmware-setup.js",
+      "sha256": "d460d1b602327a8f3701a72bad4681e6fc94f4a68c1a774ca7e449905057b0a2",
+      "bytes": 3597
+    },
+    {
+      "file": "app/hue.js",
+      "sha256": "7e0a1bd398cbfac0c5ddd7d0027c250cdab816c9eaed73ac9182f81e2a46a996",
+      "bytes": 1321
+    },
+    {
+      "file": "app/icon.js",
+      "sha256": "46988ce6d5650d1a732ce051a00a00ea91feda2c8fd9f00de03a7f2a2710dd0c",
+      "bytes": 6649
+    },
+    {
+      "file": "app/keymap-reader.js",
+      "sha256": "eead576489f9dd17701c19de57d0318b6a02d0f946f87a1d0bd45c180e646a93",
+      "bytes": 1815
+    },
+    {
+      "file": "app/main.js",
+      "sha256": "c0b6f237d6c56a2c47082b6cafc799ccffec51baf9cacddc6f761dcdb203b80a",
+      "bytes": 24005
+    },
+    {
+      "file": "app/package-verification.js",
+      "sha256": "4b76b859c9faf85e9d672e593303f3bab4ae911151b10e239d5c65c4738c9a27",
+      "bytes": 12843
+    },
+    {
+      "file": "app/pkrg.js",
+      "sha256": "6d795248dcb3c3944394089d8625efae94499012e4482819abffbcc82531837c",
+      "bytes": 11936
+    },
+    {
+      "file": "app/preload.js",
+      "sha256": "b02b7b637881b7687a47d929a1c93f565ec7e63a81797e96a3cbe90c8eeed976",
+      "bytes": 1167
+    },
+    {
+      "file": "app/preset-library.js",
+      "sha256": "a9201e68f309dd5d55179a497375ab92e23967ff65b21d5f427b6331cd8ab227",
+      "bytes": 5710
+    },
+    {
+      "file": "app/receiver-link.js",
+      "sha256": "2b5d1eaef6d5a9fe91178c9311498abad51e0d579ae4c1774a4ce460b0da703d",
+      "bytes": 2881
+    },
+    {
+      "file": "app/release-config.json",
+      "sha256": "2bd2de051cca05c8177bc31f09e0408ab6fb6fc3b4b79c4b5b2ccbc5da7c9de4",
+      "bytes": 239
+    },
+    {
+      "file": "app/renderer/app.js",
+      "sha256": "76dace2596e05c0bd0f8a0174847b66d566f0fa9891c7af471fb390b3528fdb0",
+      "bytes": 84608
+    },
+    {
+      "file": "app/renderer/assets/fonts/Inter-OFL.txt",
+      "sha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "bytes": 4380
+    },
+    {
+      "file": "app/renderer/assets/fonts/InterVariable.woff2",
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+      "bytes": 352240
+    },
+    {
+      "file": "app/renderer/assets/fonts/JetBrainsMono-OFL.txt",
+      "sha256": "a76abf002c49097d146e86740a3105a5d00450b1592e820a1109a8c5680cd697",
+      "bytes": 4399
+    },
+    {
+      "file": "app/renderer/assets/fonts/JetBrainsMono-Regular.woff2",
+      "sha256": "f1a7a03672cdd494ce0d5543fac6e4360fe22403c6de297fdc2e55a815f7baff",
+      "bytes": 92380
+    },
+    {
+      "file": "app/renderer/assets/fonts/SOURCES.txt",
+      "sha256": "22363ebd38d80d0416e527aa8a33b0dd9795904488b186d4dc57fc3cc69105fd",
+      "bytes": 752
+    },
+    {
+      "file": "app/renderer/assets/model/LICENSE.txt",
+      "sha256": "65a96cdce0a9c80f43dbe7a5959001fbef4b09947cd678bd0c861011ab7659ba",
+      "bytes": 355
+    },
+    {
+      "file": "app/renderer/assets/model/studio_small_08_1k.hdr",
+      "sha256": "f6a989f89432eb4eee3191364a9c1ceed195c4ec3544173a3c04fd96cb91d0ba",
+      "bytes": 1508872
+    },
+    {
+      "file": "app/renderer/blueprint-selection.js",
+      "sha256": "ddbc4f0a051dab17a58842b3b2dfb636693f9ef0679fbf333e78023fe09322d7",
+      "bytes": 4511
+    },
+    {
+      "file": "app/renderer/color-wheel.js",
+      "sha256": "322765015fcc1a46dcaaa33ed9eb33c21e0fa88c6fb7f03262ded638e17e6b71",
+      "bytes": 2959
+    },
+    {
+      "file": "app/renderer/index.html",
+      "sha256": "bd7bc82c97efd8a8bc08089ff23baed7b0aa6f0fecf7c71dd8fb040774f4275a",
+      "bytes": 34401
+    },
+    {
+      "file": "app/renderer/keyboard3d.js",
+      "sha256": "aac06002779a6ab05850e95343dad82d19eddb8f33d48c9706cba059ebaa2e59",
+      "bytes": 40290
+    },
+    {
+      "file": "app/renderer/keycodes.js",
+      "sha256": "adfdc56ac7e82b4b90f856da9906dac24024ecb65b9c2834be2968856387d10a",
+      "bytes": 6524
+    },
+    {
+      "file": "app/renderer/layout.js",
+      "sha256": "092568d86e84ba142c2b89c16ce1a685b9adb77261720e583ed42df5f549a730",
+      "bytes": 3153
+    },
+    {
+      "file": "app/renderer/styles.css",
+      "sha256": "ae5a2a7c5a3cad8257b672d667031bd1b10fd518aa8923fcab6ce9f00726fa24",
+      "bytes": 58715
+    },
+    {
+      "file": "app/renderer/support-reminder.js",
+      "sha256": "c087f72119eb21949f9a687d69b7b4e0e4a27eb7a6b41990e96d71cd19d72bf7",
+      "bytes": 2934
+    },
+    {
+      "file": "app/rgb-controller.js",
+      "sha256": "bddc8d6979082a63da8c2a00136630e265419786e07bdac07afc06a5e326bd2a",
+      "bytes": 10473
+    },
+    {
+      "file": "app/rgb-keymap.json",
+      "sha256": "ffe9e773d5d3fe2a621822ea95ec6926be3c29ee185dcc04ab54972d1883fc34",
+      "bytes": 27816
+    },
+    {
+      "file": "app/support-reminder.js",
+      "sha256": "2fecd48e64a183a4666e1d9a85379dcdb104696874fc0bbe7cefc9350c219b53",
+      "bytes": 2614
+    },
+    {
+      "file": "app/update-config.json",
+      "sha256": "638ea56080c37340851ed8475e4d63dc89faf3a3a537bb1a25c5e016026152d2",
+      "bytes": 260
+    },
+    {
+      "file": "app/update-feed.js",
+      "sha256": "864b21312ac4607423a8b7c46273e5dbf4b649f84f248314da8886be0adb26f6",
+      "bytes": 2921
+    },
+    {
+      "file": "app/update-lifecycle.js",
+      "sha256": "b626954d0586c7418fdc42c0b5f1a1c0e1242160542817022c7f3c6d12c9ea81",
+      "bytes": 1199
+    },
+    {
+      "file": "app/update-security.js",
+      "sha256": "8576863c8ea90d2a9c2ed2b022537ab74410473a283fd01f0437ee0c7786252d",
+      "bytes": 7341
+    },
+    {
+      "file": "app/via.js",
+      "sha256": "163c336fe0b151cfd59a44ec200449b30a16716635d2fc8ee4e8fb96ce53e31f",
+      "bytes": 11762
+    },
+    {
+      "file": "app/windows-shortcuts.js",
+      "sha256": "aa8846027855b2315e2434248a49023a6f8ec4dc7735938c11715d3ac198203d",
+      "bytes": 1746
+    },
+    {
+      "file": "build/installer-inspection.cjs",
+      "sha256": "e896e44457e55371cb28575000ccb741aa4ed8f714838f04fddcb9bff8765530",
+      "bytes": 2321
+    },
+    {
+      "file": "build/installer-process-check.nsh",
+      "sha256": "be110571e34b56f79664119a5a6f7906176d19f62eae5da81c4b0753b1794127",
+      "bytes": 3233
+    },
+    {
+      "file": "build/installer-source-bundle.cjs",
+      "sha256": "67b9474eca9d2cebcc7d865d04b551697d691bf07cc5c571514540d5901f9945",
+      "bytes": 9685
+    },
+    {
+      "file": "build/installer-templates.cjs",
+      "sha256": "56d88ab2aa26b97de614b690d96a4e64a239298179363d46c1c510140bd3c074",
+      "bytes": 6535
+    },
+    {
+      "file": "build/installer-templates/LICENSE.electron-builder.txt",
+      "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+      "bytes": 1084
+    },
+    {
+      "file": "build/installer-templates/UPSTREAM.json",
+      "sha256": "fc6c1114dd8ded70fa40a7c517d68a3aa9777a263f8ce128a8dcb041032acd4b",
+      "bytes": 1672
+    },
+    {
+      "file": "build/installer-templates/installSection.nsh",
+      "sha256": "11c1c9d9cf16d26f0a36e3d09824961482302c2ce5263e67d43a84ae8d5bef0a",
+      "bytes": 2673
+    },
+    {
+      "file": "build/installer-templates/installer-app-files.nsh",
+      "sha256": "ff59b10c07114433c8a0a1f7a8870fd06d722d147949cd0fc63cf9287ea84914",
+      "bytes": 9230
+    },
+    {
+      "file": "build/installer-templates/multiUser.nsh",
+      "sha256": "9aca256695c289ec8a875143101fae8c6236bc8c6a7cf369bbe8b4986e09c9cb",
+      "bytes": 3928
+    },
+    {
+      "file": "build/installer-templates/uninstaller.nsh",
+      "sha256": "c23a0b23bab7e5849299da44dc4d6ed6a6ac4685ef54627bc62f80d0e2eef6b7",
+      "bytes": 5826
+    },
+    {
+      "file": "build/installer.nsh",
+      "sha256": "9ca87a79e35d092d25e4070648fdbd724be5b0120b31d403eb55fb0def71b240",
+      "bytes": 1685
+    },
+    {
+      "file": "build/legal-assets.cjs",
+      "sha256": "0a1aeb0ab2b778fc04de6de2c4ad0e0c06ce84a58913598795d82788febb48b2",
+      "bytes": 3567
+    },
+    {
+      "file": "build/native-prebuild.cjs",
+      "sha256": "09ce1659ed04f4252ad625e35b5fcc2cdbdbf1f01c75cf7fb2a76115e7acbb47",
+      "bytes": 1998
+    },
+    {
+      "file": "build/release-plan.cjs",
+      "sha256": "220389fc1dd2d8ad52c8939a931009a30cccb6579ad27f7fc91f7c199bee6720",
+      "bytes": 5033
+    },
+    {
+      "file": "build/store-plan.cjs",
+      "sha256": "ec012ff751daed0139375c95b67615678665c42e35535f5fee7f050d4d3fdfa8",
+      "bytes": 5359
+    },
+    {
+      "file": "build/store-windows.cjs",
+      "sha256": "fd1052c903d3780abf6e430bc2c388cebaf3ffb36c18d69bb5dd087238ac129e",
+      "bytes": 992
+    },
+    {
+      "file": "build/windows.cjs",
+      "sha256": "bb6f181981f2274ab210bf2433bc86434bb5941d67cc66a16b8a2b923f3d6f03",
+      "bytes": 3230
+    },
+    {
+      "file": "docs/APP_UPDATES.md",
+      "sha256": "c3cfe3ebda098832d2224d35a6910ee20a1e5350dbaa31e3a8815a5fe46f0c9f",
+      "bytes": 7511
+    },
+    {
+      "file": "docs/FEATURES.md",
+      "sha256": "73cf1e211efd12c69001278605aa882edcd42a113c5753fc7ee42df3ef54931e",
+      "bytes": 6873
+    },
+    {
+      "file": "docs/RELEASE.md",
+      "sha256": "9bee4184584e33ea71f0bab14d5382c4c616d5f2619d142fb8fe48ee38bad7bd",
+      "bytes": 11642
+    },
+    {
+      "file": "legal/installer/BUILDING.txt",
+      "sha256": "341817433a4d3522a41cc99954fdf550c7ba85b9f37340e4cc69a79155d72039",
+      "bytes": 4505
+    },
+    {
+      "file": "legal/installer/LGPL-2.1.txt",
+      "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531",
+      "bytes": 27032
+    },
+    {
+      "file": "legal/installer/LICENSES/BLAKE2-CC0.txt",
+      "sha256": "f4e7f373b9b996950337e8d41a4a2939c2d90b7725e9baf3d5084a22717ad328",
+      "bytes": 7169
+    },
+    {
+      "file": "legal/installer/LICENSES/LZMA-SDK-19.txt",
+      "sha256": "63fcfe54826809b5a9f9df8a8ff53c04330122319ec67a2dd815085586adaf0e",
+      "bytes": 476
+    },
+    {
+      "file": "legal/installer/LICENSES/NSIS-core-System.txt",
+      "sha256": "3c8de989f6504d52f5f8dfafedb6668cd47201f5d01f1319570727c091425dd6",
+      "bytes": 15488
+    },
+    {
+      "file": "legal/installer/LICENSES/Nsis7z-wrapper.txt",
+      "sha256": "881f8ba4da0a0c30e281d324408baa596f14211b03d1f3bf99fe18c4621916c3",
+      "bytes": 5875
+    },
+    {
+      "file": "legal/installer/LICENSES/RHash.txt",
+      "sha256": "842fef4921191943e531c6cc939b0334f1c2658c9204e30dd35d13f51fdf70dd",
+      "bytes": 766
+    },
+    {
+      "file": "legal/installer/LICENSES/StdUtils-LGPL-2.1.txt",
+      "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531",
+      "bytes": 27032
+    },
+    {
+      "file": "legal/installer/LICENSES/StdUtils-clarification.txt",
+      "sha256": "ae0ab3f49b4473152181c1fe5670435faaca079eda0b261ee31a51a6180bc9e7",
+      "bytes": 2734
+    },
+    {
+      "file": "legal/installer/LICENSES/Unicode-NSIS-pluginapi.txt",
+      "sha256": "83fd69ebd7ac3d373d6df266f87a0efd3af2d3f21a9044128fa21698a36eff3f",
+      "bytes": 15488
+    },
+    {
+      "file": "legal/installer/LICENSES/electron-builder-MIT.txt",
+      "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+      "bytes": 1084
+    },
+    {
+      "file": "legal/installer/LZMA-SDK-LICENSE.txt",
+      "sha256": "63fcfe54826809b5a9f9df8a8ff53c04330122319ec67a2dd815085586adaf0e",
+      "bytes": 476
+    },
+    {
+      "file": "legal/installer/NOTICE.txt",
+      "sha256": "d53bb14059e60e172f8d15c113c61913ed4612ce3c6c4e087136bec668839dc2",
+      "bytes": 3368
+    },
+    {
+      "file": "legal/installer/NSIS-COPYING.txt",
+      "sha256": "3c8de989f6504d52f5f8dfafedb6668cd47201f5d01f1319570727c091425dd6",
+      "bytes": 15488
+    },
+    {
+      "file": "legal/installer/Nsis7z-19.00-upstream.txt",
+      "sha256": "881f8ba4da0a0c30e281d324408baa596f14211b03d1f3bf99fe18c4621916c3",
+      "bytes": 5875
+    },
+    {
+      "file": "legal/installer/PROJECT-MIT-LICENSE.txt",
+      "sha256": "1353d7ce28c1e10221bfc431cbe6e21b2978b8cb2308813a0d74156f93d3924d",
+      "bytes": 1063
+    },
+    {
+      "file": "legal/installer/SOURCE_MANIFEST.json",
+      "sha256": "9474a06b1d2f081822c5803aca45b3faeb4a22d0c4ae1d269813480c62e53867",
+      "bytes": 115422
+    },
+    {
+      "file": "legal/installer/StdUtils-LGPL-clarification.txt",
+      "sha256": "ae0ab3f49b4473152181c1fe5670435faaca079eda0b261ee31a51a6180bc9e7",
+      "bytes": 2734
+    },
+    {
+      "file": "legal/installer/TEMPLATE_OVERRIDES.txt",
+      "sha256": "9cad78ad22adcaa71f060942a1bef647b6df6a01229760455949f1c6f16ea417",
+      "bytes": 2086
+    },
+    {
+      "file": "legal/release-status.json",
+      "sha256": "92059d453f83667a1d4487ce5a026c6ffa636212c2803c6fdecac7c06d72d5b9",
+      "bytes": 324
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSE.electron.txt",
+      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "bytes": 1096
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES.chromium.html",
+      "sha256": "7dac8267ac6da8d959cfe88f5f055b18a397f10230380b5329125e167bf5639b",
+      "bytes": 5705935
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/axe-core-original-source/axe-core-281653df3794f429b71327fe3afa37ca0fadb1c7/LICENSE",
+      "sha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e",
+      "bytes": 15921
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/axe-core/LICENSE",
+      "sha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e",
+      "bytes": 15921
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/blink-renderer/build/scripts/license.py",
+      "sha256": "592ef53e1769d8950802638c771afa6540e56047fa972fc27ff9012d123c327e",
+      "bytes": 1850
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/blink-renderer/core/LICENSE-APPLE",
+      "sha256": "0b5d3a7cc325942567373b0ecd757d07c132e0ebd7c97bfc63f7e1a76094edb4",
+      "bytes": 1313
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/blink-renderer/core/LICENSE-LGPL-2",
+      "sha256": "7555fa34bc131a75ca56d65c40cc1ea8f9515d23e353d4c15d58573a042f7805",
+      "bytes": 25378
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/blink-renderer/core/LICENSE-LGPL-2.1",
+      "sha256": "f2b3bd09663381deb99721109d22b47af1213bb43007a8b56a06c6375c8050ce",
+      "bytes": 26536
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/blink-renderer/platform/testing/data/third_party/Noto/LICENSE_OFL.txt",
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "bytes": 4301
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/blink-renderer/platform/testing/data/third_party/Roboto/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/chromium-build/android/incremental_install/third_party/AndroidHiddenApiBypass/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/chromium-buildtools/LICENSE",
+      "sha256": "ff11d445fb41a1087c7630e120ab15f1a2cb67c1b707173cb494141805fca35e",
+      "bytes": 1537
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/chromium-buildtools/third_party/mold/LICENSE",
+      "sha256": "c98a2858469bd3b231c8865c5b65f80f6ffbf25e850d5d575967e3d9ee080755",
+      "bytes": 1067
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/eigen-wrapper/LICENSE",
+      "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172",
+      "bytes": 16727
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/eigen/COPYING.APACHE",
+      "sha256": "03379001a7b12a2ec997a25554247d985270b353c10d5bafee9ac8d6519820b7",
+      "bytes": 11362
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/eigen/COPYING.BSD",
+      "sha256": "51928dce36213c5333ba3172e847d735d4c6e9b7ff2722a326c49067155b82eb",
+      "bytes": 1517
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/eigen/COPYING.MINPACK",
+      "sha256": "c87b7f8ee88f6195e91743820c00354833583aef091b72e2d4a49c8e28e798a0",
+      "bytes": 2193
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/eigen/COPYING.MPL2",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/eigen/COPYING.README",
+      "sha256": "b680dc46db7b3d9e49931bf918e85a43ec3c790f64b4eee212ec5beeed1b02d5",
+      "bytes": 674
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/eigen/LICENSE",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/electron/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/LICENSE",
+      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "bytes": 1096
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/electron/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/chromium_src/LICENSE.chromium",
+      "sha256": "9873d81def9cebb9598b4a2d0a1ad062b17781c35c25cc04b75a0f62fc8667fd",
+      "bytes": 1558
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/electron/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/spec/fixtures/assets/LICENSE",
+      "sha256": "1eb1a11ad211e3b205f00d1d76ae80a4e56f46cfb64047103b8f61396f42f3b7",
+      "bytes": 71
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/ffmpeg/COPYING.GPLv2",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "bytes": 18092
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/ffmpeg/COPYING.GPLv3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/ffmpeg/COPYING.LGPLv2.1",
+      "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30",
+      "bytes": 26517
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/ffmpeg/COPYING.LGPLv3",
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+      "bytes": 7651
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/ffmpeg/LICENSE.md",
+      "sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af",
+      "bytes": 4346
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/ffmpeg/tests/checkasm/ext/LICENSE",
+      "sha256": "a2dc8194271e5989c0622531c645a7b41af5da92eeb2531e4f2a3ec31023bc52",
+      "bytes": 1402
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/ffmpeg/tests/checkasm/ext/src/html_data/LICENSE",
+      "sha256": "0fd2c601fb2ead2add56807b7e32664da8d973b9835a422464f210bfea997a52",
+      "bytes": 1361
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/grpc/source/LICENSE",
+      "sha256": "590198e3f305f2c347fde64d637c65492bbef554db6c8364e149cd375e3797ee",
+      "bytes": 29687
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/COPYING",
+      "sha256": "cde91164e09e33e94e1db4529aa77f89bc0c392b1ed138d689c66dfbd11d9701",
+      "bytes": 108204
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/COPYING.Apache",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/COPYING.GPL3",
+      "sha256": "0ae0485a5bd37a63e63603596417e4eb0e653334fa6c7f932ca3a0e85d4af227",
+      "bytes": 35148
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/COPYING.LESSER",
+      "sha256": "d7137682540000e5f57ff3cb0b4943b66aa3ac4ecca28614ce46991fc291bd15",
+      "bytes": 7795
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/COPYING.LGPL",
+      "sha256": "5bbcbb737e60fe9deba08ecbd00920cfcc3403ba2e534c64fdeea49d6bb87509",
+      "bytes": 26532
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/COPYING.MIT",
+      "sha256": "379ddd904c597d64e11a88bba68663f59501c9fa59e8124c0f4f32a67a5dc77a",
+      "bytes": 1736
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/COPYING.MPL",
+      "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f",
+      "bytes": 25755
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/LICENSE",
+      "sha256": "d63c6240d6f6330a025aade63d317d7ff04f95fc3325fe6aea3848ca452f64ea",
+      "bytes": 108158
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell-dictionaries/fo_FO/LICENSE_en_US.txt",
+      "sha256": "e6717c226bf7de7142f3fc6d4bdecc88fa8810ab82227878db17ae069bd7a9b3",
+      "bytes": 268
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell/COPYING",
+      "sha256": "640d90f6ee401241ff62834d0d1b33f83049e99b8bfdfa04ed1b0a1635dde3e7",
+      "bytes": 18093
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell/COPYING.LESSER",
+      "sha256": "7c6699c75f87b52bdc542db26d6b1b92892577cda46e20eceb79e2790a1c291b",
+      "bytes": 26531
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell/COPYING.MPL",
+      "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f",
+      "bytes": 25755
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell/license.hunspell",
+      "sha256": "3f7ddd07c296edbfe0a47c7bcc82038ad347a2c4f672345b24f95c624db68513",
+      "bytes": 1973
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hunspell/license.myspell",
+      "sha256": "dcda061adeed22b26f276c01ec374f930789ae0d684e5aa8f8be309dd680ff20",
+      "bytes": 2912
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/LICENSE",
+      "sha256": "848b839a69abf379954f0a564a0c84f5dbb2aab4acc26c41571a20c0657a4fb7",
+      "bytes": 143558
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/Ethi/NOTICE",
+      "sha256": "d0e9850680f127b31f98303d09e1afd42fb4a40c51d8b1d98c3144dd99787db2",
+      "bytes": 107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/af/NOTICE",
+      "sha256": "00b0495abfccee33033124c4fceeb9ee98eb449031d0862b8ae5655148aeaf08",
+      "bytes": 1131
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/am/NOTICE",
+      "sha256": "66d5d1ede4c20722d11e1c8c1cc950f6bc450dd36ac1ed86da7038aef724440e",
+      "bytes": 1124
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/as/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/be/NOTICE",
+      "sha256": "a21249db53a59789109eb8c56709b938280df710374e2c037d283ba4e7419e52",
+      "bytes": 1085
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/bg/NOTICE",
+      "sha256": "fe049719e2682733ffaa2cdfa659c20561ba11b85ee381065dcf55d6520e0eaa",
+      "bytes": 1066
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/bn/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/cs/NOTICE",
+      "sha256": "4deacc158f19b00511a3689f2b8a3b4a3ba78566063ac5f189df08bd446c6868",
+      "bytes": 1106
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/cu/NOTICE",
+      "sha256": "b8d543a7fa06605f7873a86f9063d180a0a5b492567607e3a3ba1b8d9448508b",
+      "bytes": 1080
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/cy/NOTICE",
+      "sha256": "35d1f993e5ba5190022cacd6749cb622dcdff49f71d738cbce695a1230d0387e",
+      "bytes": 1058
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/da/NOTICE",
+      "sha256": "20f598925540dda8116e4cb3707eb357f6511bb058783bea228e7e0839c3d61d",
+      "bytes": 1052
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/de/NOTICE",
+      "sha256": "c712ce0a7393cb8566d9cf09ab9b86ebc7d735ec5cebaa2343bd43d237544cb0",
+      "bytes": 1165
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/el/NOTICE",
+      "sha256": "3872d93466e662b29e1749583fabc82e46feb66078dcd0d903716671f8f85b63",
+      "bytes": 1124
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/en-GB/NOTICE",
+      "sha256": "69a23eadf4cd3e2ae9e8653c39d51d6841981da598dc5919a368f862720ae736",
+      "bytes": 1880
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/en-US/NOTICE",
+      "sha256": "6341b222144ad5d7fcc98eeccc180ab4a6629663a44f934d400b2fad96b11d76",
+      "bytes": 415
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/es/NOTICE",
+      "sha256": "f3362e6c285acb41d95bd4962abf1ed9e37f21ace36c872b70fb0d04ce92351f",
+      "bytes": 1439
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/et/NOTICE",
+      "sha256": "4acb4a681a4c96ab3ea0048bc045752651cbf84af68193e67f54e77cb7a6aaf9",
+      "bytes": 1080
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/eu/NOTICE",
+      "sha256": "0a60a44e75c0708f60bab62a15708d100a80fccc943cb90a833be89a1c6e25d5",
+      "bytes": 1614
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/fr/NOTICE",
+      "sha256": "66bb842046109ea07e0893ad4f65bb216f756674637616ff00ffd2cb44f1b96d",
+      "bytes": 1078
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/ga/NOTICE",
+      "sha256": "d317faed4c74a84c6844120732ebd90948adc4cce70a6f5a37a1244ff0673010",
+      "bytes": 1094
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/gl/NOTICE",
+      "sha256": "826b8b23c02d6a46ac4046c003d742aa2ba39b7fc7ad8845887717865a64d4c3",
+      "bytes": 1267
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/gu/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/hi/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/hr/NOTICE",
+      "sha256": "fb862183f42bfe5d3eae2a91a32ab1c951a331a906c8e79e4c4c23e666c516db",
+      "bytes": 1958
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/hu/NOTICE",
+      "sha256": "be44f17b4eaf3790c84344db584ed4116635f0b1ed6687cc34374a45cba40076",
+      "bytes": 1702
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/hy/NOTICE",
+      "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+      "bytes": 26530
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/it/NOTICE",
+      "sha256": "17e8ee6576a390c0342164dd78e0ba8685f4987bbc92a4908f4ca631e5f3ff75",
+      "bytes": 1132
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/ka/NOTICE",
+      "sha256": "aac5921670083b188a4631e5f11ada68770e3aee4b331e63d834199183cc0a8e",
+      "bytes": 1120
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/kn/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/la/NOTICE",
+      "sha256": "5912e6dff741e5192046a65896842e01744abccbf81983273556514d16f59283",
+      "bytes": 1141
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/lt/NOTICE",
+      "sha256": "dd42d3cf367fbcbe9741969828ccb82974a9724ef2abd6e13affab6f96046b7d",
+      "bytes": 1137
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/lv/NOTICE",
+      "sha256": "0f480e0cf054553ebbe5194a6d240d2809eaeaca43865c0c0ae1eeb9b32fe150",
+      "bytes": 456
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/ml/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/mn/NOTICE",
+      "sha256": "abdd0bfdd563164507a0757767d63f02303f5e389769893c9fdd09fb35d42846",
+      "bytes": 1086
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/mr/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/nb/NOTICE",
+      "sha256": "55a8d6e2ef1339d730028d5e22eade431ab19b4ea4b119235ece69d696c3eecf",
+      "bytes": 474
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/nl/NOTICE",
+      "sha256": "39faa1e689d8241740d25c36b1f4cf8883c079afb8cf6aff3e1fda6e41a4c8b1",
+      "bytes": 21012
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/nn/NOTICE",
+      "sha256": "c78eb7755a68cac12420dc3ed8d09d58e589d626cb65cbdf09a5150ad131d98e",
+      "bytes": 475
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/or/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/pa/NOTICE",
+      "sha256": "6bcecb871ecac9d8d6491f8c42059dca852d9f330dbe7a1260a6bbbf3986cf2b",
+      "bytes": 1106
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/pt/LICENSE",
+      "sha256": "a03fed9ab6321742903f3f0095b389ce811c4cfeb3f671ddc8d33da57dc92493",
+      "bytes": 1815
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/ru/LICENSE",
+      "sha256": "38e0a6513296b6740f5bc128aeae99f9002b1ef7c21718c87a0e6ffc8ef93da3",
+      "bytes": 26850
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/sa/NOTICE",
+      "sha256": "2bfad5bc2d098410c0803e5ae600db55348bf28351c8a95d755eed4d59f88a3f",
+      "bytes": 98
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/sk/NOTICE",
+      "sha256": "4deacc158f19b00511a3689f2b8a3b4a3ba78566063ac5f189df08bd446c6868",
+      "bytes": 1106
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/sl/NOTICE",
+      "sha256": "c5cfa73bd443b50f2eefaebb1fdc1deafa95db95aca9e00633e31c1db6dffdf3",
+      "bytes": 1073
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/sq/NOTICE",
+      "sha256": "e4d54e9d7fb05c8d95517bcb44a401f97011c590ba6a27f97f80d91fd56d5be2",
+      "bytes": 1131
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/sv/NOTICE",
+      "sha256": "8d6049e2d933d0a26ffb7d2afe7a2e8c5c7244c788e6c35d98c37d84b18dd2b4",
+      "bytes": 14911
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/ta/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/te/NOTICE",
+      "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+      "bytes": 1107
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/tk/NOTICE",
+      "sha256": "7c0f1ade32a2b3f6a490d2d28ee29123affbcbdb39c956c0e6b5f7a60b3f837a",
+      "bytes": 1089
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/hyphenation-patterns/src/uk/NOTICE",
+      "sha256": "be9a53837b6b46bf6d5ec66c1a031c0bdbffa4f234e221b097be8bf386e40671",
+      "bytes": 1121
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/isimpledom/LICENSE",
+      "sha256": "3ba9e660540da1bf9e85893464f35a44c3e92285e9f842888f2987664dba9299",
+      "bytes": 25369
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/libusb/src/COPYING",
+      "sha256": "5df07007198989c622f5d41de8d703e7bef3d0e79d62e24332ee739a452af62a",
+      "bytes": 26436
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/mozilla-security-manager/LICENSE",
+      "sha256": "a718a32ad435b316ce3a9e871e05421d6ca784c435f8ef5715c1b6e289381f04",
+      "bytes": 26847
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/mozilla-win/LICENSE",
+      "sha256": "6d29b685206b28617dd9ac13818ccc943e57df68aeea1db0f4a5539f4507a9aa",
+      "bytes": 18122
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/nasm/LICENSE",
+      "sha256": "7436a7c46b6e4d969b41e1ce387885ae4ced25710662189ff2983665253729ac",
+      "bytes": 1554
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/nasm/zlib/LICENSE",
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+      "bytes": 1002
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/nspr/LICENSE",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "bytes": 16726
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/opus/src/COPYING",
+      "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+      "bytes": 1945
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/opus/src/LICENSE_PLEASE_READ.txt",
+      "sha256": "7efb4989e0cd1b256229bdf2f09300c5d14e35db0e7476bfb87fac243498273d",
+      "bytes": 703
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-bundle-flac/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-bundle-mp3/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-codec-pcm/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-codec-vorbis/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-common/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-core/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-format-isomp4/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-format-mkv/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-format-ogg/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-format-riff/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia-metadata/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/symphonia/LICENSE",
+      "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+      "bytes": 16725
+    },
+    {
+      "file": "legal/third-party/runtime/LICENSES/url-mozilla/LICENSE.txt",
+      "sha256": "284545e873c704952e5b1b39d457dd83a3b115a51d9f1eb5175137bd69b8fa1b",
+      "bytes": 3200
+    },
+    {
+      "file": "legal/third-party/runtime/NOTICE.txt",
+      "sha256": "dd958594360834dfd2340d0b4658488037978828f8357184e4f598e9a97a3e3c",
+      "bytes": 3266
+    },
+    {
+      "file": "legal/third-party/runtime/SHA256SUMS.txt",
+      "sha256": "c231d86090fa58298a6bdc9a11637293feff9d7f78030efaf070e85717e04521",
+      "bytes": 7450
+    },
+    {
+      "file": "legal/third-party/runtime/SOURCE_ACCESS.md",
+      "sha256": "7dba64f05c5c7369a2bba46a49c844f7a2ba1030f56411261bd92e35bd45fc8b",
+      "bytes": 8152
+    },
+    {
+      "file": "legal/third-party/runtime/SOURCE_INDEX.md",
+      "sha256": "fe81c17a39d1bbc4909ea7143ed7262702ef75a9146648aff2819582ad24d812",
+      "bytes": 15936
+    },
+    {
+      "file": "legal/third-party/runtime/runtime-source-manifest.json",
+      "sha256": "02c33933f5ade0489f7416df82e8a4e10e82370b2e9698822e946101d87f4393",
+      "bytes": 76808
+    },
+    {
+      "file": "legal/third-party/runtime/source-specs.json",
+      "sha256": "3c05039396a180a313456871ee70453a9c0bcca4d08b029a293fe5d20aa22960",
+      "bytes": 35296
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "834a3b3209c35d386e89f620c7b59451450d8188a46978b70461b52c86377f3b",
+      "bytes": 138625
+    },
+    {
+      "file": "package.json",
+      "sha256": "fd5b5aebc419503c014fdac4f2f2b0db4c9756722e0b3e4510cc8272274bc94d",
+      "bytes": 2097
+    },
+    {
+      "file": "signalrgb/Wobkey_Crush80_VIA_Sync.js",
+      "sha256": "3bb21cf65e934f5f8dd596eac9c615be0eb1b255886863eefd2470c596e227b8",
+      "bytes": 13969
+    },
+    {
+      "file": "tools/build-ui-icons.cjs",
+      "sha256": "32e5f268f4417e0a118233a03c16973a183574e1da3f6b9bc7892614c0ec12e7",
+      "bytes": 1725
+    },
+    {
+      "file": "tools/firmware-validation/.gitignore",
+      "sha256": "bd183150472fb926555eba3878e5f50fea9386b07cb40201a99b380f8518a1ed",
+      "bytes": 45
+    },
+    {
+      "file": "tools/firmware-validation/COPYING",
+      "sha256": "6f04ae8364d0079a192b14635f4b1da294ce18724c034c39a6a41d1b09df6100",
+      "bytes": 17992
+    },
+    {
+      "file": "tools/firmware-validation/PROVENANCE.md",
+      "sha256": "01782d30802e854ff908546e4193d5536bc647fdc9f7fa9bfd7bac2b434f10f2",
+      "bytes": 4893
+    },
+    {
+      "file": "tools/firmware-validation/README.md",
+      "sha256": "39ddc7aa689ef53903f86ef22080f36809bbda514dc4830dff21ddbf30849c14",
+      "bytes": 5858
+    },
+    {
+      "file": "tools/firmware-validation/engine.py",
+      "sha256": "9f93a7527d1098331a96a09f6957f2f4dd7238aeb659d7ebd99d9203eb69a0f6",
+      "bytes": 6484
+    },
+    {
+      "file": "tools/firmware-validation/requirements.txt",
+      "sha256": "ecb36842ce080710517c6c34f8beb458c2fb8a465e20bb8be560281fdd09ec86",
+      "bytes": 108
+    },
+    {
+      "file": "tools/firmware-validation/session.py",
+      "sha256": "1f759d172aed67199d6e43fd29da849bc5d2a546f150ae5f237fb05b5037e8a5",
+      "bytes": 6074
+    },
+    {
+      "file": "tools/firmware-validation/sources.py",
+      "sha256": "df9c9ba88c7be70acfae720c838f2f7f7818114380a0f5b66b4687f48b009c4e",
+      "bytes": 1371
+    },
+    {
+      "file": "tools/firmware-validation/test_stock.py",
+      "sha256": "21a67308056c0ac1f66d5c39394472032468887e92f30a59d8b186b589d726dc",
+      "bytes": 805
+    },
+    {
+      "file": "tools/firmware-validation/test_validation.py",
+      "sha256": "4d3a67e24056874474c6d673f19b60637c46d7e8cf206dde3e59df96775d1596",
+      "bytes": 4912
+    },
+    {
+      "file": "tools/firmware-validation/validate.py",
+      "sha256": "755ee5ce8b29fca1925b03f6a77023bf98568f1178911c34016fe541db632985",
+      "bytes": 2010
+    },
+    {
+      "file": "tools/firmware-validation/validation.py",
+      "sha256": "3d7ee2b4cbe3cd4e98fbe64386cc9f351fa9ec09c017e9ab76aa1e3d1688c47b",
+      "bytes": 21237
+    },
+    {
+      "file": "tools/fixtures/pkrg-simulator.cjs",
+      "sha256": "2a01291d040e66c55be4c7787cf6bcfb609c0a4b21b2a4918c249529f2c93cf4",
+      "bytes": 2568
+    },
+    {
+      "file": "tools/per-key-firmware/LICENSE-GPL-2.0.txt",
+      "sha256": "189b1af95d661151e054cea10c91b3d754e4de4d3fecfb074c1fb29476f7167b",
+      "bytes": 18431
+    },
+    {
+      "file": "tools/per-key-firmware/NOTICE.md",
+      "sha256": "1c5c145a1332b74ae68534faeb0833f6bb58bb2b31bd1361724325e499b25eda",
+      "bytes": 3458
+    },
+    {
+      "file": "tools/per-key-firmware/README.md",
+      "sha256": "9e053dba2506c3fb083ec513e2d5cd77635266655589d82e768c2d30f1abacc3",
+      "bytes": 1249
+    },
+    {
+      "file": "tools/per-key-firmware/build_v104.py",
+      "sha256": "9e98389feb7cd58273faebb36d88ee2a8917f2ff4e67f4ffddace4303bc6c975",
+      "bytes": 8788
+    },
+    {
+      "file": "tools/per-key-firmware/pkrg_routines.py",
+      "sha256": "835f516b6768aac4526079f48a1f6793ae6ea6db8d094d79a7667efad0c884f5",
+      "bytes": 15963
+    },
+    {
+      "file": "tools/pkrg-emulator-bridge.py",
+      "sha256": "e74a42bcb700266fb53ea32189fdd02d094132ff968af2c6f4e8aae7b47014b5",
+      "bytes": 2341
+    },
+    {
+      "file": "tools/prepare-runtime-sources.cjs",
+      "sha256": "e35e6229c426f099d400b84c41bdfee9bfd8239b2d3eba094e037b76697b5b40",
+      "bytes": 9516
+    },
+    {
+      "file": "tools/prepare-source-release.cjs",
+      "sha256": "853cdb323ad5aac8eb37af1ba3a91817b33a1234ae2753df5bb1686182431068",
+      "bytes": 7869
+    },
+    {
+      "file": "tools/rear-sync/build_proof.py",
+      "sha256": "5fcbbdc5429e913de7bc69b937faab0713ccd2ac8afdd033ad9c186445571df7",
+      "bytes": 9742
+    },
+    {
+      "file": "tools/release-build.cjs",
+      "sha256": "92246816f9b2dcd2e0b838ee92c825adceb0f2899c907f8362688014c85e70f5",
+      "bytes": 16271
+    },
+    {
+      "file": "tools/store-build.cjs",
+      "sha256": "cf22033c6ac3674a4bb31df818e0153ee766c0fafa56990fcb5298f5c22b5546",
+      "bytes": 12551
+    },
+    {
+      "file": "tools/store-install-test.ps1",
+      "sha256": "615cc831e853c0443edce20368f6d18f9007f0ef4ad6b37e5dc538bbd295e387",
+      "bytes": 6127
+    },
+    {
+      "file": "tools/test-app-lifecycle.cjs",
+      "sha256": "8a1526dc21cd4fe947d67b4cf5b9d9be29d69b737ab05fba6ab1a7c5402fa648",
+      "bytes": 23651
+    },
+    {
+      "file": "tools/test-app-updater.cjs",
+      "sha256": "5bdfce7f0edc11d7c7f1c733fb9bdcdd41e6551f631ac31fcf7af86562567796",
+      "bytes": 16818
+    },
+    {
+      "file": "tools/test-battery.cjs",
+      "sha256": "a70bb5b6ef4bebece15b90e72d8cd23160ea6edab93b7d461cb7307fc2739c3c",
+      "bytes": 5713
+    },
+    {
+      "file": "tools/test-installer-inspection.cjs",
+      "sha256": "54821807e5ce927627ea18c997c4886c83c797e302d8861360223d8ebf063316",
+      "bytes": 2808
+    },
+    {
+      "file": "tools/test-installer-process-check.cjs",
+      "sha256": "0c29758463276a03c4791ad657f48e51832011f36038c9cdac97e94003035be3",
+      "bytes": 10296
+    },
+    {
+      "file": "tools/test-installer-templates.cjs",
+      "sha256": "ed7001eaf2297a040def4f98433f774a0ed79bd2f8658e2d18d325e5a9f1f4ab",
+      "bytes": 3817
+    },
+    {
+      "file": "tools/test-legal-assets.cjs",
+      "sha256": "a441916bec20fb77cd544be58eec373ce4774dae185bed6b89d188e30cbf5f6d",
+      "bytes": 1767
+    },
+    {
+      "file": "tools/test-pkrg-firmware.cjs",
+      "sha256": "195680049cdbef4dfc15ab9578d9c2f3f9421a5f37b7fb48e2b39f95e47dfb49",
+      "bytes": 5870
+    },
+    {
+      "file": "tools/test-pkrg.cjs",
+      "sha256": "2e2e8e3067aaf701ed122bbebd1efaf7643355101d63e5eaf4490b52f54b4992",
+      "bytes": 14098
+    },
+    {
+      "file": "tools/test-preset-library.cjs",
+      "sha256": "d19b4fdb66a6ebc1836897b58e2803171b3b5cffb549444f1aaca346708f1ed2",
+      "bytes": 2597
+    },
+    {
+      "file": "tools/test-receiver-link.cjs",
+      "sha256": "eba3b8c8535d6efaa91d97104b977694acc48824adc31a90f2e1ccc690e80fbc",
+      "bytes": 8920
+    },
+    {
+      "file": "tools/test-release-packaging.cjs",
+      "sha256": "484585dc9660610a16598119d2d38473975ff1689dde7c51b9f71ed7fefb16b0",
+      "bytes": 9326
+    },
+    {
+      "file": "tools/test-rgb-controller.cjs",
+      "sha256": "4606ce0aac8b0499ff5a3e581f31c4eb46a2d2bbf592dc35f413979023e26076",
+      "bytes": 26495
+    },
+    {
+      "file": "tools/test-signalrgb-plugin.mjs",
+      "sha256": "39a6f66228242ba48c132a149b2ad5cfeff48517d0c01c6994a3924134633d44",
+      "bytes": 3558
+    },
+    {
+      "file": "tools/test-store-packaging.cjs",
+      "sha256": "083a9be73a3e5452b090215b37c2c6e44bcef07036c65cdcf4cb64cd60236e70",
+      "bytes": 6716
+    },
+    {
+      "file": "tools/test-store-runtime.cjs",
+      "sha256": "765a76daae71351ab9e1fea22936cc2f3bb5d1d62e7763effddf790251129ba7",
+      "bytes": 11328
+    },
+    {
+      "file": "tools/test-support-reminder.cjs",
+      "sha256": "7ebaa432231cff5ea6cb5a94e06d8a6d7f9e392ae10464d695e12bba821c4a37",
+      "bytes": 5561
+    },
+    {
+      "file": "tools/test-update-security.cjs",
+      "sha256": "32fcfd23270133df35915486cd52500e1c98778d2e2cdbea181033ed45e9c69e",
+      "bytes": 9899
+    },
+    {
+      "file": "tools/test-via-transport.cjs",
+      "sha256": "8c77ac0a9f1a9fe7a3d650abe22c751491ebc8b88fe8a333f81de94ff36953bb",
+      "bytes": 10446
+    },
+    {
+      "file": "tools/test-windows-shortcuts.cjs",
+      "sha256": "58ef1d86742e97e59d5f4d9d554c06e4dfc57f974cdd7542f4190b452384b689",
+      "bytes": 2358
+    },
+    {
+      "file": "tools/update-release.cjs",
+      "sha256": "cd991102d502ca51dc2b100a1a75de5c110874c4612ca78395d845e7b843dbbd",
+      "bytes": 6130
+    },
+    {
+      "file": "tools/verify-release.cjs",
+      "sha256": "01471a7a890a4d7558d35e23a0fb9681937e8669dcf1d6b6b5cc3665262dd16e",
+      "bytes": 11597
+    }
+  ]
+}

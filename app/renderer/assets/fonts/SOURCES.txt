@@ -1,0 +1,15 @@
+Bundled font sources
+
+InterVariable.woff2 (Inter 4.1, normal variable weight 100-900)
+Copyright (c) 2016 The Inter Project Authors
+Official distribution: https://rsms.me/inter/font-files/InterVariable.woff2?v=4.1
+Project: https://github.com/rsms/inter
+License: SIL Open Font License 1.1, included as Inter-OFL.txt
+
+JetBrainsMono-Regular.woff2 (normal, weight 400)
+Copyright 2020 The JetBrains Mono Project Authors
+Official distribution: https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2
+Project: https://github.com/JetBrains/JetBrainsMono
+License: SIL Open Font License 1.1, included as JetBrainsMono-OFL.txt
+
+Fonts downloaded unmodified on 2026-10-28. No runtime network requests are needed.

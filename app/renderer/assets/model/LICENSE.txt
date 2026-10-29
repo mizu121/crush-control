@@ -1,0 +1,7 @@
+Studio Small 08 by Sergej Majboroda / Poly Haven
+Source: https://polyhaven.com/a/studio_small_08
+Asset: studio_small_08_1k.hdr
+License: CC0 1.0 Universal (public domain)
+License information: https://polyhaven.com/license
+Downloaded from the official Poly Haven asset CDN, 28 October 2026.
+Bundled locally; the keyboard preview makes no network requests.

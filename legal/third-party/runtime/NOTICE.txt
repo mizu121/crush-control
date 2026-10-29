@@ -1,0 +1,49 @@
+Crush Control: Electron runtime third-party notice
+Runtime covered: Electron 45.1.0 / Chromium 156.0.8078.49, Windows x64
+
+Electron and Chromium contain software by many authors under separate licences.
+The original application licence does not replace or restrict those licences.
+Copyright attributions and the full original terms are preserved verbatim in
+LICENSE.electron.txt and LICENSES.chromium.html alongside this notice. Additional
+component licence files, copied verbatim from the pinned sources, are indexed by
+runtime-source-manifest.json and included under LICENSES/ in this repository.
+
+FFmpeg is distributed under LGPL 2.1 or later for the selected Windows build.
+Copyright and individual authorship remain in its source files and in the FFmpeg
+section of LICENSES.chromium.html. The checked Windows configuration disables
+GPL, nonfree, and GPLv3 components. Its complete upstream source tree, the Opus
+dependency, NASM source/build support, Chromium GN build scripts and Electron's
+downstream patches were assembled locally in separate source materials. Those
+source archives are not included in this repository or published.
+
+Blink/WebKit includes files under GNU Library GPL version 2 or later and BSD
+terms. Complete renderer, common and public source directories and Electron's
+patch stack were assembled locally. Other source collected locally includes Mozilla/NSPR/ISimpleDOM, Hunspell and dictionaries, Eigen, axe-core,
+gRPC, hyphenation patterns, libusb and the complete vendored Symphonia crates.
+These are conservative source inclusions, not a claim that every such component
+is linked into the Windows executable. All original file-specific terms remain.
+
+JSZip explicitly offers MIT or GPLv3; this distribution selects MIT. HIDAPI's
+BSD alternative is addressed in the main application third-party notices.
+The presence of alternative GPL text in a combined notice does not change that
+selection. Other exceptions and alternatives retain their exact upstream terms.
+
+Source access and exact revisions: see SOURCE_ACCESS.md, SOURCE_INDEX.md and
+runtime-source-manifest.json. SHA256SUMS.txt identifies the audited local source
+files; their archives are absent from this repository. The manifest records a
+historical local assembly, not source files present in a fresh clone.
+
+Recipient rights: rights to copy, modify and redistribute covered components
+remain governed by their licences. The application terms must permit the
+modification and reverse engineering necessary to debug modifications to
+LGPL-covered libraries to the extent those licences require. No proprietary
+application term is intended to prohibit those activities.
+
+Publication status: the application source and these notices are published
+separately from the runtime source archives. Those archives were assembled and
+checksummed locally but have not been published or delivered to prior beta
+recipients. Beta.9 binary publication remains blocked.
+The complete combined-runtime relink source/object closure has not been certified,
+and no binary rebuild or modified-library test has been performed. This notice
+is not a promise of completed source delivery, a written three-year source offer,
+or a blanket compliance clearance. See SOURCE_ACCESS.md for the distinctions.

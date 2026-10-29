@@ -1,0 +1,58 @@
+Crush Control Windows installer components
+
+The Windows installer uses independent libraries under their respective terms.
+These terms cover those components; they do not relicense Crush Control's
+independently written application code. No keyboard firmware is included here.
+
+StdUtils 1.14 (binary file version 1.1.4.0)
+Copyright (C) 2004-2018 LoRd_MuldeR <mulder2@gmx.de>.
+GNU Lesser General Public License, version 2.1 or later.
+The verbatim Unicode DLL is used through the NSIS plugin interface.
+See LGPL-2.1.txt and StdUtils-LGPL-clarification.txt. The author's clarification
+expressly permits proprietary installers using an unmodified DLL, while
+retaining the library's own license obligations.
+Source: https://github.com/lordmulder/stdutils/tree/1.14
+Exact source revision: 4e1117321001e54dcd2c52f72d3c359d5215e426
+
+Nsis7z 19.00
+Copyright (c) Nik Medved (brainsucker), 2009; updates by Marek Mizanin,
+Stuart Welch; incorporates LZMA SDK by Igor Pavlov and other contributors.
+The original wrapper documentation says the plugin is under LGPL. We retain
+and follow that statement conservatively, with LGPL 2.1 text supplied.
+The wrapper's documentation does not specify a license version. It is not
+represented here as wholly public-domain software.
+The 19.00 LZMA SDK dependency is public domain; its separate notice is supplied.
+See Nsis7z-19.00-upstream.txt and LZMA-SDK-LICENSE.txt for the original wording.
+Source: https://nsis.sourceforge.io/Nsis7z_plug-in
+SDK: https://www.7-zip.org/a/lzma1900.7z
+
+NSIS
+The installer engine and built-in System plugin use NSIS code. Applicable
+zlib/libpng, compression-module and other original notices are reproduced in
+NSIS-COPYING.txt. Windows Restart Manager is a Windows system API; our installer
+queries it through System and does not ship a copy of that Windows DLL.
+Source and documentation: https://nsis.sourceforge.io/
+
+electron-builder 26.18.0 installer templates
+Copyright (c) 2015 Loopline Systems. MIT License.
+Three project-owned template overrides remove optional external banner and
+shortcut plugins. See TEMPLATE_OVERRIDES.txt and LICENSES/electron-builder-MIT.txt.
+The original upstream template hashes and narrowly changed sources are in
+build/installer-templates/ in the application source repository. They were also
+included in a separate installer-library source archive prepared locally.
+Original mi0ir installer code in that source archive is licensed under the
+included PROJECT-MIT-LICENSE.txt. Third-party sources retain their own licenses.
+
+Sources and rebuilding
+A separate installer-dependency-sources.zip was assembled locally with upstream
+plugin sources, projects, SDK 19.00, additional NSIS API source and notices. The
+archive is not included in this application source repository or published.
+SOURCE_MANIFEST.json records the local assembly and upstream source references.
+See BUILDING.txt for prerequisites, exclusions and verification limitations.
+These LGPL libraries may be modified and their use may be reverse engineered
+to debug such modifications as allowed by their licenses. The application's
+license does not withdraw those third-party rights.
+
+Publishing these notices and the application source does not publish the
+separate installer-library archive or complete source delivery to prior beta
+recipients. Beta.9 binary release remains blocked pending the documented gates.

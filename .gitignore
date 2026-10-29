@@ -1,0 +1,16 @@
+node_modules/
+build/.release-stage/
+build/.store-stage/
+.venv/
+dist/
+artifacts/
+backups/
+*.log
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+__pycache__/
+*.pyc

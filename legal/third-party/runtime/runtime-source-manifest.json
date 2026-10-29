@@ -1,0 +1,1784 @@
+{
+  "schemaVersion": 1,
+  "product": "Crush Control",
+  "coversAppVersions": [
+    "1.0.0-beta.5",
+    "1.0.0-beta.6",
+    "1.0.0-beta.7",
+    "1.0.0-beta.8"
+  ],
+  "runtimeVersion": "Electron45.1.0 / Chromium156.0.8078.49",
+  "status": "Local source material assembly; not publicly distributed; build/replacement untested",
+  "completeCorrespondingSourceCertified": false,
+  "buildExecuted": false,
+  "libraryReplacementExecuted": false,
+  "sourceAvailablePublicly": false,
+  "chromiumCommit": "29eb03535d5f2f4f899b95f22a92413ffde5284e",
+  "electronCommit": "45d20ec03000aac41e73b2abdb707936b4f98ed0",
+  "assemblyScope": "Exact upstream source trees and downstream patches for covered candidates, with direct FFmpeg build dependencies. Not a complete self-contained Electron/Chromium rebuild checkout.",
+  "assemblyChecks": {
+    "ffmpegUpstreamTreeComplete": true,
+    "directFfmpegOpusNasmSourcesPresent": true,
+    "electronCompletePatchStacksPresent": true,
+    "chromiumBuildScriptsPresent": true,
+    "chromiumFullRepositoryPresent": false,
+    "nodeAndV8FullRepositoriesPresent": false,
+    "fullGnDependencyClosureVerified": false,
+    "compiledWindowsComponentBomComplete": false,
+    "binaryRebuildExecuted": false,
+    "modifiedLibraryReplacementExecuted": false,
+    "allPlannedSourcesPresent": true
+  },
+  "outstanding": [
+    "Source/publication not authorized or performed",
+    "Combined-runtime LGPL relink source/object delivery arrangement not certified; full Chromium/Node/V8 checkout not local",
+    "GN/build and modified-library compatibility tests not executed (verification limits, not independent proof of a licence breach)"
+  ],
+  "generatedAt": "2026-10-29T02:06:57.342Z",
+  "materials": [
+    {
+      "id": "axe-core",
+      "component": "third_party/axe-core",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/axe-core.tar.gz",
+      "localPath": "sources/axe-core-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 226517,
+      "sha256": "935b248eadcdcb2975e514e680af53dbe4e984217fe94bbda2f0d58ce4b57a2b",
+      "archiveEntries": 7,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/axe-core/LICENSE",
+          "sha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e",
+          "bytes": 15921
+        }
+      ]
+    },
+    {
+      "id": "axe-core-original-source",
+      "component": "axe-core preferred modular source and build scripts",
+      "revision": "281653df3794f429b71327fe3afa37ca0fadb1c7",
+      "licence": "MPL-2.0",
+      "reason": "Chromium README pins this upstream source revision; include preferred modular source in addition to Chromium axe.js/axe.min.js build outputs",
+      "format": "tar.gz",
+      "url": "https://codeload.github.com/dequelabs/axe-core/tar.gz/281653df3794f429b71327fe3afa37ca0fadb1c7",
+      "localPath": "sources/axe-core-281653df3794f429b71327fe3afa37ca0fadb1c7.tar.gz",
+      "status": "downloaded",
+      "bytes": 525905,
+      "sha256": "d9b7aa1c13dafaab97ce9a34768a4d43656072a25f34f3f6d945ff4b4f88e7b3",
+      "archiveEntries": 1512,
+      "licenceFiles": [
+        {
+          "archivePath": "axe-core-281653df3794f429b71327fe3afa37ca0fadb1c7/LICENSE",
+          "localPath": "LICENSES/axe-core-original-source/axe-core-281653df3794f429b71327fe3afa37ca0fadb1c7/LICENSE",
+          "sha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e",
+          "bytes": 15921
+        }
+      ]
+    },
+    {
+      "id": "blink-common",
+      "component": "third_party/blink/common",
+      "revision": "156.0.8078.49",
+      "licence": "BSD/LGPL file-specific",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/blink/common.tar.gz",
+      "localPath": "sources/blink-common-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 322652,
+      "sha256": "f929dc2f1a26322b7bf4319a2c89ac38c25e23744c4e1063310b0a13b64eec4a",
+      "archiveEntries": 414,
+      "licenceFiles": []
+    },
+    {
+      "id": "blink-DEPS",
+      "component": "third_party/blink/DEPS",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/blink/DEPS?format=TEXT",
+      "localPath": "sources/blink-DEPS-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 867,
+      "sha256": "62c34c5a56659174359f81e75bd49e96145f82cd99c6dc1d5f35c2402184e94b",
+      "licenceFiles": []
+    },
+    {
+      "id": "blink-license",
+      "component": "third_party/blink/LICENSE_FOR_ABOUT_CREDITS",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/blink/LICENSE_FOR_ABOUT_CREDITS?format=TEXT",
+      "localPath": "sources/blink-license-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 51483,
+      "sha256": "a661d10f8f194b1963a75bb4d308f17b078cc064624313a556902d89705f6876",
+      "licenceFiles": []
+    },
+    {
+      "id": "blink-public",
+      "component": "third_party/blink/public",
+      "revision": "156.0.8078.49",
+      "licence": "BSD/LGPL file-specific",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/blink/public.tar.gz",
+      "localPath": "sources/blink-public-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1409211,
+      "sha256": "1b40f96d658aecd4ff39b5966e55a055d4431b62f752bc9195e3e6a1a843fc32",
+      "archiveEntries": 1832,
+      "licenceFiles": []
+    },
+    {
+      "id": "blink-renderer",
+      "component": "third_party/blink/renderer",
+      "revision": "156.0.8078.49",
+      "licence": "BSD/LGPL file-specific",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/blink/renderer.tar.gz",
+      "localPath": "sources/blink-renderer-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 30477001,
+      "sha256": "e8ddf87b48ed27e598b85d65464a852abfba459150adc5725bd4abb5d1920640",
+      "archiveEntries": 19557,
+      "licenceFiles": [
+        {
+          "archivePath": "build/scripts/license.py",
+          "localPath": "LICENSES/blink-renderer/build/scripts/license.py",
+          "sha256": "592ef53e1769d8950802638c771afa6540e56047fa972fc27ff9012d123c327e",
+          "bytes": 1850
+        },
+        {
+          "archivePath": "core/LICENSE-APPLE",
+          "localPath": "LICENSES/blink-renderer/core/LICENSE-APPLE",
+          "sha256": "0b5d3a7cc325942567373b0ecd757d07c132e0ebd7c97bfc63f7e1a76094edb4",
+          "bytes": 1313
+        },
+        {
+          "archivePath": "core/LICENSE-LGPL-2",
+          "localPath": "LICENSES/blink-renderer/core/LICENSE-LGPL-2",
+          "sha256": "7555fa34bc131a75ca56d65c40cc1ea8f9515d23e353d4c15d58573a042f7805",
+          "bytes": 25378
+        },
+        {
+          "archivePath": "core/LICENSE-LGPL-2.1",
+          "localPath": "LICENSES/blink-renderer/core/LICENSE-LGPL-2.1",
+          "sha256": "f2b3bd09663381deb99721109d22b47af1213bb43007a8b56a06c6375c8050ce",
+          "bytes": 26536
+        },
+        {
+          "archivePath": "platform/testing/data/third_party/Noto/LICENSE_OFL.txt",
+          "localPath": "LICENSES/blink-renderer/platform/testing/data/third_party/Noto/LICENSE_OFL.txt",
+          "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+          "bytes": 4301
+        },
+        {
+          "archivePath": "platform/testing/data/third_party/Roboto/LICENSE.txt",
+          "localPath": "LICENSES/blink-renderer/platform/testing/data/third_party/Roboto/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ]
+    },
+    {
+      "id": "chromium-build",
+      "component": "build",
+      "revision": "156.0.8078.49",
+      "licence": "BSD and nested licences",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/build.tar.gz",
+      "localPath": "sources/chromium-build-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1992503,
+      "sha256": "2b9ef51791e8aa6f89b987e063390d409dc8d4207c694b6bea785c93f46720e9",
+      "archiveEntries": 1823,
+      "licenceFiles": [
+        {
+          "archivePath": "android/incremental_install/third_party/AndroidHiddenApiBypass/LICENSE",
+          "localPath": "LICENSES/chromium-build/android/incremental_install/third_party/AndroidHiddenApiBypass/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        }
+      ]
+    },
+    {
+      "id": "chromium-build-overrides",
+      "component": "build_overrides",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Shared GN compiler configuration imports build_overrides/build.gni",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/build_overrides.tar.gz",
+      "localPath": "sources/chromium-build-overrides-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 8264,
+      "sha256": "6363a8a53020602c05b8b4dce3e323f671bb5cbbb5e2326014e3e990600a957a",
+      "archiveEntries": 24,
+      "licenceFiles": []
+    },
+    {
+      "id": "chromium-buildtools",
+      "component": "buildtools",
+      "revision": "156.0.8078.49",
+      "licence": "BSD and nested licences",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/buildtools.tar.gz",
+      "localPath": "sources/chromium-buildtools-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 64294,
+      "sha256": "10bd8e135d27ad1eefe440490af8c828896ba302feae839af9cacbfc1eca608e",
+      "archiveEntries": 124,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/chromium-buildtools/LICENSE",
+          "sha256": "ff11d445fb41a1087c7630e120ab15f1a2cb67c1b707173cb494141805fca35e",
+          "bytes": 1537
+        },
+        {
+          "archivePath": "third_party/mold/LICENSE",
+          "localPath": "LICENSES/chromium-buildtools/third_party/mold/LICENSE",
+          "sha256": "c98a2858469bd3b231c8865c5b65f80f6ffbf25e850d5d575967e3d9ee080755",
+          "bytes": 1067
+        }
+      ]
+    },
+    {
+      "id": "chromium-clang-tools",
+      "component": "tools/clang",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/tools/clang.tar.gz",
+      "localPath": "sources/chromium-clang-tools-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 712674,
+      "sha256": "1f761995b20027b964c1caeb1643bd22e13a4cb543292b031fa26a2fe812e69f",
+      "archiveEntries": 1289,
+      "licenceFiles": []
+    },
+    {
+      "id": "chromium-DEPS",
+      "component": "DEPS",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/DEPS?format=TEXT",
+      "localPath": "sources/chromium-DEPS-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 192396,
+      "sha256": "3535b3175635f9984c82a3f0c2a8e70f0ed2cfdb2a352f40446c9fddf2490703",
+      "licenceFiles": []
+    },
+    {
+      "id": "chromium-generate-stubs",
+      "component": "tools/generate_stubs",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/tools/generate_stubs.tar.gz",
+      "localPath": "sources/chromium-generate-stubs-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 15200,
+      "sha256": "eabb7a6d19bbf96db6a393417981867d17692a84d61871732ef222d86f225b8b",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "chromium-LICENSE",
+      "component": "LICENSE",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/LICENSE?format=TEXT",
+      "localPath": "sources/chromium-LICENSE-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 1536,
+      "sha256": "368cca1106be99d39ecd32a38d8305585d802a475effb66380b91ffc9bcf709b",
+      "licenceFiles": []
+    },
+    {
+      "id": "chromium-root-BUILD",
+      "component": "BUILD.gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/BUILD.gn?format=TEXT",
+      "localPath": "sources/chromium-root-BUILD-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 54711,
+      "sha256": "3ac1c40941ec13b48f3a855c6d5aef985b6bdf3cb7272d3940cf6cdf5f188617",
+      "licenceFiles": []
+    },
+    {
+      "id": "chromium-root-gn",
+      "component": ".gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/.gn?format=TEXT",
+      "localPath": "sources/chromium-root-gn-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 25602,
+      "sha256": "1c33e1726ea5b347730043bf1837fb17bedbeee4651ae9d8393f0d191fb0dd24",
+      "licenceFiles": []
+    },
+    {
+      "id": "chromium-rust-tools",
+      "component": "tools/rust",
+      "revision": "156.0.8078.49",
+      "licence": "BSD",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/tools/rust.tar.gz",
+      "localPath": "sources/chromium-rust-tools-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 26263,
+      "sha256": "27ab18857111ea557627e838ffc3f5d2e9c0296b74c6ab790f656667257fc6f3",
+      "archiveEntries": 11,
+      "licenceFiles": []
+    },
+    {
+      "id": "eigen",
+      "component": "external/gitlab.com/libeigen/eigen",
+      "revision": "04bfe22876d3bab4260f39491cce7a8df17daa40",
+      "licence": "MPL-2.0 and file-specific alternatives",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/external/gitlab.com/libeigen/eigen/+archive/04bfe22876d3bab4260f39491cce7a8df17daa40.tar.gz",
+      "localPath": "sources/eigen-04bfe22876d3bab4260f39491cce7a8df17daa40.tar.gz",
+      "reason": "Exact external DEPS checkout absent from Chromium parent subtree tar archives",
+      "status": "downloaded",
+      "bytes": 4299388,
+      "sha256": "3ce5013455a0398da54dad3594df1a9d324f7afc9c6371476bb0a47f4d37763b",
+      "archiveEntries": 2338,
+      "licenceFiles": [
+        {
+          "archivePath": "COPYING.APACHE",
+          "localPath": "LICENSES/eigen/COPYING.APACHE",
+          "sha256": "03379001a7b12a2ec997a25554247d985270b353c10d5bafee9ac8d6519820b7",
+          "bytes": 11362
+        },
+        {
+          "archivePath": "COPYING.BSD",
+          "localPath": "LICENSES/eigen/COPYING.BSD",
+          "sha256": "51928dce36213c5333ba3172e847d735d4c6e9b7ff2722a326c49067155b82eb",
+          "bytes": 1517
+        },
+        {
+          "archivePath": "COPYING.MINPACK",
+          "localPath": "LICENSES/eigen/COPYING.MINPACK",
+          "sha256": "c87b7f8ee88f6195e91743820c00354833583aef091b72e2d4a49c8e28e798a0",
+          "bytes": 2193
+        },
+        {
+          "archivePath": "COPYING.MPL2",
+          "localPath": "LICENSES/eigen/COPYING.MPL2",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+          "bytes": 16726
+        },
+        {
+          "archivePath": "COPYING.README",
+          "localPath": "LICENSES/eigen/COPYING.README",
+          "sha256": "b680dc46db7b3d9e49931bf918e85a43ec3c790f64b4eee212ec5beeed1b02d5",
+          "bytes": 674
+        },
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/eigen/LICENSE",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+          "bytes": 16726
+        }
+      ]
+    },
+    {
+      "id": "eigen-wrapper",
+      "component": "third_party/eigen3",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/eigen3.tar.gz",
+      "localPath": "sources/eigen-wrapper-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 6487,
+      "sha256": "eb628ede2e809487388407051717c51d00960d727ecab1e0ae5c323b4d598d76",
+      "archiveEntries": 6,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/eigen-wrapper/LICENSE",
+          "sha256": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172",
+          "bytes": 16727
+        }
+      ]
+    },
+    {
+      "id": "electron",
+      "component": "Electron complete source tree",
+      "revision": "45d20ec03000aac41e73b2abdb707936b4f98ed0",
+      "licence": "MIT; nested licences retained",
+      "reason": "Exact Electron source, complete downstream patch stacks and build/config scripts",
+      "format": "tar.gz",
+      "url": "https://codeload.github.com/electron/electron/tar.gz/45d20ec03000aac41e73b2abdb707936b4f98ed0",
+      "localPath": "sources/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0.tar.gz",
+      "status": "downloaded",
+      "bytes": 20278793,
+      "sha256": "023fec7887359eeff6981ba34485b7849e0bb258f2e4f7e97474023cd6f8e54d",
+      "archiveEntries": 3780,
+      "licenceFiles": [
+        {
+          "archivePath": "electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/LICENSE",
+          "localPath": "LICENSES/electron/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/LICENSE",
+          "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+          "bytes": 1096
+        },
+        {
+          "archivePath": "electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/chromium_src/LICENSE.chromium",
+          "localPath": "LICENSES/electron/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/chromium_src/LICENSE.chromium",
+          "sha256": "9873d81def9cebb9598b4a2d0a1ad062b17781c35c25cc04b75a0f62fc8667fd",
+          "bytes": 1558
+        },
+        {
+          "archivePath": "electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/spec/fixtures/assets/LICENSE",
+          "localPath": "LICENSES/electron/electron-45d20ec03000aac41e73b2abdb707936b4f98ed0/spec/fixtures/assets/LICENSE",
+          "sha256": "1eb1a11ad211e3b205f00d1d76ae80a4e56f46cfb64047103b8f61396f42f3b7",
+          "bytes": 71
+        }
+      ]
+    },
+    {
+      "id": "ffmpeg",
+      "component": "Chromium FFmpeg complete source tree",
+      "revision": "9db86ce5b5b454dfc96c435f9f0723012980c37f",
+      "licence": "LGPL-2.1-or-later for actual Windows configuration; unused GPL parts retained with own licences",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/third_party/ffmpeg/+archive/9db86ce5b5b454dfc96c435f9f0723012980c37f.tar.gz",
+      "localPath": "sources/ffmpeg-9db86ce5b5b454dfc96c435f9f0723012980c37f.tar.gz",
+      "cachedInput": "artifacts/license-audit/upstream-evidence/ffmpeg-9db86ce5b5b454dfc96c435f9f0723012980c37f.tar.gz",
+      "cachedSha256": "eacf8a44315ceb69d7770738fee936db2a817fcef9ca8bbefa76a61f15b88a28",
+      "status": "downloaded",
+      "bytes": 18925679,
+      "sha256": "eacf8a44315ceb69d7770738fee936db2a817fcef9ca8bbefa76a61f15b88a28",
+      "archiveEntries": 11438,
+      "licenceFiles": [
+        {
+          "archivePath": "COPYING.GPLv2",
+          "localPath": "LICENSES/ffmpeg/COPYING.GPLv2",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+          "bytes": 18092
+        },
+        {
+          "archivePath": "COPYING.GPLv3",
+          "localPath": "LICENSES/ffmpeg/COPYING.GPLv3",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147
+        },
+        {
+          "archivePath": "COPYING.LGPLv2.1",
+          "localPath": "LICENSES/ffmpeg/COPYING.LGPLv2.1",
+          "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30",
+          "bytes": 26517
+        },
+        {
+          "archivePath": "COPYING.LGPLv3",
+          "localPath": "LICENSES/ffmpeg/COPYING.LGPLv3",
+          "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768",
+          "bytes": 7651
+        },
+        {
+          "archivePath": "LICENSE.md",
+          "localPath": "LICENSES/ffmpeg/LICENSE.md",
+          "sha256": "2e1d16c72fd74e12063776371da757322f8b77589386532f4fd8634bde7de1af",
+          "bytes": 4346
+        },
+        {
+          "archivePath": "tests/checkasm/ext/LICENSE",
+          "localPath": "LICENSES/ffmpeg/tests/checkasm/ext/LICENSE",
+          "sha256": "a2dc8194271e5989c0622531c645a7b41af5da92eeb2531e4f2a3ec31023bc52",
+          "bytes": 1402
+        },
+        {
+          "archivePath": "tests/checkasm/ext/src/html_data/LICENSE",
+          "localPath": "LICENSES/ffmpeg/tests/checkasm/ext/src/html_data/LICENSE",
+          "sha256": "0fd2c601fb2ead2add56807b7e32664da8d973b9835a422464f210bfea997a52",
+          "bytes": 1361
+        }
+      ]
+    },
+    {
+      "id": "grpc",
+      "component": "third_party/grpc",
+      "revision": "156.0.8078.49",
+      "licence": "Apache-2.0, BSD-3-Clause, MPL-2.0",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/grpc.tar.gz",
+      "localPath": "sources/grpc-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 4220961,
+      "sha256": "9415f813f5df6a679745a3557e0be7b90b2ac7a9b96b49899187964e9dae9dc6",
+      "archiveEntries": 3476,
+      "licenceFiles": [
+        {
+          "archivePath": "source/LICENSE",
+          "localPath": "LICENSES/grpc/source/LICENSE",
+          "sha256": "590198e3f305f2c347fde64d637c65492bbef554db6c8364e149cd375e3797ee",
+          "bytes": 29687
+        }
+      ]
+    },
+    {
+      "id": "hunspell",
+      "component": "third_party/hunspell",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/hunspell.tar.gz",
+      "localPath": "sources/hunspell-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1199815,
+      "sha256": "60d6467c0b66ae18c25c0e2bc65b382c247df233d3b0f8be6b88df5aa656d7db",
+      "archiveEntries": 104,
+      "licenceFiles": [
+        {
+          "archivePath": "COPYING",
+          "localPath": "LICENSES/hunspell/COPYING",
+          "sha256": "640d90f6ee401241ff62834d0d1b33f83049e99b8bfdfa04ed1b0a1635dde3e7",
+          "bytes": 18093
+        },
+        {
+          "archivePath": "COPYING.LESSER",
+          "localPath": "LICENSES/hunspell/COPYING.LESSER",
+          "sha256": "7c6699c75f87b52bdc542db26d6b1b92892577cda46e20eceb79e2790a1c291b",
+          "bytes": 26531
+        },
+        {
+          "archivePath": "COPYING.MPL",
+          "localPath": "LICENSES/hunspell/COPYING.MPL",
+          "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f",
+          "bytes": 25755
+        },
+        {
+          "archivePath": "license.hunspell",
+          "localPath": "LICENSES/hunspell/license.hunspell",
+          "sha256": "3f7ddd07c296edbfe0a47c7bcc82038ad347a2c4f672345b24f95c624db68513",
+          "bytes": 1973
+        },
+        {
+          "archivePath": "license.myspell",
+          "localPath": "LICENSES/hunspell/license.myspell",
+          "sha256": "dcda061adeed22b26f276c01ec374f930789ae0d684e5aa8f8be309dd680ff20",
+          "bytes": 2912
+        }
+      ]
+    },
+    {
+      "id": "hunspell-dictionaries",
+      "component": "chromium/deps/hunspell_dictionaries",
+      "revision": "cee14e319bb7603a1157bb4d1e216be64ee82b77",
+      "licence": "Mixed per-dictionary terms; preserve whole licence set",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/deps/hunspell_dictionaries/+archive/cee14e319bb7603a1157bb4d1e216be64ee82b77.tar.gz",
+      "localPath": "sources/hunspell-dictionaries-cee14e319bb7603a1157bb4d1e216be64ee82b77.tar.gz",
+      "reason": "Exact external DEPS checkout absent from Chromium parent subtree tar archives",
+      "status": "downloaded",
+      "bytes": 69491769,
+      "sha256": "a51e0dfc45d7438361ae2165a85b22a59b95a9c92eae0821bde2d21b41cf28fd",
+      "archiveEntries": 245,
+      "licenceFiles": [
+        {
+          "archivePath": "COPYING",
+          "localPath": "LICENSES/hunspell-dictionaries/COPYING",
+          "sha256": "cde91164e09e33e94e1db4529aa77f89bc0c392b1ed138d689c66dfbd11d9701",
+          "bytes": 108204
+        },
+        {
+          "archivePath": "COPYING.Apache",
+          "localPath": "LICENSES/hunspell-dictionaries/COPYING.Apache",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        },
+        {
+          "archivePath": "COPYING.GPL3",
+          "localPath": "LICENSES/hunspell-dictionaries/COPYING.GPL3",
+          "sha256": "0ae0485a5bd37a63e63603596417e4eb0e653334fa6c7f932ca3a0e85d4af227",
+          "bytes": 35148
+        },
+        {
+          "archivePath": "COPYING.LESSER",
+          "localPath": "LICENSES/hunspell-dictionaries/COPYING.LESSER",
+          "sha256": "d7137682540000e5f57ff3cb0b4943b66aa3ac4ecca28614ce46991fc291bd15",
+          "bytes": 7795
+        },
+        {
+          "archivePath": "COPYING.LGPL",
+          "localPath": "LICENSES/hunspell-dictionaries/COPYING.LGPL",
+          "sha256": "5bbcbb737e60fe9deba08ecbd00920cfcc3403ba2e534c64fdeea49d6bb87509",
+          "bytes": 26532
+        },
+        {
+          "archivePath": "COPYING.MIT",
+          "localPath": "LICENSES/hunspell-dictionaries/COPYING.MIT",
+          "sha256": "379ddd904c597d64e11a88bba68663f59501c9fa59e8124c0f4f32a67a5dc77a",
+          "bytes": 1736
+        },
+        {
+          "archivePath": "COPYING.MPL",
+          "localPath": "LICENSES/hunspell-dictionaries/COPYING.MPL",
+          "sha256": "53692a2ed6c6a2c6ec9b32dd0b820dfae91e0a1fcdf625ca9ed0bdf8705fcc4f",
+          "bytes": 25755
+        },
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/hunspell-dictionaries/LICENSE",
+          "sha256": "d63c6240d6f6330a025aade63d317d7ff04f95fc3325fe6aea3848ca452f64ea",
+          "bytes": 108158
+        },
+        {
+          "archivePath": "fo_FO/LICENSE_en_US.txt",
+          "localPath": "LICENSES/hunspell-dictionaries/fo_FO/LICENSE_en_US.txt",
+          "sha256": "e6717c226bf7de7142f3fc6d4bdecc88fa8810ab82227878db17ae069bd7a9b3",
+          "bytes": 268
+        }
+      ]
+    },
+    {
+      "id": "hyphenation-patterns",
+      "component": "third_party/hyphenation-patterns",
+      "revision": "156.0.8078.49",
+      "licence": "File-specific LGPL/MPL/permissive terms",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/hyphenation-patterns.tar.gz",
+      "localPath": "sources/hyphenation-patterns-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 2415523,
+      "sha256": "6c7958ac297884771e6388f4e315fc7f79593c08c89e1481f221d4b4fad4dc9e",
+      "archiveEntries": 437,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/hyphenation-patterns/LICENSE",
+          "sha256": "848b839a69abf379954f0a564a0c84f5dbb2aab4acc26c41571a20c0657a4fb7",
+          "bytes": 143558
+        },
+        {
+          "archivePath": "src/Ethi/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/Ethi/NOTICE",
+          "sha256": "d0e9850680f127b31f98303d09e1afd42fb4a40c51d8b1d98c3144dd99787db2",
+          "bytes": 107
+        },
+        {
+          "archivePath": "src/af/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/af/NOTICE",
+          "sha256": "00b0495abfccee33033124c4fceeb9ee98eb449031d0862b8ae5655148aeaf08",
+          "bytes": 1131
+        },
+        {
+          "archivePath": "src/am/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/am/NOTICE",
+          "sha256": "66d5d1ede4c20722d11e1c8c1cc950f6bc450dd36ac1ed86da7038aef724440e",
+          "bytes": 1124
+        },
+        {
+          "archivePath": "src/as/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/as/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/be/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/be/NOTICE",
+          "sha256": "a21249db53a59789109eb8c56709b938280df710374e2c037d283ba4e7419e52",
+          "bytes": 1085
+        },
+        {
+          "archivePath": "src/bg/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/bg/NOTICE",
+          "sha256": "fe049719e2682733ffaa2cdfa659c20561ba11b85ee381065dcf55d6520e0eaa",
+          "bytes": 1066
+        },
+        {
+          "archivePath": "src/bn/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/bn/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/cs/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/cs/NOTICE",
+          "sha256": "4deacc158f19b00511a3689f2b8a3b4a3ba78566063ac5f189df08bd446c6868",
+          "bytes": 1106
+        },
+        {
+          "archivePath": "src/cu/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/cu/NOTICE",
+          "sha256": "b8d543a7fa06605f7873a86f9063d180a0a5b492567607e3a3ba1b8d9448508b",
+          "bytes": 1080
+        },
+        {
+          "archivePath": "src/cy/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/cy/NOTICE",
+          "sha256": "35d1f993e5ba5190022cacd6749cb622dcdff49f71d738cbce695a1230d0387e",
+          "bytes": 1058
+        },
+        {
+          "archivePath": "src/da/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/da/NOTICE",
+          "sha256": "20f598925540dda8116e4cb3707eb357f6511bb058783bea228e7e0839c3d61d",
+          "bytes": 1052
+        },
+        {
+          "archivePath": "src/de/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/de/NOTICE",
+          "sha256": "c712ce0a7393cb8566d9cf09ab9b86ebc7d735ec5cebaa2343bd43d237544cb0",
+          "bytes": 1165
+        },
+        {
+          "archivePath": "src/el/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/el/NOTICE",
+          "sha256": "3872d93466e662b29e1749583fabc82e46feb66078dcd0d903716671f8f85b63",
+          "bytes": 1124
+        },
+        {
+          "archivePath": "src/en-GB/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/en-GB/NOTICE",
+          "sha256": "69a23eadf4cd3e2ae9e8653c39d51d6841981da598dc5919a368f862720ae736",
+          "bytes": 1880
+        },
+        {
+          "archivePath": "src/en-US/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/en-US/NOTICE",
+          "sha256": "6341b222144ad5d7fcc98eeccc180ab4a6629663a44f934d400b2fad96b11d76",
+          "bytes": 415
+        },
+        {
+          "archivePath": "src/es/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/es/NOTICE",
+          "sha256": "f3362e6c285acb41d95bd4962abf1ed9e37f21ace36c872b70fb0d04ce92351f",
+          "bytes": 1439
+        },
+        {
+          "archivePath": "src/et/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/et/NOTICE",
+          "sha256": "4acb4a681a4c96ab3ea0048bc045752651cbf84af68193e67f54e77cb7a6aaf9",
+          "bytes": 1080
+        },
+        {
+          "archivePath": "src/eu/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/eu/NOTICE",
+          "sha256": "0a60a44e75c0708f60bab62a15708d100a80fccc943cb90a833be89a1c6e25d5",
+          "bytes": 1614
+        },
+        {
+          "archivePath": "src/fr/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/fr/NOTICE",
+          "sha256": "66bb842046109ea07e0893ad4f65bb216f756674637616ff00ffd2cb44f1b96d",
+          "bytes": 1078
+        },
+        {
+          "archivePath": "src/ga/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/ga/NOTICE",
+          "sha256": "d317faed4c74a84c6844120732ebd90948adc4cce70a6f5a37a1244ff0673010",
+          "bytes": 1094
+        },
+        {
+          "archivePath": "src/gl/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/gl/NOTICE",
+          "sha256": "826b8b23c02d6a46ac4046c003d742aa2ba39b7fc7ad8845887717865a64d4c3",
+          "bytes": 1267
+        },
+        {
+          "archivePath": "src/gu/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/gu/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/hi/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/hi/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/hr/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/hr/NOTICE",
+          "sha256": "fb862183f42bfe5d3eae2a91a32ab1c951a331a906c8e79e4c4c23e666c516db",
+          "bytes": 1958
+        },
+        {
+          "archivePath": "src/hu/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/hu/NOTICE",
+          "sha256": "be44f17b4eaf3790c84344db584ed4116635f0b1ed6687cc34374a45cba40076",
+          "bytes": 1702
+        },
+        {
+          "archivePath": "src/hy/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/hy/NOTICE",
+          "sha256": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+          "bytes": 26530
+        },
+        {
+          "archivePath": "src/it/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/it/NOTICE",
+          "sha256": "17e8ee6576a390c0342164dd78e0ba8685f4987bbc92a4908f4ca631e5f3ff75",
+          "bytes": 1132
+        },
+        {
+          "archivePath": "src/ka/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/ka/NOTICE",
+          "sha256": "aac5921670083b188a4631e5f11ada68770e3aee4b331e63d834199183cc0a8e",
+          "bytes": 1120
+        },
+        {
+          "archivePath": "src/kn/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/kn/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/la/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/la/NOTICE",
+          "sha256": "5912e6dff741e5192046a65896842e01744abccbf81983273556514d16f59283",
+          "bytes": 1141
+        },
+        {
+          "archivePath": "src/lt/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/lt/NOTICE",
+          "sha256": "dd42d3cf367fbcbe9741969828ccb82974a9724ef2abd6e13affab6f96046b7d",
+          "bytes": 1137
+        },
+        {
+          "archivePath": "src/lv/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/lv/NOTICE",
+          "sha256": "0f480e0cf054553ebbe5194a6d240d2809eaeaca43865c0c0ae1eeb9b32fe150",
+          "bytes": 456
+        },
+        {
+          "archivePath": "src/ml/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/ml/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/mn/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/mn/NOTICE",
+          "sha256": "abdd0bfdd563164507a0757767d63f02303f5e389769893c9fdd09fb35d42846",
+          "bytes": 1086
+        },
+        {
+          "archivePath": "src/mr/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/mr/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/nb/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/nb/NOTICE",
+          "sha256": "55a8d6e2ef1339d730028d5e22eade431ab19b4ea4b119235ece69d696c3eecf",
+          "bytes": 474
+        },
+        {
+          "archivePath": "src/nl/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/nl/NOTICE",
+          "sha256": "39faa1e689d8241740d25c36b1f4cf8883c079afb8cf6aff3e1fda6e41a4c8b1",
+          "bytes": 21012
+        },
+        {
+          "archivePath": "src/nn/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/nn/NOTICE",
+          "sha256": "c78eb7755a68cac12420dc3ed8d09d58e589d626cb65cbdf09a5150ad131d98e",
+          "bytes": 475
+        },
+        {
+          "archivePath": "src/or/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/or/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/pa/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/pa/NOTICE",
+          "sha256": "6bcecb871ecac9d8d6491f8c42059dca852d9f330dbe7a1260a6bbbf3986cf2b",
+          "bytes": 1106
+        },
+        {
+          "archivePath": "src/pt/LICENSE",
+          "localPath": "LICENSES/hyphenation-patterns/src/pt/LICENSE",
+          "sha256": "a03fed9ab6321742903f3f0095b389ce811c4cfeb3f671ddc8d33da57dc92493",
+          "bytes": 1815
+        },
+        {
+          "archivePath": "src/ru/LICENSE",
+          "localPath": "LICENSES/hyphenation-patterns/src/ru/LICENSE",
+          "sha256": "38e0a6513296b6740f5bc128aeae99f9002b1ef7c21718c87a0e6ffc8ef93da3",
+          "bytes": 26850
+        },
+        {
+          "archivePath": "src/sa/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/sa/NOTICE",
+          "sha256": "2bfad5bc2d098410c0803e5ae600db55348bf28351c8a95d755eed4d59f88a3f",
+          "bytes": 98
+        },
+        {
+          "archivePath": "src/sk/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/sk/NOTICE",
+          "sha256": "4deacc158f19b00511a3689f2b8a3b4a3ba78566063ac5f189df08bd446c6868",
+          "bytes": 1106
+        },
+        {
+          "archivePath": "src/sl/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/sl/NOTICE",
+          "sha256": "c5cfa73bd443b50f2eefaebb1fdc1deafa95db95aca9e00633e31c1db6dffdf3",
+          "bytes": 1073
+        },
+        {
+          "archivePath": "src/sq/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/sq/NOTICE",
+          "sha256": "e4d54e9d7fb05c8d95517bcb44a401f97011c590ba6a27f97f80d91fd56d5be2",
+          "bytes": 1131
+        },
+        {
+          "archivePath": "src/sv/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/sv/NOTICE",
+          "sha256": "8d6049e2d933d0a26ffb7d2afe7a2e8c5c7244c788e6c35d98c37d84b18dd2b4",
+          "bytes": 14911
+        },
+        {
+          "archivePath": "src/ta/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/ta/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/te/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/te/NOTICE",
+          "sha256": "324c444264651c3e0ae43209016877bde71bad5c86658a7ebfaa8617bdc7794c",
+          "bytes": 1107
+        },
+        {
+          "archivePath": "src/tk/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/tk/NOTICE",
+          "sha256": "7c0f1ade32a2b3f6a490d2d28ee29123affbcbdb39c956c0e6b5f7a60b3f837a",
+          "bytes": 1089
+        },
+        {
+          "archivePath": "src/uk/NOTICE",
+          "localPath": "LICENSES/hyphenation-patterns/src/uk/NOTICE",
+          "sha256": "be9a53837b6b46bf6d5ec66c1a031c0bdbffa4f234e221b097be8bf386e40671",
+          "bytes": 1121
+        }
+      ]
+    },
+    {
+      "id": "isimpledom",
+      "component": "third_party/isimpledom",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/isimpledom.tar.gz",
+      "localPath": "sources/isimpledom-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 13188,
+      "sha256": "757bdb6c82bdc84b51a98d96cca76e739705340aca82310ba8d12e7721bc335c",
+      "archiveEntries": 8,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/isimpledom/LICENSE",
+          "sha256": "3ba9e660540da1bf9e85893464f35a44c3e92285e9f842888f2987664dba9299",
+          "bytes": 25369
+        }
+      ]
+    },
+    {
+      "id": "liblouis-BUILD",
+      "component": "third_party/liblouis/BUILD.gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/liblouis/BUILD.gn?format=TEXT",
+      "localPath": "sources/liblouis-BUILD-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 1235,
+      "sha256": "80f17df487ad2f99ecf9ef405859af63cde0e30cce004c3a1b3524e35efd6217",
+      "licenceFiles": []
+    },
+    {
+      "id": "liblouis-readme",
+      "component": "third_party/liblouis/README.chromium",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/liblouis/README.chromium?format=TEXT",
+      "localPath": "sources/liblouis-readme-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 1801,
+      "sha256": "81926ad1583066ec83a24e4214ee5a875682eb1f4bfe6ef2887a2d1b4c67632f",
+      "licenceFiles": []
+    },
+    {
+      "id": "libusb",
+      "component": "third_party/libusb",
+      "revision": "156.0.8078.49",
+      "licence": "LGPL-2.1-or-later",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/libusb.tar.gz",
+      "localPath": "sources/libusb-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 208992,
+      "sha256": "e7c1f92842b6525b99d1081bc1e66e71c3a2bca5eda955d88e3275d82b6a0c65",
+      "archiveEntries": 64,
+      "licenceFiles": [
+        {
+          "archivePath": "src/COPYING",
+          "localPath": "LICENSES/libusb/src/COPYING",
+          "sha256": "5df07007198989c622f5d41de8d703e7bef3d0e79d62e24332ee739a452af62a",
+          "bytes": 26436
+        }
+      ]
+    },
+    {
+      "id": "mozilla-security-manager",
+      "component": "net/third_party/mozilla_security_manager",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/net/third_party/mozilla_security_manager.tar.gz",
+      "localPath": "sources/mozilla-security-manager-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 16949,
+      "sha256": "1d67857b129534d580971473135165276a1233f63096b027cb8e99c177b7ee50",
+      "archiveEntries": 6,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/mozilla-security-manager/LICENSE",
+          "sha256": "a718a32ad435b316ce3a9e871e05421d6ca784c435f8ef5715c1b6e289381f04",
+          "bytes": 26847
+        }
+      ]
+    },
+    {
+      "id": "mozilla-win",
+      "component": "net/third_party/mozilla_win",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/net/third_party/mozilla_win.tar.gz",
+      "localPath": "sources/mozilla-win-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 7750,
+      "sha256": "40c29f7d7e037d313e044fd5e7b90fa2408f6cd068cb479ea9e91f047cd5fd8f",
+      "archiveEntries": 8,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/mozilla-win/LICENSE",
+          "sha256": "6d29b685206b28617dd9ac13818ccc943e57df68aeea1db0f4a5539f4507a9aa",
+          "bytes": 18122
+        }
+      ]
+    },
+    {
+      "id": "nasm",
+      "component": "chromium/deps/nasm",
+      "revision": "525a09a813be0f75b646ee93fc2a31c27b87d722",
+      "licence": "BSD-2-Clause and file-specific tools",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/deps/nasm/+archive/525a09a813be0f75b646ee93fc2a31c27b87d722.tar.gz",
+      "localPath": "sources/nasm-525a09a813be0f75b646ee93fc2a31c27b87d722.tar.gz",
+      "reason": "Exact external DEPS checkout absent from Chromium parent subtree tar archives",
+      "status": "downloaded",
+      "bytes": 2433429,
+      "sha256": "e3cd839abcb74ef502db98827a9b86a88dabbe7df608ddbba87446c70dc16029",
+      "archiveEntries": 1387,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/nasm/LICENSE",
+          "sha256": "7436a7c46b6e4d969b41e1ce387885ae4ced25710662189ff2983665253729ac",
+          "bytes": 1554
+        },
+        {
+          "archivePath": "zlib/LICENSE",
+          "localPath": "LICENSES/nasm/zlib/LICENSE",
+          "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+          "bytes": 1002
+        }
+      ]
+    },
+    {
+      "id": "nspr",
+      "component": "base/third_party/nspr",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/base/third_party/nspr.tar.gz",
+      "localPath": "sources/nspr-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 18682,
+      "sha256": "5e1d94bb955c8ad3e2a86a71a7e28cd831f771dbd23bb7c73b7ff7f5348dba72",
+      "archiveEntries": 6,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/nspr/LICENSE",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+          "bytes": 16726
+        }
+      ]
+    },
+    {
+      "id": "opus",
+      "component": "third_party/opus",
+      "revision": "156.0.8078.49",
+      "licence": "BSD-3-Clause",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/opus.tar.gz",
+      "localPath": "sources/opus-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 4258550,
+      "sha256": "495fe8c73557190a1d9f9728e68466cb1157acdab27062a8818bd918e09b3ce8",
+      "archiveEntries": 790,
+      "licenceFiles": [
+        {
+          "archivePath": "src/COPYING",
+          "localPath": "LICENSES/opus/src/COPYING",
+          "sha256": "01e1167d54a096d123cf6dfbbeb19587278845c6481d2d66d545669846079551",
+          "bytes": 1945
+        },
+        {
+          "archivePath": "src/LICENSE_PLEASE_READ.txt",
+          "localPath": "LICENSES/opus/src/LICENSE_PLEASE_READ.txt",
+          "sha256": "7efb4989e0cd1b256229bdf2f09300c5d14e35db0e7476bfb87fac243498273d",
+          "bytes": 703
+        }
+      ]
+    },
+    {
+      "id": "rust-cargo-lock",
+      "component": "third_party/rust/chromium_crates_io/Cargo.lock",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/rust/chromium_crates_io/Cargo.lock?format=TEXT",
+      "localPath": "sources/rust-cargo-lock-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 54893,
+      "sha256": "8b087d18dba609ba806c9f27d08e91d51738efb228c25864d91e2b387bf411b6",
+      "licenceFiles": []
+    },
+    {
+      "id": "rust-cargo-toml",
+      "component": "third_party/rust/chromium_crates_io/Cargo.toml",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/rust/chromium_crates_io/Cargo.toml?format=TEXT",
+      "localPath": "sources/rust-cargo-toml-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 5047,
+      "sha256": "09ac1a102d1dea6c63d04d4078d0780b68dad5a75675fa0e183b067cd20f910d",
+      "licenceFiles": []
+    },
+    {
+      "id": "rust-gnrt-config",
+      "component": "third_party/rust/chromium_crates_io/gnrt_config.toml",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/rust/chromium_crates_io/gnrt_config.toml?format=TEXT",
+      "localPath": "sources/rust-gnrt-config-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 29444,
+      "sha256": "ddefda87d11c103a3f44502f831376601414a8fb22bf3aebbb9e19df5bcd8145",
+      "licenceFiles": []
+    },
+    {
+      "id": "screen-ai-BUILD",
+      "component": "third_party/screen-ai/BUILD.gn",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/screen-ai/BUILD.gn?format=TEXT",
+      "localPath": "sources/screen-ai-BUILD-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 421,
+      "sha256": "9ed475a07d316f152d7ed0e081ef44c283f8515a8e0cd3222fd8c849891c67fe",
+      "licenceFiles": []
+    },
+    {
+      "id": "screen-ai-readme",
+      "component": "third_party/screen-ai/README.chromium",
+      "revision": "156.0.8078.49",
+      "reason": "Pinned build metadata / component classification evidence",
+      "format": "text",
+      "base64": true,
+      "url": "https://chromium.googlesource.com/chromium/src/+/156.0.8078.49/third_party/screen-ai/README.chromium?format=TEXT",
+      "localPath": "sources/screen-ai-readme-156.0.8078.49.txt",
+      "status": "downloaded",
+      "bytes": 1552,
+      "sha256": "f41581ebd5f02b109db3e8d5ebed2226f95c73c5f32a27d5756775456964ca91",
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-v0_6.tar.gz",
+      "localPath": "sources/symphonia-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 18051,
+      "sha256": "262fbfb39470bda8b63614d875ee355494119ca1cc7e2cedafe31fdc2f132a9f",
+      "archiveEntries": 14,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-bundle-flac",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-bundle-flac-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-bundle-flac-v0_6.tar.gz",
+      "localPath": "sources/symphonia-bundle-flac-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 32088,
+      "sha256": "375fd1841a36030a99a485dca3690965fa3d0f2cda0a526c49cbc1bc52d4e594",
+      "archiveEntries": 15,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-bundle-flac/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-bundle-flac-gn",
+      "component": "third_party/rust/symphonia_bundle_flac",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_bundle_flac.tar.gz",
+      "localPath": "sources/symphonia-bundle-flac-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1623,
+      "sha256": "0e88ccdb3745e2bd2850ea224399a62fe4b995067d97e3e7f8edcd6e967cfcb4",
+      "archiveEntries": 4,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-bundle-mp3",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-bundle-mp3-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-bundle-mp3-v0_6.tar.gz",
+      "localPath": "sources/symphonia-bundle-mp3-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 70304,
+      "sha256": "5e75f0505e1897237b281085cb5f38a48a03665ccf0b1f024592ba5441a53822",
+      "archiveEntries": 27,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-bundle-mp3/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-bundle-mp3-gn",
+      "component": "third_party/rust/symphonia_bundle_mp3",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_bundle_mp3.tar.gz",
+      "localPath": "sources/symphonia-bundle-mp3-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1661,
+      "sha256": "03722085c2964306fcaaff4c17bac91c39dfca4f9100e1a0df5c684cd5d51aaf",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-codec-pcm",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-codec-pcm-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-codec-pcm-v0_6.tar.gz",
+      "localPath": "sources/symphonia-codec-pcm-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 12685,
+      "sha256": "7c4de21443fe14c706cde981027884801f39afc6de49399c330b00a1c60103f3",
+      "archiveEntries": 9,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-codec-pcm/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-codec-pcm-gn",
+      "component": "third_party/rust/symphonia_codec_pcm",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_codec_pcm.tar.gz",
+      "localPath": "sources/symphonia-codec-pcm-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1492,
+      "sha256": "cff36b0d7990d9f82cf1276fdf5eef787715dc120d7502c8b666aca680255bd0",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-codec-vorbis",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-codec-vorbis-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-codec-vorbis-v0_6.tar.gz",
+      "localPath": "sources/symphonia-codec-vorbis-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 32841,
+      "sha256": "3ecff4c37a5e1740ab05d6165a810470f1345a51043bec89d027632d61bc2c2c",
+      "archiveEntries": 15,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-codec-vorbis/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-codec-vorbis-gn",
+      "component": "third_party/rust/symphonia_codec_vorbis",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_codec_vorbis.tar.gz",
+      "localPath": "sources/symphonia-codec-vorbis-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1554,
+      "sha256": "6f87c934f4681216359aa726e4e6f8cecba4958dd7c801660a4b814d0b957e5f",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-common",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-common-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-common-v0_6.tar.gz",
+      "localPath": "sources/symphonia-common-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 21401,
+      "sha256": "9a9a108f94dd05d3304279bde36ae4d368202ef85edbd02ed7ef706b5b658026",
+      "archiveEntries": 32,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-common/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-common-gn",
+      "component": "third_party/rust/symphonia_common",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_common.tar.gz",
+      "localPath": "sources/symphonia-common-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1571,
+      "sha256": "b2e448197a4054a7e99c8c054b374cc14f23e5fe088320b8b3fc73aeeb541254",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-core",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-core-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-core-v0_6.tar.gz",
+      "localPath": "sources/symphonia-core-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 154294,
+      "sha256": "149107c9eff84889cac2b3f468b87d79a51fb3bb47cf78c442741fd83e144323",
+      "archiveEntries": 59,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-core/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-core-gn",
+      "component": "third_party/rust/symphonia_core",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_core.tar.gz",
+      "localPath": "sources/symphonia-core-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1904,
+      "sha256": "27f9043af5c99857f7319be3b779907a3b08a629b25b0e80a410d5883e78380d",
+      "archiveEntries": 4,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-format-isomp4",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-isomp4-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-isomp4-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-isomp4-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 56891,
+      "sha256": "9e62742b2cd47b96027e3e32ff69dbb46bf28d5e476ad0be01dceb54c1d27158",
+      "archiveEntries": 57,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-format-isomp4/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-format-isomp4-gn",
+      "component": "third_party/rust/symphonia_format_isomp4",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_isomp4.tar.gz",
+      "localPath": "sources/symphonia-format-isomp4-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1737,
+      "sha256": "ef52ee25dd4a88903a0b720eee7ccd003df3f3b347aeb0ca96225cc2a1b0b27e",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-format-mkv",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-mkv-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-mkv-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-mkv-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 51384,
+      "sha256": "9f7834b4039ffff474f2698cee8432dd5fd7c9eea583bf12066f6d14e6fd21ac",
+      "archiveEntries": 16,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-format-mkv/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-format-mkv-gn",
+      "component": "third_party/rust/symphonia_format_mkv",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_mkv.tar.gz",
+      "localPath": "sources/symphonia-format-mkv-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1594,
+      "sha256": "a39393d6561a9f6eba99c16fbcac2438a15f2dfb0e6f34cc53eec74ab1d6c948",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-format-ogg",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-ogg-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-ogg-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-ogg-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 33985,
+      "sha256": "c2a4f2a1a15b90619d48790bc0ca7af92ab766661de67a1de4d8c8a78bfc761f",
+      "archiveEntries": 19,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-format-ogg/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-format-ogg-gn",
+      "component": "third_party/rust/symphonia_format_ogg",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_ogg.tar.gz",
+      "localPath": "sources/symphonia-format-ogg-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1570,
+      "sha256": "89b8b6f39e61beced4b1a2ffb43c58eecec352ec6aa56e32d136e5d655c5cb21",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-format-riff",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-format-riff-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-format-riff-v0_6.tar.gz",
+      "localPath": "sources/symphonia-format-riff-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 30623,
+      "sha256": "03e1d65baad261168e2308eac8c8865344576bf30c5652fffb4f9efc04d4e63a",
+      "archiveEntries": 16,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-format-riff/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-format-riff-gn",
+      "component": "third_party/rust/symphonia_format_riff",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_format_riff.tar.gz",
+      "localPath": "sources/symphonia-format-riff-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1580,
+      "sha256": "041c818b6ffbe1b877f98b86538f6882a5963c661b1a91a4b180c85810cd5cac",
+      "archiveEntries": 3,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-gn",
+      "component": "third_party/rust/symphonia",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia.tar.gz",
+      "localPath": "sources/symphonia-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1617,
+      "sha256": "6056a518080b29160695f1ceec544aa2295da4269e60ba0e0ebccea2874ad828",
+      "archiveEntries": 4,
+      "licenceFiles": []
+    },
+    {
+      "id": "symphonia-metadata",
+      "component": "third_party/rust/chromium_crates_io/vendor/symphonia-metadata-v0_6",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0",
+      "reason": "Entire vendored crate including Chromium modifications and Cargo metadata",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/chromium_crates_io/vendor/symphonia-metadata-v0_6.tar.gz",
+      "localPath": "sources/symphonia-metadata-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 61710,
+      "sha256": "e3f4198d3b597b783b8764cb2c902850697e5cd9b695b342fe46def6b18a9ccf",
+      "archiveEntries": 31,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE",
+          "localPath": "LICENSES/symphonia-metadata/LICENSE",
+          "sha256": "c76f740d1521b9bed9ca7a04ad526c310493c62621b1341d623b431736533b30",
+          "bytes": 16725
+        }
+      ]
+    },
+    {
+      "id": "symphonia-metadata-gn",
+      "component": "third_party/rust/symphonia_metadata",
+      "revision": "156.0.8078.49",
+      "licence": "MPL-2.0 / BSD build files",
+      "reason": "Exact generated GN crate wrapper and README",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/third_party/rust/symphonia_metadata.tar.gz",
+      "localPath": "sources/symphonia-metadata-gn-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 1726,
+      "sha256": "7221d5cd6c8508fc013774fef2130047a8b326490408f59e2bc152a255159dab",
+      "archiveEntries": 4,
+      "licenceFiles": []
+    },
+    {
+      "id": "url-mozilla",
+      "component": "url/third_party/mozilla",
+      "revision": "156.0.8078.49",
+      "licence": "MPL alternative chosen",
+      "reason": "Preserve exact Chromium source/build files as a conservative covered-source superset; linked inclusion may vary",
+      "format": "tar.gz",
+      "url": "https://chromium.googlesource.com/chromium/src/+archive/156.0.8078.49/url/third_party/mozilla.tar.gz",
+      "localPath": "sources/url-mozilla-156.0.8078.49.tar.gz",
+      "status": "downloaded",
+      "bytes": 16949,
+      "sha256": "c4b92fa4f002f577b4de688feb69c97198922646440d3cc630f065e2e6b3c813",
+      "archiveEntries": 4,
+      "licenceFiles": [
+        {
+          "archivePath": "LICENSE.txt",
+          "localPath": "LICENSES/url-mozilla/LICENSE.txt",
+          "sha256": "284545e873c704952e5b1b39d457dd83a3b115a51d9f1eb5175137bd69b8fa1b",
+          "bytes": 3200
+        }
+      ]
+    }
+  ],
+  "classification": [
+    {
+      "components": [
+        "Android NDK",
+        "glibc",
+        "gtk",
+        "libbrlapi",
+        "libsecret",
+        "plasma-wayland-protocols",
+        "Speech Dispatcher",
+        "v4l-utils"
+      ],
+      "status": "Platform-specific notice candidates, not identified in Windows runtime files; not assumed Windows linked",
+      "remaining": "Confirm with Windows compiled-component graph before a complete BOM claim"
+    },
+    {
+      "components": [
+        "ScreenAI Library"
+      ],
+      "status": "Chromium metadata states component downloaded separately by Chrome; test-only binary target; no ScreenAI library in actual app file inventory",
+      "remaining": "No proprietary ScreenAI source acquired or claimed to be distributed"
+    },
+    {
+      "components": [
+        "Braille Translation Library"
+      ],
+      "status": "Chromium README describes ChromeVox wasm; Linux-conditioned source checkout; no standalone liblouis wasm in app inventory",
+      "remaining": "Preserve classification evidence; no claim of Windows-linked library"
+    },
+    {
+      "components": [
+        "JSZip"
+      ],
+      "status": "Explicit MIT OR GPLv3 alternative in delivered notice; MIT selected, no corresponding-source duty from that selection"
+    },
+    {
+      "components": [
+        "DirectX-Shader-Compiler"
+      ],
+      "status": "Broad notice GPL text identifies autoconf/config.guess and exceptions; no evidence GPL compiled into DXC DLL",
+      "remaining": "Full notice preserved; executable-source licence attribution remains version-pinned upstream metadata"
+    }
+  ],
+  "downloadedCount": 64,
+  "totalBytes": 164610262,
+  "allPlannedSourcesPresent": true,
+  "deliveredRuntimeNotices": [
+    {
+      "path": "LICENSE.electron.txt",
+      "bytes": 1096,
+      "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+      "provenance": "Exact Electron 45.1.0 notice, verified identical to audited beta.5 through beta.8"
+    },
+    {
+      "path": "LICENSES.chromium.html",
+      "bytes": 5705935,
+      "sha256": "7dac8267ac6da8d959cfe88f5f055b18a397f10230380b5329125e167bf5639b",
+      "provenance": "Exact Electron 45.1.0 notice, verified identical to audited beta.5 through beta.8"
+    }
+  ],
+  "extractedLicenceDocuments": 117
+}

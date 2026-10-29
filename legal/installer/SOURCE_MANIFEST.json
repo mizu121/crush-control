@@ -1,0 +1,2968 @@
+{
+  "schema": 1,
+  "generatedFor": "local license remediation; no publication authorization",
+  "upstreamArchives": [
+    {
+      "name": "StdUtils 1.14",
+      "file": "StdUtils.2018-10-27.zip",
+      "sha256": "3ffe893dc7477fdb1cac551a86ae017509e1f2d0ebdc7185fd0fbaf20870688c",
+      "url": "https://github.com/lordmulder/stdutils/releases/download/1.14/StdUtils.2018-10-27.zip"
+    },
+    {
+      "name": "Nsis7z 19.00",
+      "file": "Nsis7z_19.00.7z",
+      "sha256": "6f2f3730049926f40442ee0c8b7d3e3dee7ace544d82467ff8059ea3f4201c58",
+      "url": "https://nsis.sourceforge.io/mediawiki/images/6/69/Nsis7z_19.00.7z"
+    },
+    {
+      "name": "LZMA SDK 19.00",
+      "file": "lzma1900.7z",
+      "sha256": "00f569e624b3d9ed89cf8d40136662c4c5207eaceb92a70b1044c77f84234bad",
+      "url": "https://www.7-zip.org/a/lzma1900.7z"
+    }
+  ],
+  "binaryPlugins": {
+    "StdUtils.dll": "b72e9013a6204e9f01076dc38dabbf30870d44dfc66962adbf73619d4331601e",
+    "nsis7z.dll": "b393f05e8ff919ef071181050e1873c9a776e1a0ae8329aefff7007d0cadf592"
+  },
+  "stdutilsSourceCommit": "4e1117321001e54dcd2c52f72d3c359d5215e426",
+  "nsisApiSource": {
+    "repository": "https://github.com/jimpark/unsis",
+    "commit": "6bb3de8754f5c6c1dabf4358c69dca223102a278",
+    "path": "unicode-src/Contrib/ExDLL",
+    "evidence": "The normalized pluginapi.h matches the header in the official StdUtils source archive. Historical helper object equivalence and a full DLL rebuild have not been verified."
+  },
+  "sourceFiles": [
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/StdUtils.rc",
+      "sha256": "1747cac4906b0443d437f12a182663cbb2567a6f6be685582119d82e04d18969"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/StdUtils.sln",
+      "sha256": "f48ec29239459c9879934b70cd3d7cc8836dcd1c4981b9cc9acc10df4c25840a"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/StdUtils.vcxproj",
+      "sha256": "dbbcdf093a92a2f607c1337eba1eba490fc4c555e1d9106a62fd79779804930c"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/StdUtils.vcxproj.filters",
+      "sha256": "4257156983706a59ac8f5c872a984bb17943639eb6fa37907698d478ecfc0351"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/include/ansi/nsis/api.h",
+      "sha256": "60d394d869118558efc6d9e1de65f9cdcdeb669c6509a6c8c26a256d34f6d643"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/include/ansi/nsis/pluginapi.h",
+      "sha256": "c1643cd6b07acce4f02ca35cd379efc7923929a5e3142915ee4a9cf0db25d5d6"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/include/common/msvc_utils.h",
+      "sha256": "ea539f9f30d2a35685c125dd57821582a069091c1cd47e3369c8c6053854bd38"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/include/common/nsis_tchar.h",
+      "sha256": "e7b32f06f53600567af0639e61941572007abb827c815be009897c3f03b25fd5"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/include/unicode/nsis/api.h",
+      "sha256": "da0b2aa6ad8a9c6570ba63605746c3d832c468972a24417d75c322abe788086c"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/include/unicode/nsis/pluginapi.h",
+      "sha256": "537c93fb4c08b0ab9ca598300aa517f96edd68b6011aa35faca40ce0a73559f5"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/Base64.cpp",
+      "sha256": "c233a9a037a718672a7252123bf14bb60cdddc45601e0f243c3b9f8d753d1b0f"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/Base64.h",
+      "sha256": "de17dd08ce95b33e0873c73b86982fedaba1415f4bba7070074bc137f2667e49"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ByteToHex.cpp",
+      "sha256": "5e3827a1e5bd2ef10a23d71d9efd85566286dd945f90139163d33fd245c37c91"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/CleanUp.cpp",
+      "sha256": "ee711e1914a1547d613c180dc76ab98cd41f7534573b79f2e50b25fb06709c9e"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/CleanUp.h",
+      "sha256": "d8932c91b33219abb6a0ec7ab6b938927645d1b065e462a03dccd6be50c1808a"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ComUtils.cpp",
+      "sha256": "fcf7809de3161e9095f3d54ef416595531c4eedd168558f370ec66356cb91f02"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ComUtils.h",
+      "sha256": "3afb8bf1abdac930429862d355dff2cecd692ea154dbf8dcf518f69ef79d2f47"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/DetectOsVersion.cpp",
+      "sha256": "0c9ddf505115bab224a12def555f59d2bbb50558465b378118655bd9de37780d"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/DetectOsVersion.h",
+      "sha256": "be8bf09a1404054d7403efc3b4913571ed5e50109faa258d80ac661cd6774a2d"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/FileUtils.cpp",
+      "sha256": "5a705e31f39945c46a96c02ca33c0c03e591c5eefadbb716fe78afcf25b504cb"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/FileUtils.h",
+      "sha256": "10a6d9ed308682060d2cea5c9155af97b8f3bd0a72dfe73589ea9b2189290dae"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/HashUtils.cpp",
+      "sha256": "84610e415aac7a3f985470c550886f5fa6f833b57d88d3953b8faf01553a647d"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/HashUtils.h",
+      "sha256": "df58c1521b12b769aed81daeef987c6e4a284f8de5172ee3d660a22eb3fd912d"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/InvokeShellVerb.cpp",
+      "sha256": "05f7c1e451865a350f498b75793b4cf4f78ce34388d01f2318ead02536d552b0"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/InvokeShellVerb.h",
+      "sha256": "95819c26982f207c5dd6709a8b8decfe390c97a3c932291c41a6356ced3067f7"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/Mutex.h",
+      "sha256": "ba3c5231def30fdeb4f4ba8b34fb9c2367b562c3459d50b0771dec1473b13ebc"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ParameterParser.cpp",
+      "sha256": "ddf3c05bc164b49e183a35e44bac7f45ed16aff87312d3055184cce8d0049c5f"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ParameterParser.h",
+      "sha256": "9d5522c2257a4dd677c8829944851e539f33473230a9be5eede6548c87d41f6e"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/PathUtils.cpp",
+      "sha256": "9d6d11c252452d8c7f88f743db63c310154404ac4b99b0a1af9cc85bc5362513"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/PathUtils.h",
+      "sha256": "f072a774f9ce995e95c92d2ca789f8463331a6aa13cbc7e4fa61636da6b19fe0"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ProtectedData.cpp",
+      "sha256": "299b6ead76fa2e80ee0abcaef11e98967146365c66e6ea8e6b764bafb6bf8eea"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ProtectedData.h",
+      "sha256": "8e155e469c0f3c824f78c344a5c4ee632e176265b90b507b8b2e9be2e4883141"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/RandUtils.cpp",
+      "sha256": "bc33240f15a65ccd5ac2da0734dd11db1ba0be028a9039fc2f1ec47874ec463d"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/RandUtils.h",
+      "sha256": "6e1a58741ea76a7cf3df3fcfddf794ee379fb80841a32adf588d02871d100562"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/Resource.h",
+      "sha256": "423d6cdded281a00e3baf89295e2ea68911535aceeb1e43fc02754b38a06c854"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ShellDispatch.cpp",
+      "sha256": "c9cd43ac52f6d970f3cd84314d3fe8dd5dd4d4b0190d01f937bc470f9e01eb78"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ShellDispatch.h",
+      "sha256": "df70c54b1b87509ba841dd954e3688b2c092e78d2b0e6226778ec550ceb7e27c"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ShellExecAsUser.cpp",
+      "sha256": "891b40366b124ef638056b95eb7db776b12e5aee88912b90dbad70a3a83110ef"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/ShellExecAsUser.h",
+      "sha256": "df2e1eb25d0634ae28e2d0407bec920c0a709b2da468408285d24df65f73d444"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/StdUtils.cpp",
+      "sha256": "56063f6f3bad3ffcef5611103b0339e97fd83c26f3b29daa065f4adbc506f49c"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/StdUtils.h",
+      "sha256": "90ee4d276c8afe42ee5c3b3eb27878c47a996a53ef1591a388a3fa3ed71fc6f0"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/TimerUtils.cpp",
+      "sha256": "41c85020e7837e22c84e5750695572af4baf0c9afd1f1c00d96a5173d1f2ea06"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/TimerUtils.h",
+      "sha256": "3df6ecfc5ff93149810e0af33bffb83c5dfa968733d267323ee1b671a655e55c"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/UnicodeSupport.cpp",
+      "sha256": "92716bae4fbc80cf04f3703f70fa70944894e6992445a1742340c5f5c09af9b2"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/UnicodeSupport.h",
+      "sha256": "5867dc4af15c7edb8a32b9a27a2ef340b19ca2c05a57bc1524ee08330ff6f48f"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/WinUtils.h",
+      "sha256": "3ba25a2ba487288c743d54ed342cb6b73e417257fd5bfee9eed05f83b2adf88e"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/blake2/COPYING.txt",
+      "sha256": "f4e7f373b9b996950337e8d41a4a2939c2d90b7725e9baf3d5084a22717ad328"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/blake2/blake2.cpp",
+      "sha256": "2b85bfbd2559b43348f40159d30ee1b81ae2061d6d45a2bb9321bf0babc8b8b4"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/blake2/blake2.h",
+      "sha256": "e20581a2f472c23b4e8cb91a9842a9507d55a78a521b37b427aebfb03b425df6"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/COPYING.txt",
+      "sha256": "842fef4921191943e531c6cc939b0334f1c2658c9204e30dd35d13f51fdf70dd"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/byte_order.c",
+      "sha256": "20eeb4862cf83b3e649848ec43c6f1b9877778e15260143e461e90b8146dd835"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/byte_order.h",
+      "sha256": "7017bc872ed4bdb539b51b33a2a497ad05ad297bc1e9e367fc747230dd4f878c"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/crc32.c",
+      "sha256": "3b6feccc26ca47dd7630ba412dbf30e15dbcee36e3398857442520112edcf8b3"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/crc32.h",
+      "sha256": "b71314174917c3d2912afde970e1fd24f557dcad8e58edd2a024090f6269b968"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/md5.c",
+      "sha256": "57b0a702059d6b57c55915de9c193c01e53efc36d8835d3a2ef8f2020385ad2b"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/md5.h",
+      "sha256": "b3d320f61c2eca820b6fb6295f18214419184039f812edf0660294055f47ecc4"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha1.c",
+      "sha256": "747422460ffc87728e6321462527c4ed365ae5fb266018b68e6f0c7b0e3aa502"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha1.h",
+      "sha256": "40097d9c041b5bdeb10de66def332c52790ea4bf9e4220209940b992724360c4"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha256.c",
+      "sha256": "09c8f7f9b1dd796d73e9f8ba1a02102227a4836e0037a38e76a47bc8345429e4"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha256.h",
+      "sha256": "04f5c97b0d455413c33284fdd8a28e7f9dc96494c5e87bf2bcfae6fbd6d5bceb"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha3.c",
+      "sha256": "4ac2338a0a92f21109bd0ec8f7b96dceab987d1c8a2fe852df7720c2f9ed1b56"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha3.h",
+      "sha256": "d84f4f658e762a331a4428dff1a7fa102bff641f9eee91ed6e1cced44c22c8ac"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha512.c",
+      "sha256": "645b22f184315dcd295253c76c06d6e522c40d8b0629620f4b9bab0a4adfa894"
+    },
+    {
+      "name": "StdUtils-1.14/Contrib/StdUtils/src/rhash/sha512.h",
+      "sha256": "9f49c65d72c19308eb44160ba2cb900e3cebc7e8c6dad4b9a81c39202b387746"
+    },
+    {
+      "name": "StdUtils-1.14/Docs/StdUtils/StdUtils.FULL.html",
+      "sha256": "1609adae79b97dd853b4f25c3fe6aeb1211ad4963e939bbcce37fc56ed87b5ac"
+    },
+    {
+      "name": "StdUtils-1.14/Docs/StdUtils/minify.cmd",
+      "sha256": "c84ef776876fbb79e6b868e050abb51c25024849dcf67a3d10475ee602499bb8"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/!_Clean.bat",
+      "sha256": "8818d707e089ec4405a0c1af998682cf2f979f992d077d5aac4a1dcd885652a7"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/!_Make.bat",
+      "sha256": "185dff9df5f83a663b3fcecae86cb220dfed14b4124f23a9bad7cafe2fb4dda1"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/AppendToFile.nsi",
+      "sha256": "ce03dd5b8e77cd46e90ffbd17146cd30f2c4b3f40a2f83e684e3ca672d9ca50d"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/GetParameters.nsi",
+      "sha256": "f07911153cfbdec105d8d6ec8f574b3a77043581e385015fc29d791d872be9be"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/HashFunctions.nsi",
+      "sha256": "c35e8e6f6daf271f854f75f7ef7d46246d55e53210622aafd1fb98c0a1f2938a"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/InvokeShellVerb.nsi",
+      "sha256": "5fe0590b468b400eb8ff1b299f1d88322ff2adcaddc7787dc79785f6b680bba8"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/OSVersion.nsi",
+      "sha256": "0cfc7c1d1f0da3b9aa6f39db5186adfac6628785b47ca245e2f017ba573cf4e4"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/PathUtils.nsi",
+      "sha256": "4b013e372476884233585f7e102a87c812d3e99eaa5766f2baf22c1e6e16fbdd"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/ProtectStr.nsi",
+      "sha256": "90f63078941e9c1854374f573278834b28400bfb4a902aa36be7882123a05363"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/SHFileOperation.nsi",
+      "sha256": "9a181bf1782879ac924ce559939241deb21b92e89fd18565411f0d28b20f2f24"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/ShellExecAsUser.nsi",
+      "sha256": "9c42f66671023809241ead7d4fe338c1ed3b770b091413f12b063d5072719a12"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/ShellExecWait.nsi",
+      "sha256": "d18bcc19d2fd23d2d84e4b23a543f0a2fb1fd047ed726d7142b164b795b63c4b"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/StdUtilsTest.nsi",
+      "sha256": "a7671db7893d9b2a802f223be42b7494f4e76d2944e5fd4852a186e11254aa7d"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/StrToUtf8.nsi",
+      "sha256": "bf16bdcd301b2a1b442cbf74c150b8349e0fdf2e48d387bb89509f238925b271"
+    },
+    {
+      "name": "StdUtils-1.14/Examples/StdUtils/TimerCreate.nsi",
+      "sha256": "652d786ae8d5c9d06a96c33dba635e5ed2c85c58c5fb9d83fefeb44cca0d93b8"
+    },
+    {
+      "name": "StdUtils-1.14/Include/StdUtils.nsh",
+      "sha256": "40526509edb8a148261bfbfbf7adc20c03d419aaa92797516c457c89bf41f0d0"
+    },
+    {
+      "name": "StdUtils-1.14/LGPL.txt",
+      "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531"
+    },
+    {
+      "name": "StdUtils-1.14/LGPL_CLARIFICATION.txt",
+      "sha256": "ae0ab3f49b4473152181c1fe5670435faaca079eda0b261ee31a51a6180bc9e7"
+    },
+    {
+      "name": "StdUtils-1.14/ReadMe.txt",
+      "sha256": "31b67e463c6e5695e9ffaf62dd077d9bd62df34026593c2f29bc9ea87fdac72f"
+    },
+    {
+      "name": "StdUtils-1.14/make_pack.bat",
+      "sha256": "a72445c68e0f72caf2831c1744b198eb1b1769d333939254c8fa03b870ecbaa4"
+    },
+    {
+      "name": "StdUtils-1.14/pluginapi-source/COPYING",
+      "sha256": "83fd69ebd7ac3d373d6df266f87a0efd3af2d3f21a9044128fa21698a36eff3f"
+    },
+    {
+      "name": "StdUtils-1.14/pluginapi-source/SConscript",
+      "sha256": "09e3bdaa43ef02682f8236109bd57cee25700ff50b53c04218097f0bc62cff66"
+    },
+    {
+      "name": "StdUtils-1.14/pluginapi-source/nsis_tchar.h",
+      "sha256": "378563248ddd77f4a33691527c43b1e4acb3925e1ddd2394fc6ec96d307a173b"
+    },
+    {
+      "name": "StdUtils-1.14/pluginapi-source/pluginapi.c",
+      "sha256": "dcd9ccaf4b674f0673c1c97065b799a09be72b0e3c867e0aa998f2f24b7267cd"
+    },
+    {
+      "name": "StdUtils-1.14/pluginapi-source/pluginapi.h",
+      "sha256": "a826572abd541271490ec5360299f944234043f5e5feef1afbdac9e6c73fb0be"
+    },
+    {
+      "name": "Installer-overrides/build/installer-templates/LICENSE.electron-builder.txt",
+      "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce"
+    },
+    {
+      "name": "Installer-overrides/build/installer-templates/UPSTREAM.json",
+      "sha256": "fc6c1114dd8ded70fa40a7c517d68a3aa9777a263f8ce128a8dcb041032acd4b"
+    },
+    {
+      "name": "Installer-overrides/build/installer-templates/installSection.nsh",
+      "sha256": "11c1c9d9cf16d26f0a36e3d09824961482302c2ce5263e67d43a84ae8d5bef0a"
+    },
+    {
+      "name": "Installer-overrides/build/installer-templates/installer-app-files.nsh",
+      "sha256": "ff59b10c07114433c8a0a1f7a8870fd06d722d147949cd0fc63cf9287ea84914"
+    },
+    {
+      "name": "Installer-overrides/build/installer-templates/multiUser.nsh",
+      "sha256": "9aca256695c289ec8a875143101fae8c6236bc8c6a7cf369bbe8b4986e09c9cb"
+    },
+    {
+      "name": "Installer-overrides/build/installer-templates/uninstaller.nsh",
+      "sha256": "c23a0b23bab7e5849299da44dc4d6ed6a6ac4685ef54627bc62f80d0e2eef6b7"
+    },
+    {
+      "name": "Installer-overrides/build/installer-templates.cjs",
+      "sha256": "56d88ab2aa26b97de614b690d96a4e64a239298179363d46c1c510140bd3c074"
+    },
+    {
+      "name": "Installer-overrides/build/installer.nsh",
+      "sha256": "9ca87a79e35d092d25e4070648fdbd724be5b0120b31d403eb55fb0def71b240"
+    },
+    {
+      "name": "Installer-overrides/build/installer-process-check.nsh",
+      "sha256": "be110571e34b56f79664119a5a6f7906176d19f62eae5da81c4b0753b1794127"
+    },
+    {
+      "name": "Nsis7z-19.00/Asm/arm/7zCrcOpt.asm",
+      "sha256": "746ec91da99afc2131fbc345b17ff77c6fe1930bf30e803bdf85d3a71199b488"
+    },
+    {
+      "name": "Nsis7z-19.00/Asm/x86/7zAsm.asm",
+      "sha256": "2df926a1b77891d001be4d359e287e8b259b9961230423cabc6bb7cd2e17990e"
+    },
+    {
+      "name": "Nsis7z-19.00/Asm/x86/7zCrcOpt.asm",
+      "sha256": "1dedc07acc7b1f57299930cc946f0c9ef20c8e4edbbb403639ba22bf9fe42bdc"
+    },
+    {
+      "name": "Nsis7z-19.00/Asm/x86/AesOpt.asm",
+      "sha256": "76e2f66d7aeb8188f5e2b4e63d9439352fb7b1f82fc5ffc19ab1f58732b55a88"
+    },
+    {
+      "name": "Nsis7z-19.00/Asm/x86/LzmaDecOpt.asm",
+      "sha256": "3f37f01f71ccd8a465f87c7c26f463fae7709c6c1682a2aeab78dd0f83ec442e"
+    },
+    {
+      "name": "Nsis7z-19.00/Asm/x86/XzCrc64Opt.asm",
+      "sha256": "85f3f15c236144350a13f5895ccbd63a52b447992f2608e369fca8a1a365a391"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7z.h",
+      "sha256": "3577f7c141373679f72f8179179ff04b5976dc015d4e4495f216c17bc28a6747"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zAlloc.c",
+      "sha256": "70d4b4395e299a1b445232435efeee5b892bd3690269e78ab48d857d31347ebe"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zAlloc.h",
+      "sha256": "b333385741e534273d47d27d551d5ae35236ddcde17951004fcb75b59579d15e"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zArcIn.c",
+      "sha256": "2dd1a3570b756c678527dd6f9da4881bd9d8a862cd34cc215a381fd29c024fa5"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zBuf.c",
+      "sha256": "34f1bbf82091c59663c2b14c0d6d3321d4bb189098f6e597e849d0a824a61e04"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zBuf.h",
+      "sha256": "6a9b29655cc5092c0048709453b911619dfd0e01c785f07c40f182f01055e56a"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zBuf2.c",
+      "sha256": "5e64b31339ed340d5d57857f1decbb17e42ac741465e37c113184a662bb22da1"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zCrc.c",
+      "sha256": "4f71b7737a2c6c58f4ec77c4691b39008a7e7633e07db99237a850c63221f5fd"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zCrc.h",
+      "sha256": "84ae571634f80ef906202467fc82456cfe631e44cdd20840047874daf25cbebb"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zCrcOpt.c",
+      "sha256": "9ec1b0fc62140700e79bb466d7c25a8299f7d58ffc2ab487059ecb15a0e52746"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zDec.c",
+      "sha256": "ae0b3355f3910abe7d8b65144f090d0f386f6e3a92327ba88e583646d60238de"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zFile.c",
+      "sha256": "f9158ebec3cd421450b43061325995ddd17a0f2db85bbb61caa85ffd3ecf1865"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zFile.h",
+      "sha256": "9f43c9041a8c0f0a99f7ee5dbc204452d7e38b583f650df01a375aa2a7847ea2"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zStream.c",
+      "sha256": "3135ea7d4600e1c1a7d0e4a7b888aa954647dcefb2b30291ac1db479e8a03050"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zTypes.h",
+      "sha256": "cba4277d8cda4954ddb4ad1e2d91a3c119b27d6bde8e906c674f3532511c26f0"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zVersion.h",
+      "sha256": "54a472a0b79d3c386ffb790903a4979a618c6fa594fc05198f4febb43a37e200"
+    },
+    {
+      "name": "Nsis7z-19.00/C/7zVersion.rc",
+      "sha256": "1f3704dabc940fe51cb9e77cb246427931ccb89723f8f9719d6c0b2c932cb1e9"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Aes.c",
+      "sha256": "991438f4cd0a22470f0e0ebda9fa27247130954a87b06643b384dd41c26d80c2"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Aes.h",
+      "sha256": "b9e6217b8752a558d0b22dabe85fbc091c41617759495e2be92e86d25918ebdd"
+    },
+    {
+      "name": "Nsis7z-19.00/C/AesOpt.c",
+      "sha256": "cf15238d7c703affa0e088d300b4bf53017dc33a0413a55eb3bbcf3a3e0e2f6e"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Alloc.c",
+      "sha256": "e1427d3dd13d3669c3f06dcb541f3136bb4f5ab579b5953f9f36aa2963dc92c2"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Alloc.h",
+      "sha256": "4963733351408586042d235a0aabbc413390d5770afece33d92cd7cb9ddec947"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Bcj2.c",
+      "sha256": "ceacca5ad123f0ed9f0a14d448465d67b4156236bcec78c8edf0e749084695a4"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Bcj2.h",
+      "sha256": "f4038a4f8ad768c99e60facb7562331988aed919ea26ff1d4347271563554a52"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Bcj2Enc.c",
+      "sha256": "0f88e1d50ba0aaabffd56819b1938a2a405578d78933ba0516b9bc75d53cf5dc"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Bra.c",
+      "sha256": "3f20b9f405537d89c545b958a3564c22282d673e7c01198b3d23c050fab63632"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Bra.h",
+      "sha256": "fff20b5da3821ac5a11bcde5acb2c2fabdba79f0377095f396e8c65d6bcb5dfc"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Bra86.c",
+      "sha256": "f6ffa9c79fdc5bb6a3317610b4bb035f5549e54df8fdd523774030431d1f3525"
+    },
+    {
+      "name": "Nsis7z-19.00/C/BraIA64.c",
+      "sha256": "6917aeba0b570f45c86dd7a0815d7ca615fd7550ede4f3a80db1860de4635dcf"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Compiler.h",
+      "sha256": "432fffe11231783e452fa0d7bbfc0412d6860e377291e00d54e0fdf01b029878"
+    },
+    {
+      "name": "Nsis7z-19.00/C/CpuArch.c",
+      "sha256": "9ee42b2b7a8b17ae08db2e96a01e3bbac1fd4d95453c181b1ae82a9922a700fa"
+    },
+    {
+      "name": "Nsis7z-19.00/C/CpuArch.h",
+      "sha256": "aa2ddb12dbf18df4e310e2105276ce29f5b5f6b67cace5f392c2c62c888f7afd"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Delta.c",
+      "sha256": "ff20849ee9472b27ce5ba0e184130e46f32ce1bf0d2d88fb7df67239bd13e1a1"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Delta.h",
+      "sha256": "b892bfea8bb79ff7a463939455cef30fb5186f20bb947bcb61fa1b5be91aa6d8"
+    },
+    {
+      "name": "Nsis7z-19.00/C/DllSecur.c",
+      "sha256": "cdf148daf7962d218dc2ce994cd6a48b93d10916674e6bb73981ee70077b95da"
+    },
+    {
+      "name": "Nsis7z-19.00/C/DllSecur.h",
+      "sha256": "49382222d3f18bd8c9c2397569196615b395c1cbcee7b27f8264e5509c636970"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzFind.c",
+      "sha256": "4134f28a20600e276769485576d39b8f9f719062273cb7371455b62713e8e23b"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzFind.h",
+      "sha256": "49d13c4edb9382b4598100166f0b91aedfc2e8a52df2921ed05fd5bfe755b2fa"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzFindMt.c",
+      "sha256": "bb200aa13ce51bbc4b329f68741cbaa004a959c1b60c405da7cf2b19a2c4b3fd"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzFindMt.h",
+      "sha256": "f132126c6b24adbd0f8f9b4f9ffece6422d54cc90229d6aa1879c3bd5a9e58dd"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzHash.h",
+      "sha256": "8303c1c37c1bb07cc91a1300b7b7e7d89070981e030549d63126453194b477b6"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma2Dec.c",
+      "sha256": "10dc95c06e919cbcc4e2d5ef96ffb33d5e6148c918ccb7fcaa6ad106616275b7"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma2Dec.h",
+      "sha256": "53962ba2efbfe617b2feebd747bc84d544aa33ba84036253b484c945dd834bd4"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma2DecMt.c",
+      "sha256": "7a310da3726d175475a686cd97b97a29ba077ba9da9adbea2f8a26b526db10b9"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma2DecMt.h",
+      "sha256": "ef8a12985bba32a8036c68599894e4a5d4c59a35215a53db1a1446ecbc71081f"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma2Enc.c",
+      "sha256": "1ff1218b74a0ea940efbffcf08d7ccece5539b53aa1fe5ed9f8e7fde9aeb7dca"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma2Enc.h",
+      "sha256": "a3c7a49c93a09775463f3522ebe992dc8cb3c9aa9d56a869be827098ca5ffc07"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma86.h",
+      "sha256": "05edfb972f9cd5fb41229d3723abc739de151f510a0e35078efcaa4ce5207652"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma86Dec.c",
+      "sha256": "6a8eac5177d8171475cb7fd9636c11449fc40e64e5c708d6f41889b761d6c000"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Lzma86Enc.c",
+      "sha256": "e21fe7c1faecf6d8f6c439a376f2f7a63e436fc2ed782ddfa584b4d954e2fd9b"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzmaDec.c",
+      "sha256": "34081b2f00685c1e2f0b4828cbdfebca846e0f7af82d7a84d38787824909e8f4"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzmaDec.h",
+      "sha256": "f43c4023065b3fc6c230c309457645070cecef848e8a3a1c9c4e0aa54eb5c5ff"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzmaEnc.c",
+      "sha256": "fd005b39afd16459fd57006c20098ea1d5d3d03ccc6965b3c95f253ee0ec119f"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzmaEnc.h",
+      "sha256": "474db10f1e485a744ecd560f7a9560a4e24888b46a34432910efd9b964c79299"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzmaLib.c",
+      "sha256": "3927497cca9e9cc7eb6b7ad79e1421ad294b2c0f5ec4c06f511661f1f8960e15"
+    },
+    {
+      "name": "Nsis7z-19.00/C/LzmaLib.h",
+      "sha256": "c84bf13df1163fdd453badff35a473cb3eda8e310c22d5da9a70b273c815ffe3"
+    },
+    {
+      "name": "Nsis7z-19.00/C/MtCoder.c",
+      "sha256": "e3b971a1a4eae4e2260301219a2ef853bc68df09675a6a6c30cad97285216801"
+    },
+    {
+      "name": "Nsis7z-19.00/C/MtCoder.h",
+      "sha256": "2dc13839d5814e57ca6af43ab14fdf095704501e87966b8d891c7e3eada77c39"
+    },
+    {
+      "name": "Nsis7z-19.00/C/MtDec.c",
+      "sha256": "8aeb71e82013b613432264188a5618944bb4b8dea5c676015ba5b313dc0dcb68"
+    },
+    {
+      "name": "Nsis7z-19.00/C/MtDec.h",
+      "sha256": "ce3f25df4cd4ec4e2fa7d56677d0313aaf884e4a77b8104e0da1aa041d5bfe21"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Ppmd.h",
+      "sha256": "62a2f3404467ce510c4ab69bef07c1f70f26e266492341e206c73c3f3d21b670"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Ppmd7.c",
+      "sha256": "9ac5ba04897a2f61a84e9e6419b1987f8dc1f36f0cf19db54422050abda4408c"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Ppmd7.h",
+      "sha256": "3e3537f82b18179b3936bcfdb3f72606554e0477cd342813339cf8b8f2fdad85"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Ppmd7Dec.c",
+      "sha256": "65c11aeb4c610b2d6ecb2413f7b99bd484be4a08b131c04660d0d83daa08c6bc"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Ppmd7Enc.c",
+      "sha256": "a3b64319cebdd475eb84379ab168012f857867db37ef56712cc3e1dd2561b549"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Precomp.h",
+      "sha256": "3850ffe13cb2207dba1c037fe41a803303883aaeec1407052f6038c4e6722ace"
+    },
+    {
+      "name": "Nsis7z-19.00/C/RotateDefs.h",
+      "sha256": "17ea79667edf075dbc181c6b6be225656b47c9430a0b8701379d78e5f7de33d5"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Sha256.c",
+      "sha256": "16a151b6469f349fe5b42938c34f4695c40045ce6bbbbde808f7dc4565a8c3fc"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Sha256.h",
+      "sha256": "a3d6eadf39b0489755980928c0154bd4d2abc312dd2952496ef29d6175144b49"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Sort.c",
+      "sha256": "94c400a6a76ba8637875dad5a70bb1a5db69192558c93f7c16515510dce379eb"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Sort.h",
+      "sha256": "91a825d39ba363ff14f8b2365613f3a50c3e1c125008d10b022ef814af3b1f38"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Threads.c",
+      "sha256": "e1993ad02553cff37d36df1d5e60e975cb64c97264af710276907189819d00dc"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Threads.h",
+      "sha256": "1c57767a548ccd92b7a147478586126f10196f3ac6ecba20519ea86a73319bfb"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/7z/7z.dsp",
+      "sha256": "a831fd0017ed6651f78ac6176459113b6b765372d99723eac25dcc98f347c46a"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/7z/7z.dsw",
+      "sha256": "fe9dd345d4009f3c33eddd289edbcd968ade41080772109657ffa63641f746d8"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/7z/7zMain.c",
+      "sha256": "6058eba4864ecf2f60a9a6762a9ea5d13619ef61721da131cb3a9f27b36fa0ee"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/7z/Precomp.c",
+      "sha256": "bea94cc316f1a70b295c5a0c94722e2e835908aa356acccc27388198468714ea"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/7z/Precomp.h",
+      "sha256": "a26c45c2bbec972d8a0b71822b9cf8ed3e533d073563f8efe1e24ed5b07282af"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/7z/makefile",
+      "sha256": "a1b56c8c15ac25275afc9082a24e02b7d8359b455ce20dee491198e6cecc3ab8"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/7z/makefile.gcc",
+      "sha256": "e47e96ff5aa5d0d3cdb2765279efbdf54c8c5ea38e2d9e0418978f7088313101"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/Lzma/LzmaUtil.c",
+      "sha256": "ffea5c3c36b661ce0a40f0fe872c2cb2e7045fb99947ceb029aafa53231b9afe"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/Lzma/LzmaUtil.dsp",
+      "sha256": "9f168b0a32dd0c88a8f0d22e209838c2e9685ee4f6755068a61dbf5a0f40e9ac"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/Lzma/LzmaUtil.dsw",
+      "sha256": "c63d1a703c2f4279522213e52bf1bf73195f2cb844e359ba53719a3d6fcd1bac"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/Lzma/makefile",
+      "sha256": "c72d0d8b95f150642eff19fa74a007db7b551393302bd368acfe5cb7029b83f2"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/Lzma/makefile.gcc",
+      "sha256": "2d0d1172882fb5d1c643e28487bf5b6eb18606ce0fbaa95004061f77c22a52f8"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/LzmaLib/LzmaLib.def",
+      "sha256": "98be62c5419e75aa987812c05d575142b5ba521fcecfd876357b5e0deee1b67f"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/LzmaLib/LzmaLib.dsp",
+      "sha256": "f8c410be0eb61b125b159ba59cdf378ff935ed9aeb60d96754ee53193a7dd17e"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/LzmaLib/LzmaLib.dsw",
+      "sha256": "b826e11b7e2d0df8bbe5394d51fd6e1b9ac369aef88f24be9ea6f40fb8e76896"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/LzmaLib/LzmaLibExports.c",
+      "sha256": "88967c1a29e4bac1170fa9b8173f882e3f39bb747044e7d342498ea1f372741f"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/LzmaLib/makefile",
+      "sha256": "31d838697de2197995e09fdae95fc17064243ede6efa78ae3619c0e7d39213e9"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/LzmaLib/resource.rc",
+      "sha256": "28c205f3b6df613f878b1c1fd14486932a39cb23a9dd3418b468d3c3a8f99ac5"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/Precomp.c",
+      "sha256": "bea94cc316f1a70b295c5a0c94722e2e835908aa356acccc27388198468714ea"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/Precomp.h",
+      "sha256": "a26c45c2bbec972d8a0b71822b9cf8ed3e533d073563f8efe1e24ed5b07282af"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/SfxSetup.c",
+      "sha256": "8f5ae08b67753d33f63142d156525c9699bc8401a26cd563482716c2433728b4"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/SfxSetup.dsp",
+      "sha256": "59005f6a381ecf568ee6129837e2490c2620d592787b64083e1d0e00b80dee9f"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/SfxSetup.dsw",
+      "sha256": "4419213d4f3e0c6351f332428286e0025af28569abde44848f3b37129635ba21"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/makefile",
+      "sha256": "e2b902a5bda8086d1c6732883892df523ecc2cbf92392273ced04c3a2fb0ed7f"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/makefile_con",
+      "sha256": "b7bf1bc4796b07332a1e2403b098ffca47739b2e19d573bba4d26382ed2ccb2a"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/resource.rc",
+      "sha256": "e360329350d0bba52a01c618af7af4b626e14dfbdd8562bc9474cb143da9e6b5"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Util/SfxSetup/setup.ico",
+      "sha256": "9727149697282e89e33255bd4d4285090bf89e3f7b1db08154de7988972f44b5"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Xz.c",
+      "sha256": "df56dcc4b1c1e4fb7762b4fd2a46a6b32dd4aa94f033e6174133c156c824d700"
+    },
+    {
+      "name": "Nsis7z-19.00/C/Xz.h",
+      "sha256": "c34873fe33ae222a5b180163abac37b5f5f41d4d2720736fdf71686fd975594d"
+    },
+    {
+      "name": "Nsis7z-19.00/C/XzCrc64.c",
+      "sha256": "f3b8eb28fb26a3727421c153872af6a5175e8aaa21e12b4d48d22b238a20ddab"
+    },
+    {
+      "name": "Nsis7z-19.00/C/XzCrc64.h",
+      "sha256": "15ab222c824431b9322d885974adc66b064c140966d9847a3700550467f1a0a4"
+    },
+    {
+      "name": "Nsis7z-19.00/C/XzCrc64Opt.c",
+      "sha256": "d5dcca81d6283f1f20253f74aa5909e3eecfc1bd4f9d0fedf23593df0cf2324a"
+    },
+    {
+      "name": "Nsis7z-19.00/C/XzDec.c",
+      "sha256": "32595c10aac7e4f57a7302c2e943753a9005f86947acdd8b24c9b0ba6167664c"
+    },
+    {
+      "name": "Nsis7z-19.00/C/XzEnc.c",
+      "sha256": "1eae59ef755e8528d7506a5a9f2b4c168aa0cd7d5b7bb365359eb272295d611f"
+    },
+    {
+      "name": "Nsis7z-19.00/C/XzEnc.h",
+      "sha256": "afd8f2bfda7a602943a14333652f6ae7b32876f1c1249edef0fd8b3fe960a501"
+    },
+    {
+      "name": "Nsis7z-19.00/C/XzIn.c",
+      "sha256": "e7e336ac1328e7377ca006a2cd1b142a03b6a8850d97e09c967cfd92c4c3b27c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/7zip.mak",
+      "sha256": "c9f1f22524949dbbe07cb592549c59034ed94a0ad71c467b69f901b963fa3c17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Aes.mak",
+      "sha256": "fec2d338662c720ede1ed46a5d4404f2b9824dc03b244f20958327eb7e70e3b4"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zCompressionMode.cpp",
+      "sha256": "0ed3b181e8cd669f874adc77c10f85e22ae9239eff9ce30403516da50c3e73bb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zCompressionMode.h",
+      "sha256": "74b3dcce8250b7669463cd9fbcc87c1a3cc383db61bc5ec194e8c29ad50730e0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zDecode.cpp",
+      "sha256": "3cac91c1b7e47ee2350d4f263034703b9d35f00427018224d23b33466c0a8170"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zDecode.h",
+      "sha256": "af087422b14ffa05666ec731460d4aded9abf219529ad0843aab8613744914cb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zEncode.cpp",
+      "sha256": "2da4f312c3cb07f7272b90d39fbc99bf4550ebc7ac2938f14d32b1328651af28"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zEncode.h",
+      "sha256": "fe25cb9ab544b101b74e8de1c6a2f44d3e7e0b5ad4b62adcc4d17d14001927fd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zExtract.cpp",
+      "sha256": "921eeb2e39f643085172d7a4b94dd63152179578961fc6a825ade43692a7284c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zFolderInStream.cpp",
+      "sha256": "a847fb9678cd739c76247725ea7c00556206d3cd360dfea2a541c2aa8e333825"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zFolderInStream.h",
+      "sha256": "3e0214cb111aa5ee8de613492d755e0458dfe33066e3e3f414edd3edb004cb44"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zHandler.cpp",
+      "sha256": "c7f55404973619c1841421f6f9556e5086fb8b2377c5f5b92d3ed18ef2ec23de"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zHandler.h",
+      "sha256": "af10914734961e62f959ae57d3f456b431f2b3f3a2d8e96e70770a6c7d9bb9ee"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zHandlerOut.cpp",
+      "sha256": "1ea6bf91f9ff2c5623746cd348bf52ed76bef82a72ec97fa76d5eeaf78b3318e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zHeader.cpp",
+      "sha256": "45870c5c1dd9616b7b7a3a5535abe88303f5e22389980c3e9cf4ef9cc51897e6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zHeader.h",
+      "sha256": "36167084a54a68428016a23ec06a52a389cb6dd76f29a3a6fb1ec99483785158"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zIn.cpp",
+      "sha256": "3241a7712a3cb328293d043a4d172ef4fec2db17f2929c87e2d97726a90830c0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zIn.h",
+      "sha256": "0b0751ae952dfd9d6e7f2c8203b83f7d823e9c1718df7e387e874f8485913b92"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zItem.h",
+      "sha256": "d6a1ac7c2e1acf908f8d413ed1d586be15af863a68d4b3919ab04cb92e13980c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zOut.cpp",
+      "sha256": "79ac7b5d6e44290602cee4d9e4cc4358ada71eec8485cb9d44aa1a462c2aac99"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zOut.h",
+      "sha256": "75df80161874101fd8304f61f323ed125e2e0e83e99ef2ebe65622c7a9356ab3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zProperties.cpp",
+      "sha256": "33f43634e1d245bd9834a9e1bb79d774fcbf8f0fe4c8a7e7090ad104a699488d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zProperties.h",
+      "sha256": "47e5ba4d14c58d23f18bfbae59bdda78de48c52ff37cd0632014cd42983de234"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zRegister.cpp",
+      "sha256": "5e4d7aefce66258c85556f85fbf024f37edf77ab3cbe41acfb09faa8b1f1a615"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zSpecStream.cpp",
+      "sha256": "7375e2153cbb984cda4de0f976a5557cd50504e39a818eb3a430c24d6c5071a9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zSpecStream.h",
+      "sha256": "72bad060582028329f0ad0b407aea9c3eb5cacb13aa8cd9e82304fcb4db3ee3d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zUpdate.cpp",
+      "sha256": "8f64ec3b9e846aa0a8ff97da8fbc1c9214bb1b46074f98cb9f6c1f61f9580dc4"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/7zUpdate.h",
+      "sha256": "60907c1001d221cd33c6d102af3c26305b575eacabfa75cd161acbb5dc837a5e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/7z/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Archive.def",
+      "sha256": "4a370763cdae2c4ba0f2f25577d25bb8fbafb266a2afb41753a3822b3c0cf707"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Archive2.def",
+      "sha256": "d83257a508cab95bda36569794aa506e04c8bb39f05e81082239239ed4ca32bf"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/ArchiveExports.cpp",
+      "sha256": "24087b0b818d937dbdf06dc581634c8eab356a2ef3f8ab5eb05e05cd386ddda6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/CoderMixer2.cpp",
+      "sha256": "1f83f74b1270bceab963eda28b97948b94c48c206a060351ac525df980c5ec90"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/CoderMixer2.h",
+      "sha256": "262c300e77909474520a1069d54f1fbdab2859add4f44d5a8d36550bb2c5b223"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/DummyOutStream.cpp",
+      "sha256": "67e0eaa21526f6838c160fa079db166477b9878ec95ddb44d272883db92fbf93"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/DummyOutStream.h",
+      "sha256": "0c3e978f40c9ba793f6cac429f4918d8317b5ce410027b7b7b308f64341f474a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/HandlerOut.cpp",
+      "sha256": "dd850351344b814f90be1c3f1f4a0325d7c74aacf730190be4c9332e89b00237"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/HandlerOut.h",
+      "sha256": "1d33219d50925e22056d327218c5825d99829d810403dae897f354239aa07e65"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/InStreamWithCRC.cpp",
+      "sha256": "710d47afff089a6c5e3f8331abda8b30925aac04f47d2ce5dc74274205f0761e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/InStreamWithCRC.h",
+      "sha256": "a12c9fb168e1d52ade340850e3f00152a7e92b8d9d55134ee4a4c6947c55c28f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/ItemNameUtils.cpp",
+      "sha256": "a1a8b8c9b03245c87b544f4ebdcbe85ba367db9a31d63a1f9baa30384766166f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/ItemNameUtils.h",
+      "sha256": "4b37e1a286dc7e957e6b88e77f4cbb1181b00ec61ed21c9ad0ea5bed02d4c0b0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/MultiStream.cpp",
+      "sha256": "99e708449af5afb122da0d5aeb3efbbeb9b28b9a5077bbeb9e31c829ad9ce50e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/MultiStream.h",
+      "sha256": "7bb9d5ce77df5f2ade2de5b324db4e0cd4c5d0058d8dfbe108159820c93c7bfa"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/OutStreamWithCRC.cpp",
+      "sha256": "46de9a51d2ff5d6701285f90d11ef5ef75516ff7d0ed87aa33489d099fa82ec9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/OutStreamWithCRC.h",
+      "sha256": "e2845ad5489870123b86dd7cf780469a3c4dd0826166f43efd760d6d4a8c730f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/ParseProperties.cpp",
+      "sha256": "0c1a67faa204695fb0b07d3e70209848f0830ef0d777302f696a29945f952831"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/ParseProperties.h",
+      "sha256": "a33a345d459d0686630cb9f22eb40fe8ac1a82b8336f9d253c550bd8d001dd2e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Common/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/DllExports2.cpp",
+      "sha256": "55f4619eea961ddc4153f2aa278e660ec3ea86cbebd47b32f2ba09fdd1eb3b7b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/IArchive.h",
+      "sha256": "d7371b76eb953a1817925816da8cdcf86d7ccc15973affa7a1d1336b8a394f51"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/Icons/7z.ico",
+      "sha256": "d9e63318dc7a95f76807cc2c181218479f05d5c13fabe418a0facdb294830c26"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/LzmaHandler.cpp",
+      "sha256": "f8faf97eda94fee0cb5b8b908600177a8e24fd95cafaba8601653ba3d04faa9a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/SplitHandler.cpp",
+      "sha256": "5e79444e3efc08ef592c8bcc32a0c8ad86d59292b289fce724ea470b678801f6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/StdAfx.h",
+      "sha256": "c0912ec01aadfd377499202f62ff7804a79ecbde2be91032654f0c1fa46196f2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/XzHandler.cpp",
+      "sha256": "aff6a74e5f0ecba5cfa8f3599097675aae2aa9514fe107bcde394bf7f98430ef"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Archive/XzHandler.h",
+      "sha256": "47cac620b7c7b1c6a305cf74db49ae4ec3bd6fdbf20a059c451c99d4c6e479da"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Asm.mak",
+      "sha256": "0c584d62460d883029e183b926e6549f14342688eea65707d0a64936d6fe0ac6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Alone7z/Alone.dsp",
+      "sha256": "71548c0cabf9db595cdf53f80281bdd8a8b2f1dec1b76c58fd1c38f78dd1dca3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Alone7z/Alone.dsw",
+      "sha256": "0af9e15cbaa2ac0e8e219044b401d6c4fdb7ffab7637b5117df1efa9476507cd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Alone7z/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Alone7z/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Alone7z/makefile",
+      "sha256": "ea495e380948a619f6f12f6e483117fdc3ad5d3cc80bfb26f3307bcaa2f36385"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Alone7z/resource.rc",
+      "sha256": "0314a2c2e6343cda4c9d82e78ad86fa82d7d84181b69150c4b0cc0712fa4ba3b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zExtractR/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zExtractR/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zExtractR/makefile",
+      "sha256": "34b6b67c451184645d867236c6285ca1b8fbe489455f86e23d035e3c16e239e5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zExtractR/resource.rc",
+      "sha256": "7ac96f0215d6b515e15a84d74e6650a24ab830f9ecf27ca55e34a95741d5b8ab"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zR/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zR/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zR/makefile",
+      "sha256": "273f53a3c7d1b3caa82ee0adc179998daefd8070d6d8ac31884b1690c542c9e8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Format7zR/resource.rc",
+      "sha256": "94ddae7ee129583ecfcfdf5b22e134e52d3a83b8f6ce9a5763207d8364132f3e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/LzmaAlone.cpp",
+      "sha256": "705fc3d3208a09c9de047c1e16f55c80e3124f65e9a77e26675100b6bce7ee76"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/LzmaCon.dsp",
+      "sha256": "badb117c86e9ef795327a063d78e6f1c576b4c6403bc431b264e7ee3a1bc35db"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/LzmaCon.dsw",
+      "sha256": "4e3ffa1d68d3492964bec0477e6513c2733e26b99531fbc1a33aa2c0a3def773"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/makefile",
+      "sha256": "84663d1ebadf9142c5026b72d7173ca683c845f57383038938d392c52c8e56ea"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/makefile.gcc",
+      "sha256": "557d7f4bc903d215b7884e6d878f0b203a8e3c2fa34ec3f7b1120ed34e9149d9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaCon/resource.rc",
+      "sha256": "c0e9ea03c29436664ebac60b28191831ec8375643c0cf77e99e72a3532fc0000"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/LzmaSpec/LzmaSpec.cpp",
+      "sha256": "ae81e258ffc5e3adfc3276492b92838282b4eb882dbe2ba126ea230d2580f196"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/7z.ico",
+      "sha256": "ad4990b6462d0b8a0ac489e741474c0542936351b615a78bfa2e1f27ce795a8f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/SFXCon.dsp",
+      "sha256": "fc0c1961fefe59882e714de2a52935ec37b63bab571240ae22f34cb35ae2a3b3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/SFXCon.dsw",
+      "sha256": "26ee8fce449ca1593d22784eaaf6b5b2de2fd3eb5ec089b9b204e004b6415111"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/SfxCon.cpp",
+      "sha256": "03c4567b4ad2c1404f0fd923c64218f245ca041d1fccf6298b80a431b4402e11"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/makefile",
+      "sha256": "9dab07e91e59a849ac6b9248f3343795b577b72882657931a07a7deb67fed367"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXCon/resource.rc",
+      "sha256": "596509fd93cc9756501a6b23a051ab37a828e52e862c974a9ddcd9ccc5167700"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/ExtractCallbackSfx.cpp",
+      "sha256": "215331243d7a879d3ff0ac4a18ef73f474a6bbe483489b218bfb62f7612c68a5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/ExtractCallbackSfx.h",
+      "sha256": "3f2feceea5e5ddbb6a700deb46252ffaf55e1e09cd7799aa12f274bb2133d345"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/ExtractEngine.cpp",
+      "sha256": "4832f2f38e2bed9571bffc59b416267e7859982766990c78d7a6b91b7e0eed29"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/ExtractEngine.h",
+      "sha256": "7ec6c70231f9a50ca560b33b32b54e4b718314b28551518ab69178882d6ac28a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/SFXSetup.dsp",
+      "sha256": "663b236e4c3fc1e88bc3cb6eadf6e2a4f86c2f98b7b7be49d12e191595123483"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/SFXSetup.dsw",
+      "sha256": "f2c8267d3ae62650c1c0f075efe8cd143617011f26df1d6c703b5f80ba335e06"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/SfxSetup.cpp",
+      "sha256": "896db5f960699fc213381f785f2c5a46f0ddc9a85acbd900c7101cad5d4bca82"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/StdAfx.h",
+      "sha256": "c1975879fc2467e785c8d297d46a520835a4efdcc7f23c5c9bdaffff2a9d0e75"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/makefile",
+      "sha256": "fb74448306331b0d02c62d2c27be0b82b7ab81063605ff69fedc7cd0cacb3f06"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/resource.h",
+      "sha256": "d7cc7760adcbd965d380492700efd0f8ad04d1a19ec5ab4229b79a379f42d32f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/resource.rc",
+      "sha256": "f5c99d763b181b2cd3c37057fba4bae1d4e8986bed4e71a7251faa4ed24f615f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXSetup/setup.ico",
+      "sha256": "8c1774fc46a29bc6da48f1eaabaa0cfaf86aa30e890be1721b8b676a8ef20b3a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/7z.ico",
+      "sha256": "ad4990b6462d0b8a0ac489e741474c0542936351b615a78bfa2e1f27ce795a8f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/SFXWin.dsp",
+      "sha256": "e2e44502fa3839ac0fa1704ce4c128e1f53c604dc560a667341c6530be149f05"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/SFXWin.dsw",
+      "sha256": "ef00e94e9ed67bec6723d3964ab600a8e607873e582f4f134aa10bd2330a9edd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/SfxWin.cpp",
+      "sha256": "278c32ae545292a997709d6e9115511c35befbde89564a078955dfb18321035d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/StdAfx.h",
+      "sha256": "2d73cb9f9d6af8797eb3391eaf96390e5aaa9ec95a66b6a00f56a0afa3951b9e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/makefile",
+      "sha256": "7f29e87c5e90c3b4f30a7b4a5b15129402873e1fc9f16a1ea3d11f40f7ded7ec"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/resource.h",
+      "sha256": "2f91904123e29e55bc8211fc7c5b1d3b57b230ace4b7dfea2bbc508fc92fbf12"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/SFXWin/resource.rc",
+      "sha256": "25706337e0b2dc7f912fc0e1008e5b0988d1f900be3d45ecb534b0cd1befda9b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/CWrappers.cpp",
+      "sha256": "ecdcbc3c04a196214053ea174ea33ab98615e32f7cb6bb1d42438c4e3b4d1846"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/CWrappers.h",
+      "sha256": "0f1e39d1d0a23eaa1556802d1894605773e1f588d9bf102c3aa8d7f96b5e4efe"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/CreateCoder.cpp",
+      "sha256": "f8a97fbd88374d1c413bd883044fbc17be208f5863706915135985c498ee9855"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/CreateCoder.h",
+      "sha256": "ea0e752473393afca1ceff4e1c732f0ce45626818296eca565695e0806b4c7bd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/FilePathAutoRename.cpp",
+      "sha256": "e0e02750e9483042a7e0d838b771f4e2a76f728608675ddd81c86a09619e8b6a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/FilePathAutoRename.h",
+      "sha256": "b2c84fcbb807a7c0947a92d769735831b22def3958208da51ac7f41ab5ea8484"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/FileStreams.cpp",
+      "sha256": "244ca29e90ee99c99c9cf47ec7e1399c23501dd9e0d848acb3522fa68308b7a2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/FileStreams.h",
+      "sha256": "643152352bf70999ade54fcc572e7a2f09973ae5a386179c2228a5fa4a4f788e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/FilterCoder.cpp",
+      "sha256": "a2e20432d17d797768403d869fb3a828ab37ddb814ab79cd77d06694d93665e7"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/FilterCoder.h",
+      "sha256": "a33934115413e3e2cf8c309ccfcf3deba30d3a68b6e8dc7e8b74fa3a4cacad21"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/InBuffer.cpp",
+      "sha256": "1a0844cf5292c2f9338ba5793f505a17b230e6270e5f66a385166379e56fec94"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/InBuffer.h",
+      "sha256": "4b4ef06d863e867a7af4c877d96b6012022cb8b0c0b85cb379840b46c006d44b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/InOutTempBuffer.cpp",
+      "sha256": "ff0b9f567a6f5533792fad871b9b90bee709ad97d09fec21607eeb860a5b79fb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/InOutTempBuffer.h",
+      "sha256": "d1bb1e29ccf3e138473027c9afff3d9b1e02226c3d3058229caa9f9ca06145bb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/LimitedStreams.cpp",
+      "sha256": "a3d16fb53482a39518795d615d509d7d98c12fc34fff34a1ae11c58705944563"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/LimitedStreams.h",
+      "sha256": "2254c8378466f9c4c4316edec3fca194f8e1663bc68ea914a9e13c915b5cdf8f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/LockedStream.cpp",
+      "sha256": "e5c126c9b366d44e7f785f10b9a42f1c22228ec034913b5ffc8d32a3c7f0387e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/LockedStream.h",
+      "sha256": "6dfb747c52fd1ceb0cbad5b3c801c8943f40579be8b53e2749bde442afbaeea3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/MethodId.cpp",
+      "sha256": "f2d3d9ca8aa1f6af81de0717a249c69951397f00025cbc94db18916a4621f938"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/MethodId.h",
+      "sha256": "e9e0a0b852060e867986fac8796b3e32945f2752acfd1276fcfc77b2011e2560"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/MethodProps.cpp",
+      "sha256": "b94ddfedcb0052499ae08982478c7e6609a277d86ec71f69b8955c1b82c24a0d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/MethodProps.h",
+      "sha256": "ace03f906e5bb167d2b376e14d45d02638c5e04ababd8885e8e0c6ca9d9a717e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/OffsetStream.cpp",
+      "sha256": "1afd57f680eda3ae1d4f5a9b2050a50792e2ec9d1724be6cbbf8b68ad8280d5d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/OffsetStream.h",
+      "sha256": "a72535ed4040c2176adc5f5e7c82e50d52951636397ba332d903585b61b62f24"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/OutBuffer.cpp",
+      "sha256": "b96d8ba3691324a04340fe389dc33cc510f59ccd389cb3ffb50f52deae7180ae"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/OutBuffer.h",
+      "sha256": "ffd027c886a35c6ed0d91f224108e6d9513b33bdcf2985369be6c70c059e3073"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/ProgressUtils.cpp",
+      "sha256": "5dc95e7a74b4d756ca953a989d965324af4edee7c56965173ceb703f678391ab"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/ProgressUtils.h",
+      "sha256": "fa5f1b3530dbc0c4509292bb602e75eed2e1dbba140b8d15979982c365addb55"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/PropId.cpp",
+      "sha256": "d9958576201574bbfa6af569499e0fdd2a60e68936409c5b534baf229be5c356"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/RegisterArc.h",
+      "sha256": "af6e675accc17a16c9f07086de2296b0b4818a8af48bfa2dee4b68f7980d0f25"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/RegisterCodec.h",
+      "sha256": "88e2ec24e2bf0a1f379111cf6c0d8dc7c1a1ae2684640c11df28d3842ba4adca"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/StdAfx.h",
+      "sha256": "c0912ec01aadfd377499202f62ff7804a79ecbde2be91032654f0c1fa46196f2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/StreamBinder.cpp",
+      "sha256": "00942ba17b7237630195ab43df7bd0a96c54c03e6274eef0137f8d8589352bc1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/StreamBinder.h",
+      "sha256": "0e35d5d98453293e085e11ed6083d425a1c709026efc6a2295f8827c222dcd6b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/StreamObjects.cpp",
+      "sha256": "59bc7546ea30210f476075acc0df0205977d23fb80ea52752f99b17e21f1c202"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/StreamObjects.h",
+      "sha256": "cf1139f9941bdd8fdac1aa5deee81a8cb123187347310dc20190001ccccea0b9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/StreamUtils.cpp",
+      "sha256": "9ea196d5d8f3b9c4500a00d9c8f91c7484aa1f1730d766970de024daccaf4c10"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/StreamUtils.h",
+      "sha256": "ec936358205d9ef22aa51425d95d35db4ee785c6cd321d4dbf7f9325c1de1b1f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/UniqBlocks.cpp",
+      "sha256": "97ed0e8b0e170280e27407f0c83b906047c37f6f15c0c9c5efeada55e9fcac43"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/UniqBlocks.h",
+      "sha256": "d02801fbb7e9197b0c657bca05e6940445d0dc77ac32f35a5d4227fe98b067ad"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/VirtThread.cpp",
+      "sha256": "1c24ee8873eaa1ae3c30954ecaeecd4613c8afdd959a8e2375473fa910a63cfb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Common/VirtThread.h",
+      "sha256": "c07675832286121122a3c82d993575126219e377142316cf9b64f985ce08a81b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Bcj2Coder.cpp",
+      "sha256": "ca8336815de7ef48bc1adf64e3f0df929704941c13be93bc008195af380e8c62"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Bcj2Coder.h",
+      "sha256": "cc03cc320f48d45aece909fcea790575728cd11a223c593b89c3dc8ad12906ec"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Bcj2Register.cpp",
+      "sha256": "b60918f218e1eeb5d38d5b704b788ab35d191f712f9729a30b7e84f7b440a1ed"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/BcjCoder.cpp",
+      "sha256": "68db49c05702cb6b5eef1ea510543ed6397f79cdf36427308e4c40864c35ce94"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/BcjCoder.h",
+      "sha256": "9398f77467c47bba6084f829675733bda892f02b3effef8185574e93d285c8d6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/BcjRegister.cpp",
+      "sha256": "09fbb13add7798da43617799be5805ef4cd03aff4e9c265e9bd7fefeab8af7e8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/BranchMisc.cpp",
+      "sha256": "f82afbbd35074d1e38d3f9ade94f30ed809c720c7f4fbbd18a720c0d44b23d76"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/BranchMisc.h",
+      "sha256": "4e6e15a60bc239235d8cd42b5e90f34f9022ded3e05d3955c5ecc6f2ce011a9d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/BranchRegister.cpp",
+      "sha256": "81f74d9c333f9a18cdaf81ce0b747185a6253431f16648fbacb5532cb9f7a94b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/ByteSwap.cpp",
+      "sha256": "72bc8f7f800761266186d43c958312cace30092a76f1e910d9677a048d329813"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/CodecExports.cpp",
+      "sha256": "ca2ed0b5f280a91e41bbc4dfdd561263863bcb84a1d72a2aeb0cbbfae7a45e35"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/CopyCoder.cpp",
+      "sha256": "1b6bc5835a89ae1a43595cd589202ee710877c17811bafb1fe970253e8e4f872"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/CopyCoder.h",
+      "sha256": "c66ef1cf2ab2f7f3820654851d61f987a60261644fa880c316c85ff205a5bcf1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/CopyRegister.cpp",
+      "sha256": "a4dca4650b926edc48e622cfe1d3e962b5746e941e0e67356f7a11cb5dd959e0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/DeltaFilter.cpp",
+      "sha256": "32fb4a672747478a4620c73b3b65e33770d4d2709d28a40c445175ddaffa1b13"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Lzma2Decoder.cpp",
+      "sha256": "fd10bbcbda35a19e8880c794e38c1697a5383ee317e3d82a74cdce99a5a5db62"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Lzma2Decoder.h",
+      "sha256": "a6a5732e37c6ac8bdd7613702a9912baf453a75546fb249f5499b27613bad308"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Lzma2Encoder.cpp",
+      "sha256": "b8ab91ab3344c2e1773dbbf8fc047f6980469c808ae83a5466a1a2d4f0b33466"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Lzma2Encoder.h",
+      "sha256": "0905954943dbd8dfcccb86b8dc37db608eb376a2aa8a98037042d2032f66a9e6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/Lzma2Register.cpp",
+      "sha256": "702bd111dde8b4840e4938d6065d364c2e4f5b98d9a408cfa9dcc325b8a47301"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/LzmaDecoder.cpp",
+      "sha256": "e30ed386ce12fa850416f016dadbfe14d2e97a9cf452ae953205fb4819466b88"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/LzmaDecoder.h",
+      "sha256": "91a49e7fc2414fa27fd510dd595e37ac9878ad273ee74032642859292c67ba41"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/LzmaEncoder.cpp",
+      "sha256": "a51f866004c6e2bb2398fe375678835770a403d45a24f6702cb8bfbf50697fbd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/LzmaEncoder.h",
+      "sha256": "4c50f2789f5a1db33a9291fb9fbd0982e25d149dbb4e59c88d9c628412e29e3b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/LzmaRegister.cpp",
+      "sha256": "ed059e08038282db17a84bdfa925c5d3ed125ee7688b611cd2b6472580f0a2e9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/PpmdDecoder.cpp",
+      "sha256": "2a817d06b25237a85087dc475a37a4f3195dc4a29b44d8419546c17983fb568d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/PpmdDecoder.h",
+      "sha256": "72c6babd70a94893e9b876d6e925b316198ce96f8de89560f38d4974d468d48f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/PpmdEncoder.cpp",
+      "sha256": "ef8410e9db5fcd939911b1d53639d512e2b460abd3536ab625be32587ebd8081"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/PpmdEncoder.h",
+      "sha256": "924d896c81c22ae79262d9b05ac5c2f4304600741f2984cc105cccc6ac7d60e1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/PpmdRegister.cpp",
+      "sha256": "c33cbeb4474dfa4704b530fd2cc59f5ddc45f7f2fde331b70137cea06b73ffeb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/StdAfx.h",
+      "sha256": "c0912ec01aadfd377499202f62ff7804a79ecbde2be91032654f0c1fa46196f2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/XzDecoder.cpp",
+      "sha256": "9b9ffb1d3c2375c8122ba0096c99b0ac132e3f05f951f905d1a9afa7210cf742"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/XzDecoder.h",
+      "sha256": "bfa60856c9320f959f2a6347cca158187bae3cb3d319738efb26f8f99eb872bc"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/XzEncoder.cpp",
+      "sha256": "87d4d38d648e1f2e6808c38d3a962236da7803a978fa05f0f5e5cb32068565e7"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Compress/XzEncoder.h",
+      "sha256": "3af135bc47eec53a3a8533ff99f2e548532d180c8c330e67eca87d3c6e225bf8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crc.mak",
+      "sha256": "0287c34c68691288d0761233a42e00702b1ad7e485ccfcc8fd1724b5c1140fe6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crc64.mak",
+      "sha256": "6440366d52c11a49d45bf3842db2478956c878cf412a74e59976ae6d73fac2e0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/7zAes.cpp",
+      "sha256": "9b5aca1533f3fef6889435cced522ed5a3e5d9dbc0c1cb7503af5af922a5be0c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/7zAes.h",
+      "sha256": "7da93f090684735676f6daf79f6f8f4eaad587d71d7410def7227b9ac46ab458"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/7zAesRegister.cpp",
+      "sha256": "a8165592fc3d79bec1ebaca4aa061e8a1122d15fe3f20c5314d0b839d94131ac"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/MyAes.cpp",
+      "sha256": "f2489cce17aed535cbcaa9633791a27cf5778ca6bb80d583e246ae5588f259dd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/MyAes.h",
+      "sha256": "e67888a0583f75956ea55ab32364fba4e4a852590770ca6cf154b6e1dd2e4d29"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/MyAesReg.cpp",
+      "sha256": "2dde946c9236f0235f3bed9e128df1cbb830685f1e4bedd1d22206a04ae1b583"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/RandGen.cpp",
+      "sha256": "22cf6fa147f409661e8c5d032616ffb1cad9655d54d2b9da61ddf3c0e0290217"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/RandGen.h",
+      "sha256": "72571182f57406b22714e3c04ffca89e96adad620dacfbfdfa68c0b37d7df47e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Crypto/StdAfx.h",
+      "sha256": "c0912ec01aadfd377499202f62ff7804a79ecbde2be91032654f0c1fa46196f2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/GuiCommon.rc",
+      "sha256": "9bb143c92d993cf23ef64748e118d46bca59ea5cbb22ab7ab36d8d14b1d83b84"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Guid.txt",
+      "sha256": "e4110b4e6148234f6f9c3f5cdd646d5ebe3e678ed226ba5c4c45cebd404a8cf7"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/ICoder.h",
+      "sha256": "4a737f564cc264123405f1f0f3d1d7685818d63dec0622365d30086b0bfbdb34"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/IDecl.h",
+      "sha256": "a45b973e5804fbdb74431788682bf9b92a54d55c2a9511baacdb43c8bac4c438"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/IPassword.h",
+      "sha256": "b0179d6d08af8056bc4185847308eaaa592276a0b3879f9f6250911300674d36"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/IProgress.h",
+      "sha256": "c2cd21e47263e9140a102200739644109e76bfe72c0a73958e0a0bb5b2456d5c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/IStream.h",
+      "sha256": "61d2702583a111521ab462e5292b6e71f6029b82069bc64839405f5c9311eafd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/LzmaDec.mak",
+      "sha256": "78fdac979b559c85421ba495720e632f40c8f929486cb87452183871ac40e78b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/MyVersion.h",
+      "sha256": "61261d968cf8de57ab9d98a8bf3e42fcdc08ade89efd209dea8ddf875a3b54bc"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/MyVersionInfo.rc",
+      "sha256": "6c3538792148e4bcdf52566c7cfac1909226b049c9dc67160a415be2daf2faf4"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/PropID.h",
+      "sha256": "e8686aa7f8691dcf0d878366750a52a712373ce0ab834e22b4a22890c6c5a875"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/SubBuild.mak",
+      "sha256": "c892fdd6a127600323338e8d6ba2664b82b5153fdca1a334168db48034d340fd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Client7z/Client7z.cpp",
+      "sha256": "934c4831703c2bfa749866cef3e2ce88315746262d34415d7ff48dc71ef24495"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Client7z/Client7z.dsp",
+      "sha256": "c95964adeacb2848fb127f28f3c853eec465309ae64c4c3ebb9cec0a25891c7c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Client7z/Client7z.dsw",
+      "sha256": "8a58e95e76f8d210140fb6d8f9b1219da8566f159e3cbe811e6384bd6e5511eb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Client7z/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Client7z/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Client7z/makefile",
+      "sha256": "d25954ac4c73ab796f7eddb88cefbadf0e87acf9c3c5d32479507016ca983821"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Client7z/resource.rc",
+      "sha256": "83ef6d68d66a8c9455369f1e00e0d57dbd0f784dcb8e36051a0558f6aefab825"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveCommandLine.cpp",
+      "sha256": "91c581a8e5f6ea2dae3b9e47654666edaea5c7021af704f1592ceb220ef677d8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveCommandLine.h",
+      "sha256": "e9ec21bba850ff97e6d9f66b09969029500678d4afbec4af03de950c09990554"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveExtractCallback.cpp",
+      "sha256": "d4730663252718adb3f590d74466e22d01285a9ef583e2aa3d7669b4969ddc9d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveExtractCallback.h",
+      "sha256": "32625dc696faaa51df76b66cbcf3d3e3a887c2fd160f054c8e20bfd4111541f7"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveName.cpp",
+      "sha256": "b7b8984790644b12fc9ebb2a9b2d3330f57c6c5a6e6f2e0ad6114241e5e1ca3a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveName.h",
+      "sha256": "714e889fc062c2675e9e2dd99c34e1aad967989dfc12c85763c0ff7dfeca9322"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveOpenCallback.cpp",
+      "sha256": "f08045339b58be6318db871cc06f576921d13fbd211118d886d3a7a391b3a987"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ArchiveOpenCallback.h",
+      "sha256": "9216d714f12a6699c573c908ab2cda8ed30035f3c1b47f48b2e432d19be5d3b5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/Bench.cpp",
+      "sha256": "b2d97896454f2a91eccbc4940640c794b35b4d8f304ace4f7e760576ee51710d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/Bench.h",
+      "sha256": "ad1d003c61558e4068d5614c3208fd8496a7813240a586275243054f0691e42e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/DefaultName.cpp",
+      "sha256": "4e5452f48846670b659f634bb4359b46153d392ae140f38a8f55c426f64285a3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/DefaultName.h",
+      "sha256": "5d2b1208d4891042042b7dc35fc8effa8208c6b9c9d6e99adc16ce368aa269d2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/DirItem.h",
+      "sha256": "c7b1e7288d8258208fe26a0851c241bc9b91e3d88167ce3a8d2f8dbbf6859e40"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/EnumDirItems.cpp",
+      "sha256": "fe8f56105b3d11e02091075e880a8f2d75015cda97f962a8f220226c0a6609bc"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/EnumDirItems.h",
+      "sha256": "df4840fb454497336a94dcb78d5da0c71e37cdbba591a1e8450cc47296506105"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ExitCode.h",
+      "sha256": "935a88084c89eb88c1f1591ed11089dbfad10e1d6ec1c08cd128322a884139ed"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/Extract.cpp",
+      "sha256": "0fdb90eb7a704371f1bdfcbbd20c1b56d8411afe85b6ef7a0090501f9a36cf08"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/Extract.h",
+      "sha256": "5f920249389c37e866db3e761f4ea8db73033fd75e78a30294645b816a03fe90"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ExtractMode.h",
+      "sha256": "bc0fc326d70f5147503a4321a9d4250753c92b895b7ec77a45d37567c6c89682"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ExtractingFilePath.cpp",
+      "sha256": "af73ea363b535ba17095f6ea1d672afeb07c1a1042c5c87c0e503c74a915d541"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ExtractingFilePath.h",
+      "sha256": "16f259972fb809cdedab74aeedc0a6c12ba41c4283bbe3b47ce114194ca6b88c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/HashCalc.cpp",
+      "sha256": "62c43fae846ee2b9acd25f194db4b1ad7e2c8307a37448d3830df8f8425fd690"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/HashCalc.h",
+      "sha256": "8afcbeead4239a3ce121727f65b399b559c3b68c9256fa79aa9d6447d2eb1c85"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/IFileExtractCallback.h",
+      "sha256": "1abc92d7eea972f40b83ca72ef86318280f9449a0ee56f72c46ca2aee336daab"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/LoadCodecs.cpp",
+      "sha256": "fa007a4c93b1cbd89c1547220e7c88ced3f157272cf50ec503852d4cb6db5ac0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/LoadCodecs.h",
+      "sha256": "ad7be02258ccb07ef86fed4504f5ba6f967bcc29d169cc1b04461293ddfadd91"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/OpenArchive.cpp",
+      "sha256": "35853912b3665907f7a0f1a6829ffa3c3ca0577b5b1c5330cd9aac60e07367bb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/OpenArchive.h",
+      "sha256": "e5bbae026db0e6f0b27580c356b96bea078d89bf8f8392bcee4782254cea8769"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/PropIDUtils.cpp",
+      "sha256": "907e92b510526d81ec2376886e426b22f13a0efcd16173b97f9f8ee22ea633d6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/PropIDUtils.h",
+      "sha256": "b83866484810d86f9e593bee888f35780783da3d8f0202cb9d8d055be295ff91"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/Property.h",
+      "sha256": "99f4c5a11502cde34b65e3f9160f4c270b8f20d0bbd0e95a2bbd0bfad8d64559"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/SetProperties.cpp",
+      "sha256": "c77e652e46e58352a44868fd4225ec40209356a7fabbbc3e0ecbd32c13322c8b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/SetProperties.h",
+      "sha256": "6aa45ad47454de72b3be09a83bdd5e46cd4acb3fa0011ae3372ce878b61b910c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/SortUtils.cpp",
+      "sha256": "971b6e4ddd67d66121c9875783112cfde72edad78900726171563114cebbce06"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/SortUtils.h",
+      "sha256": "84666ddd726acf18725936759c3406c758c5bd604fa4cdc565fdb8b4a4074cda"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/TempFiles.cpp",
+      "sha256": "c10e18676ff1c5218a2531565e61738febe71cdf21464c1f2027f7a88ead451a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/TempFiles.h",
+      "sha256": "f6e237de9e6fa795f586cd4406d9be65d8423d6d3c1c4519ed2826f339cbe4a1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/Update.cpp",
+      "sha256": "2c6e822ec0bbd6e6fbd5ef1aa6b80ac24085d7c1d60820f625fc969d912209be"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/Update.h",
+      "sha256": "05fc23476ab226b3bf9142e49627a9b03388b75127b458249e2cc0f46dd467a5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdateAction.cpp",
+      "sha256": "c2dfb28ba3d6c005903ffa531e91feda25492a9fc2258f50b6df82e05782c96f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdateAction.h",
+      "sha256": "4296b06993ef42051901ad256735ff34b5d2625f16a82c496567da17c5cb3d00"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdateCallback.cpp",
+      "sha256": "32c2eae025cbf848ffdb1dc6c88635c8a56cfb636cd94150b90e04a1fccbd089"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdateCallback.h",
+      "sha256": "b69875adb6e7578c59d0a2edf3f2acd7b46c62e3e09e721da7b38d270432276f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdatePair.cpp",
+      "sha256": "8c6c5d4dc812fa783c0ba6d89e7f6e26f8aa5bdfcbab92df8b01d5d16d378829"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdatePair.h",
+      "sha256": "1afaf091b358f71b9de7471678f998e1385ac781e068c00817f8b0b746620f88"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdateProduce.cpp",
+      "sha256": "df563e68e30fb6f5c4abd503697f6f6ac4752230fe664cc8f995df793c07e9af"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/UpdateProduce.h",
+      "sha256": "7f88009eb67f65ed9f40b62fcb507f8626bac65ef82958f3655a8348e0d35a66"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/WorkDir.cpp",
+      "sha256": "9f74aa3ea08e2c3606494a8a9390e44efbcd839445109e66a95f391f839da7b0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/WorkDir.h",
+      "sha256": "b4c6c79365e97f472db4074267e0f380406b71d6f963a36c99ffaa70a245b323"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Common/ZipRegistry.h",
+      "sha256": "260b7f57ba0cf26ce41e9fd70b6e9ee4df02a21a04b5445306231888cd3fe4f0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/BenchCon.cpp",
+      "sha256": "bef4fcc82aec741420d04d1cbc215e914916d2f5421ebed801581e801421f972"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/BenchCon.h",
+      "sha256": "1d4f9f56bdfb5242e8819b01fc4f31b3f6bee0e944e6c2d6ec9aa5b851b9bb8d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/Console.mak",
+      "sha256": "7673bbab3195871fb8c39a1b80a65d01aa75c86e08688ede3f408404dd30c74d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/Console.manifest",
+      "sha256": "fd3f18e6ec417eb0f63a003d9808553b3194f6fab33a8bf618d18a476944a5e6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/ConsoleClose.cpp",
+      "sha256": "c3611abc968542c95aa7cc692062e8fd7b0708c22c38f656988f14e14c335c42"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/ConsoleClose.h",
+      "sha256": "1d7c4befdb55990843886453d73d61fe57c090bb2c910487c2f8bb60b01e79ed"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/ExtractCallbackConsole.cpp",
+      "sha256": "e11898db129f8a9032cd5db2e9ac46625c679c07624acbc5401defc3b8df4032"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/ExtractCallbackConsole.h",
+      "sha256": "4c7f38181f64ed8f757c39c37aff409304170d25ed6d775c5b5d7aca46580865"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/HashCon.cpp",
+      "sha256": "f81c41b7781d7d3113ed92c89c3b649944482b3b11ac73754e73bd4419b89329"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/HashCon.h",
+      "sha256": "108840265419d6659ae93b0421154d467dfbd8cc62b52f0502e6cb4470d6ab4c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/List.cpp",
+      "sha256": "6d2073a2b0ee3e438600fcc5125f19c87fd9e5b536776f8567b045aacadda986"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/List.h",
+      "sha256": "a83e317f7a7335369b539cfa798d0378ec577827309e48870ff22b95843a8a76"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/Main.cpp",
+      "sha256": "b6767099e674fa7a5592d33645918ee1a205e24279020448d26d4001deb396d8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/MainAr.cpp",
+      "sha256": "c280f8516eb16bc3bf88c8c3e58a8bd632d43fc97808f1fb67e44f44e48185c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/OpenCallbackConsole.cpp",
+      "sha256": "467ce1f0e3c713e037e811d8ae41b2aa89125a0a99384c8c4a117b834a7d3a3c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/OpenCallbackConsole.h",
+      "sha256": "023f6c92cde1549ab85217d1af4bc398ec0074dbb498ecc82feb08a18198579d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/PercentPrinter.cpp",
+      "sha256": "86d2ff34773f2ce975f6f7402bb499851022ae457bb6ac151b3f902b11bf4c57"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/PercentPrinter.h",
+      "sha256": "cc4141963296651f7735009107ee15a1158c3851cdc8f2ee0da8e9c9f3834cc0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/StdAfx.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/StdAfx.h",
+      "sha256": "a1a20150dd5baf23e53a7e81c785ef280bd0dd040fcf8cbd43e24e36c1eaff17"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/UpdateCallbackConsole.cpp",
+      "sha256": "327e6d96e08384237105d8437f34b1bd06b772391c9d6df5ec138a64a9a2662f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/UpdateCallbackConsole.h",
+      "sha256": "f7aeeb965d19b9ecd48a2a82468b20d3af6b848118c7544fc0493c3291b29b74"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/UserInputUtils.cpp",
+      "sha256": "c9298abe0d3c9d3d8e2b12e8aded960a634978eef0cfe77d6d3908c0b0c1389c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/UserInputUtils.h",
+      "sha256": "946f4ae60d82562d94508414a888e9d19619e2270b0d6a9dfe2f86311dbe141e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/makefile",
+      "sha256": "02fa66de5f7f3e5c7e4407f0fb020ca10ed3be60884f9fecfc2009aaa537c7d1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Console/resource.rc",
+      "sha256": "4ebe12ca3b9df4943116141ba8094b389173bac053097a83a3ff0efb1a2f096d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Explorer/MyMessages.cpp",
+      "sha256": "f89ceeb584e0d37a4b929bf8b21151078bb43fce34f595f31756caedf81cd740"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/Explorer/MyMessages.h",
+      "sha256": "8df1de6c13107c9abf7a0e443d82a2225b775f2484aa606c3ea60ddd861b0441"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/BrowseDialog.cpp",
+      "sha256": "6c322dab20229b6cf038ed230d6e9fa1c9caf1761c93a1f6288edaf5f8cfe893"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/BrowseDialog.h",
+      "sha256": "5846034552e1c685bdc1b4510c78a1e0e8dfc7dace7cfc1f849bf64a6a83862d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/BrowseDialogRes.h",
+      "sha256": "984dc8acd6d13bbdb96985aa8cecc5a37ca312629ffefa46efdc5d0a13c4105d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ComboDialog.cpp",
+      "sha256": "2117c5527c4b725d9d40ba04a165f2dee80440da6a952f7394eb1105468f1d04"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ComboDialog.h",
+      "sha256": "086aabbf5ba1b3947255c241d07285d13329c23e906e0147939239431cdb7cff"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ComboDialogRes.h",
+      "sha256": "2c29eec7f17714ee5611c1a63fe2d73b56560f6287649475f4054776cc671947"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/DialogSize.h",
+      "sha256": "45025496df0e391cf950f88c98f05d45edafb9ef3922097d0c9384892efacc28"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ExtractCallback.cpp",
+      "sha256": "658cf61efb1abd68b3016debd592d932338e9c02f0c2903b7abc55661fe1fdce"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ExtractCallback.h",
+      "sha256": "be851e23485272b148b458169817e12192453c9214ada54a9506dd8ec8b8a5c9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/FormatUtils.cpp",
+      "sha256": "f109bc7b00b6a9320b01b3f3aa5902dd347bda1d831f993a31e323c2edd0bd40"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/FormatUtils.h",
+      "sha256": "24379d5aca9ae4f9701bd32af9ba7e55d29ccca0ef66f99cbc9933c2190204d0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/LangUtils.h",
+      "sha256": "577b5ac163bbe031db7c5a8fdf6f9e2511b3975ad57ccc4248fe09d9e60b3f1d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/MyWindowsNew.h",
+      "sha256": "02ba881f7b9317dca7fc48fa65d6737841c66837924637253830ad8d524e607c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/OverwriteDialog.cpp",
+      "sha256": "3ae20b4c2672c6187a0eb25c491c93742c026affac25e0dacc53ea6db108dc8e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/OverwriteDialog.h",
+      "sha256": "b3ad1f5a389b2b5ea1be53456140121bbd3c076d8b482a691f375df77672d9fd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/OverwriteDialog.rc",
+      "sha256": "eb83bfbb87142064257c2c03210acfe67b99312d2b8cff261a839a5db5dba593"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/OverwriteDialogRes.h",
+      "sha256": "d63fc6f17a574c42f1c970124819ccadbacb7ba88e0fff05a15b3b4d3d36760d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/PasswordDialog.cpp",
+      "sha256": "0fb8374456dbc8dc731c0fa72ea77a5e1e84006fe82aab920ee7917776c1fd1c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/PasswordDialog.h",
+      "sha256": "5b5abee09c37364fb069a8aa83432c9346feeaf89be65c9af8b645900c6024ce"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/PasswordDialog.rc",
+      "sha256": "d78c2ea94c01ba461e1c2f3613f941dce952368fe08b6f128feef78af51d8c48"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/PasswordDialogRes.h",
+      "sha256": "5cd18c38c280fd861c08ab53288c2c45a6c493df942b1699f51c6f770b150bdc"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog.cpp",
+      "sha256": "6226b2d12e662d3d69c19ccfdcf89eab531ff915f6dfe6ac76c73f6b41cb86ae"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog.h",
+      "sha256": "da26ef8829522104b528207c38395a4cf583aa0fd30c82dfec3fe47f139f9b63"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog.rc",
+      "sha256": "b17f65c206308e0cbe1b7ac5cfb40403b5c95bd7f1f18e6a12b3ea6f683205b3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog2.cpp",
+      "sha256": "317627747c5bf5de71b3edbdcd07db08ef4a40f7cb6cf8ba267cbdc800a9707c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog2.h",
+      "sha256": "c675d72e02a0c2d350e8939addf242a3f356ebbeee318d90612a9f22f7d75bff"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog2.rc",
+      "sha256": "f8edd9cdb944c7981e95a6e457d52497a315f39cf2975527a3f21dbad3141eb2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog2Res.h",
+      "sha256": "ec9e3c11527530f5965068d4b38a8e0e887100aedaffe92b23397fd96a3e42df"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialog2a.rc",
+      "sha256": "90337d6e3dc9667c96ec3c8c7551eb20280488979d794c295270c5db4f0dd0bc"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/ProgressDialogRes.h",
+      "sha256": "127022d005010b45b34ed593ee60d4037bffdbd7a0d8f0997a9af4e63cf3b938"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/PropertyName.cpp",
+      "sha256": "e79320ab7cc1774130811985c7ee40f3cc27559346356c3e5319c65d80132847"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/PropertyName.h",
+      "sha256": "3a5dadfddb9bf963299da3bc3084a9ba981c7c7d9e88f4423285c954dd40dbeb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/PropertyNameRes.h",
+      "sha256": "379c5b46fc0190188c400fda32f680af474a8c7cfa2a5a1333b9a443810f372c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/SysIconUtils.cpp",
+      "sha256": "7dfdba730093a22dab99a3a4931841f91db9680e4e5635db5b00440359a3f965"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/SysIconUtils.h",
+      "sha256": "ef218df6f305c105693b244c71a019bdae0a53b98d46c588e66b7baad2de407d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/resource.h",
+      "sha256": "07251a907be77a1a831408ce2c195f331307b34150f9d7d7ffbc6627257438c6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/FileManager/resourceGui.h",
+      "sha256": "c7dd4c70826e831bd987645f713dda02fa96563b8debb259b1247dc9c4456d83"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/Extract.rc",
+      "sha256": "ecc89012d059fcc978733abc21189c4062888f576372e3461b05db7db344ba77"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/ExtractDialog.cpp",
+      "sha256": "fbaecf0053e5bc7b7dc0a99d99b627f20485e09a382d3bfc90f60569b23f03ce"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/ExtractDialog.h",
+      "sha256": "40685d5cd8dfd989b51f3b2a996ed9ce886a5068132a18f8408c9c1dd6108c84"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/ExtractDialog.rc",
+      "sha256": "ca9900868fc55e432f7103a8e979afe43416abd69e2ebc5be46dad6a64b7fd93"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/ExtractDialogRes.h",
+      "sha256": "f2cac932157d0340570b292ed784c81a400cdefff512f31ea18e8492851e376c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/ExtractGUI.cpp",
+      "sha256": "90e3bcf6182327b01719c2e76a924b48e29ca6782084f1c2d163cf63af38ceff"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/ExtractGUI.h",
+      "sha256": "1d63c717697770f6432189a798da796b0e8cf0da14fc375e29850d9f49768fd1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/ExtractRes.h",
+      "sha256": "4618efc49692d4cb20c15d288f82cc10b83ac0c6137dffd78520e4044a7ab216"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/HashGUI.h",
+      "sha256": "faf8aee95784e21e70e154ff736bfa4acb4fd82c7f59700b1043142cd85969ec"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/GUI/resource2.h",
+      "sha256": "d73f560322dfe181f93162732a7e03999fb927e7765d885e74d1eeded83dd555"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Build.mak",
+      "sha256": "b1bd6fcfdf55227b59e2ffac4f9f88b8086a9f7daac247872f560a37fabcb118"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/AutoPtr.h",
+      "sha256": "6e4be0bc3fa0ae543de25f1b02ec3b78ed7b6d5f329dc21d365178e2111c8108"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/CRC.cpp",
+      "sha256": "645e7bd5e2575349caae4852dbb8ac7a174804cbb7e98405934d192924e6a870"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/C_FileIO.cpp",
+      "sha256": "8702d8704458b2e24cbb124ebbf0725d7a533207cdc6b2b87ff9a00dfe9a0830"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/C_FileIO.h",
+      "sha256": "9c6a276ce9e00e5ec6b92811738783306c510a3801484a2a6aa072cb36142519"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/ComTry.h",
+      "sha256": "0075a309a2558b489d3c19017ae94162339572f210b30342a675b6c2d606dda0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/CommandLineParser.cpp",
+      "sha256": "9fe15689d6a145a848436dfc1fccce80eca8d7f916277e96b7dc7b08e9fc8898"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/CommandLineParser.h",
+      "sha256": "eeca4427174ea7aa8eddd5406ca1b930279c92d43aea424636bd03c0cc66ddb6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/Common.h",
+      "sha256": "c8ce38bf3555bd5c515c793b25f1f41fb17898695b575cf7d9d3ae60f9a7f179"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/CrcReg.cpp",
+      "sha256": "4bbaf3246a9ba3ad917b66d1b31d61e5cce17fda31f27f1f2b227e7d3da9800c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/Defs.h",
+      "sha256": "748b701ff2b0b97a84b122cdab0e90b8ee64a6b57d457a5f9a8726cff639cf75"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/DynamicBuffer.h",
+      "sha256": "43406245a82b75972c380206c1babcd5b6bbbca2cb97717dc169ada722702766"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/IntToString.cpp",
+      "sha256": "af4aa4c70e403143b2d2cb8e6eb4e39ccccd88f5b6d735b395f10ba6b66428a3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/IntToString.h",
+      "sha256": "b813d53c0d1eb09820a69af5e66dcf32c7583e3071ad734a85de4a4273d5dbaf"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/Lang.h",
+      "sha256": "0af97e7ba88c93f7957328df1c7d9468047eef4af7538da317d98f1b44f7ae6f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/ListFileUtils.cpp",
+      "sha256": "c4e437834ef87f13746ba71e6590f7b3e3fd86209c0d7d067223ec2f60852354"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/ListFileUtils.h",
+      "sha256": "01d9043240b0089b859600456f979f2d48344418f92bad9709f5cb91ea72a528"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyBuffer.h",
+      "sha256": "db1db5af455be11a6f27e05257a77f2d24c2edf5b15d040c7f478d768b625041"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyBuffer2.h",
+      "sha256": "c29c74da74387e0e46810ab0112d693879e0b9e538692b0cb8e78843f16a044c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyCom.h",
+      "sha256": "471e9c555b015491b17201e12cf3b3dadbb923cfa37fdd481de7993001f1fd1a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyException.h",
+      "sha256": "e4f575e9b8b8a2b8f08a5286d08a7033940992287637b2f84d1ef6260144231e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyGuidDef.h",
+      "sha256": "74a3b7e7941dc7b80d5d94154d05b2420b4a849d07b24235a3e5bdabe371f64f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyInitGuid.h",
+      "sha256": "8e2897ea431637a7a2dca37dca4fafb94be64ef5df49def22b72538c6cf8d353"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyLinux.h",
+      "sha256": "ff443fbff172fb814466ca18221fd546f001abd97277cb1848e599be7e387efa"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyString.cpp",
+      "sha256": "adff360e7f192d38cf493b0f9e05d8814deebfd1dd190d7e6fa77248cceb138a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyString.h",
+      "sha256": "15573ac877342aac0e6c269499a28d7d9552e78b072e1b60c2d02554bebe9459"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyTypes.h",
+      "sha256": "ad7a7818ad9fdd74ba7b4bfb57b5dbfd27ec8f4e41eaf72d7c259542263320f3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyUnknown.h",
+      "sha256": "5a4bea8617837483988f179dc3bab24e7dc0c21e5a4defed271a9a4519beb042"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyVector.cpp",
+      "sha256": "a7b805ff2c3aaaed376c0f6a34aa7bec1ccca7ee1eccaa4dda47812eabe3c9e5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyVector.h",
+      "sha256": "04c874426db4fe980f016d8e5b7a8612a939755a009238b444e95fb1a42944d8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyWindows.cpp",
+      "sha256": "714f6172b37b14509cfeed0944ed23b66ebfd03f708fe5713c4774673383c5b4"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/MyWindows.h",
+      "sha256": "0ff0fa655b4b3d42d5a2627dd465148e6ec9bc7c81b1e250239fce9c4bdc59b0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/NewHandler.cpp",
+      "sha256": "ae8576379b7b49eed7a5706ea640e5b1639235823e3d49709272bdcd26fdd65c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/NewHandler.h",
+      "sha256": "c9f46bb2c0b9c78ccdffa02cec1548497a4d359d31099820a45426e3d610a006"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/Sha256Reg.cpp",
+      "sha256": "f6db3cf01c889a673c4243c95f99a19e9ac3242d45ab8b2858a94023301eeee5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StdAfx.h",
+      "sha256": "a64b47acb769a073658a554b40ddd407fa41b3adafe0cbb9241fc452be091fbe"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StdInStream.cpp",
+      "sha256": "ece23b3d5c3ba17e4576205dda22cc66c435144ca51e7692f408bc22eaae2571"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StdInStream.h",
+      "sha256": "1250bf7ebe69194ded5c8858775ab16202481fd5be2348ea444a7a9014261df8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StdOutStream.cpp",
+      "sha256": "05b296313d234acbd1947eb04ee09a3e97598463e013cb27f0cb8a55d2793611"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StdOutStream.h",
+      "sha256": "3cc613ed77750e1de1ca9ac4a62a88d8ebbe1790d758bc57a64547eb2c355e56"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StringConvert.cpp",
+      "sha256": "c62d69df5a1ea645ed8cabebd0e69e0964c86027888014b59239a7775ac08f00"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StringConvert.h",
+      "sha256": "552a9a9718f811c0d1acb2bb756671644e9e4fb6d944f5345d81509ea8e3424d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StringToInt.cpp",
+      "sha256": "70934814aab7ca73cb359cd983e8f5813bb330a13860196972a5b3027778c3e7"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/StringToInt.h",
+      "sha256": "0981c9d56785aa23e107e5cf63dab1ce80df02ba4b1f75d6c1de2d377257d0b0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/TextConfig.cpp",
+      "sha256": "e7bcdeca2f58583493072bfee77d5bec77e0ba1a2684e57593aa82756482b1e8"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/TextConfig.h",
+      "sha256": "b72e165127d83a5607def19578f8f36cea2e679cc3d1b61a2eeed0ebfcd02108"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/UTFConvert.cpp",
+      "sha256": "8e48d725f40f21e0c0a50ab26f3303d86f5843341e5a3afdb3482904536953f9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/UTFConvert.h",
+      "sha256": "846c75a6b9bcf6b5d26a65ecd01eabf2308200cee429e894cf2aa6b5f5401687"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/Wildcard.cpp",
+      "sha256": "9f4df9ca1f90703b56d739718dda119204a7dd8613f8a9edb46e83fa9392ac48"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/Wildcard.h",
+      "sha256": "170f320ab28f24bcb914e11c13ad613e226488d0b14e1d10a45d0d735e30abeb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/XzCrc64Init.cpp",
+      "sha256": "65293b4f1ce94af03d2b4075d88196b8a4e4f17252ea859214d28cff50d01968"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Common/XzCrc64Reg.cpp",
+      "sha256": "5918d502142376c86cef7855900e93d97201fff201fc62d055ca9265e1c9ca50"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/COM.h",
+      "sha256": "87b524329f0d91c2603f2939eee327624353413a3191bc44ea7d42d187f90fb0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/CommonDialog.cpp",
+      "sha256": "da38faeb49462397fa015232601c309883802583bd593429738bd95496f217c0"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/CommonDialog.h",
+      "sha256": "f7d2d903acad8a0407401df15a1a97f24ea18ab55e9c1f99dde150f89aa549a9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ComboBox.cpp",
+      "sha256": "4b27e2adbf7e8af395ccf08ca82540444fefaef553b3717a7014c8b34cbefcdb"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ComboBox.h",
+      "sha256": "7396315f6a93ce7066136fd2ed2ee68b5ab633acda082f064a7d98f807b0a177"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/CommandBar.h",
+      "sha256": "478f7b9d627ded4f2edde185bd255b863b74e1d51711dbe313eb1bc8d784e77d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/Dialog.cpp",
+      "sha256": "31599f9c00efa933589b4a8e87626a2e1e703549820f1e1b02f644d6a864101c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/Dialog.h",
+      "sha256": "4f20625781876846a574083f45bb2afe9b71953832f068d48855208ea148cec5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/Edit.h",
+      "sha256": "66de9a376b1f00ecc4d0a1fb2b7bbd0f6398832db52fd5fd138b946ae4885c16"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ImageList.cpp",
+      "sha256": "254b93993e773d37dacc3ab3f9a27f1d0e80a9ce2b9c2aa6a458a09a2fb8d619"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ImageList.h",
+      "sha256": "93dbb1bd8306ab5dc41e37ef62942a3c55531b39518cfcf3e7ff97dbe8bc3fc2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ListView.cpp",
+      "sha256": "fbbb559606ee07ffda510c26339bc5940dc7472516df00657ad9622ba38659d6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ListView.h",
+      "sha256": "e98324e808bcc174faf1380cc4b709ea8ad04c9a55baee48474de4b106537621"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ProgressBar.h",
+      "sha256": "9ea50e36c8ed80f3ffe8ec88b8ebcdab0f794c6f8f9fdd430d07d02675e97450"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/PropertyPage.cpp",
+      "sha256": "66c2c67ad9e2ca049f1d7aa5147d3a72e4db91d22811c83f4edc56831f0e1e62"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/PropertyPage.h",
+      "sha256": "b0bb6b98d3967829dfbdb207e50a4c02c985092d06a3fc456b5486c0847cd291"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ReBar.h",
+      "sha256": "b0efd32bdfdf5a68941a5c3da4b416f4a6f907233a72d51023b490465a31a8cf"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/Static.h",
+      "sha256": "3979b0a6ecf5c00446a8296f9fd619adfa1241811d5a4dd0d20aff2bf6b287c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/StatusBar.h",
+      "sha256": "9756449801346dc6198897212257f51ef7aacbf7fffea017d6cec8f1dbe18f28"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/StdAfx.h",
+      "sha256": "c0912ec01aadfd377499202f62ff7804a79ecbde2be91032654f0c1fa46196f2"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/ToolBar.h",
+      "sha256": "cdb732e4ec654a19a3f0b6d1376614c225e4e0124d0d3e14696a5ff3cf1774c9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/Trackbar.h",
+      "sha256": "8b51607f41dad02cdbdd38a51f760f109fbaed0ff0cd1ff73e3b56650a6151c3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/Window2.cpp",
+      "sha256": "51f5ea1a3a27f8f9aed8a31453154e26173c269aa9f6a631a308a2254cd1b225"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Control/Window2.h",
+      "sha256": "d6d6364c8340e4bf2e6c22cda1a605c7da5c256738f3ae746235ea4d9a69f17a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/DLL.cpp",
+      "sha256": "314ebeb47d5f940920e7f9336ae53cdeab1fc0fade4b895657ee3f2825f4b299"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/DLL.h",
+      "sha256": "574f2bba7767040d7179464bc7181d2e45c07ad319039fe76043717c36d41d34"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Defs.h",
+      "sha256": "6889f5f7e35fd821da1b75c44cba19eea387bfbcdbf6171759b230ce2d1a4e3b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/ErrorMsg.cpp",
+      "sha256": "1293228d2cb160eaed32da9348707dbfc95bfd26984ebdca84eec3726c8eb1a1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/ErrorMsg.h",
+      "sha256": "58cea9a91717988926c270bbccc1fb923f0c90338ef59722e4c64d57c54e313b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileDir.cpp",
+      "sha256": "efbb2068401316eee39d9b5d95c1e7e764e39ac566c9f0f9f1a84da11f966edf"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileDir.h",
+      "sha256": "c4f4364d5ca3dbf1b22fe026f1b93be70aac291cca36f56491cbd599a70624be"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileFind.cpp",
+      "sha256": "c4d47eccac72784c8362c6fb2a8048893d7ce297b113329892e3bca6a755be62"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileFind.h",
+      "sha256": "77484d4a3656a3a7f3bead7608b96cdbe2cd477bac5a583badbe38ca02703346"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileIO.cpp",
+      "sha256": "30cd63a119c91b1d87887ac6e1530b3880c8a4ab002eae6270961c68f3c091d3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileIO.h",
+      "sha256": "549094dff4b13145c49f33fc29b18035dfb1aec627a95f00014ab2c4d0eafa51"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileLink.cpp",
+      "sha256": "525fc2db0ebe9743140f9ff900d8542fbc224f01156705742bd5d42e25b6e803"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileMapping.cpp",
+      "sha256": "0e80dd767c5659af2bd7ebd8259b1b2dd59d4dd8ac663209cb785fae50640990"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileMapping.h",
+      "sha256": "b5c7f541b3b6123ccf1a4e89464c8e2540bee5a246ad68a5140908904113e400"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileName.cpp",
+      "sha256": "2b5d0d2b32fe7c9464c5c30f84a23ef0622635e525596155d9fb921cdcc1c86a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileName.h",
+      "sha256": "d606d4a6811127b8bc4d4b376a09e0b424fac34c0e3f2a3acb158aa885a2f6a5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileSystem.cpp",
+      "sha256": "da8029a328e4641ecc443fc91cf0708ce8b583102d5ec992f99bfc024545911c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/FileSystem.h",
+      "sha256": "d588b9c6ec463d50408ebd177c8c38b00db69c9d977c519885b68fa622b0acd6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Handle.h",
+      "sha256": "5c616089f8a9a4ed05870334ffcd019e1236802ae41c8f0fad4c9741963dc170"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/MemoryLock.cpp",
+      "sha256": "21e5974702d0e5b7e406412df685520957924ab999253b4f2d214d97939d41df"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/MemoryLock.h",
+      "sha256": "76775dd67169664582db8e43e3d1042cf542052f831f3ceec63718f1564f7429"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/NtCheck.h",
+      "sha256": "e6a2ffe372fd48c4c04122e5561248ed7d66a5440f41636ec5e888f8f3c18b6e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/PropVariant.cpp",
+      "sha256": "c2d134bb8d074f61f992e642c78edb612348f6dc22c853e0ef2c0dbddf899073"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/PropVariant.h",
+      "sha256": "6f47e4edbd37213aea1c857f82b58645c80d70dc28d25e449a26945115eac8c5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/PropVariantConv.cpp",
+      "sha256": "ac8ec6e8dded3f01fdd1222a60909937865e184e5ecc3c732f5efaea0b80a97f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/PropVariantConv.h",
+      "sha256": "be13af95a22e967890200e19ab3d01018df448990d56d8a74035cb814b06ed79"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Registry.cpp",
+      "sha256": "7e16d534744363f2c9de7e5520534b4a51e0e881c90d9c524b7368310dd4c214"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Registry.h",
+      "sha256": "5973416b42c7ffbcf20f2f5f120a3a751dfffc194d9c2c10e3793b364cc45efc"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/ResourceString.cpp",
+      "sha256": "6012410c2308e6f526917c10ff3ea4c5f372bbc4a58e5805878586a6f1fc0dbe"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/ResourceString.h",
+      "sha256": "7642de02c421011739de3b3e6fafc104450936803800b4fe0a431fae63ccb8ee"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/SecurityUtils.cpp",
+      "sha256": "390d5037b7facbf940a5bf4655a6f37eae8962364b38439b0cf6d08791cf6f41"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/SecurityUtils.h",
+      "sha256": "dfede0bdff09029f4ad0cd4473397afae3d28b4770b9c3fb95e8e1691c99b325"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Shell.cpp",
+      "sha256": "a92a1d492567a169994ecc106d129893d19c975ad5118579ad540d5402302d5e"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Shell.h",
+      "sha256": "5f97ef35eec270f3b6c60e1327c3e3cdfbe28d611757a7399ab6a03cb655298d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/StdAfx.h",
+      "sha256": "117bc0cf6300ae15286a4133e1a66912f1e8c6d171dd79a63f9e2c355ad8faf1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Synchronization.cpp",
+      "sha256": "af9db71d3776088693699b6363ff9f73158c035ec8b1eb6cf41b05d42e69cf1c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Synchronization.h",
+      "sha256": "30b9c90cbeaa6d384433c0f689596a61add197a32d6b6946225aaa049d1127ad"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/System.cpp",
+      "sha256": "d6d71a1cc771926dbe472997a2474651f76538f6798ac5205a17dff41f83cd9a"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/System.h",
+      "sha256": "9ef48a6f2b79a4257e194c19d7d3e5378bf087d1659b417922bcb98148089af6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Thread.h",
+      "sha256": "4bd78c07beb5badb5a4d25cd0e10b0927cb82628d71e0436049ecdc4bcf52aec"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/TimeUtils.cpp",
+      "sha256": "69d583972e3a4a3053a22b3d3ddf0b447a4c4e1aa33d34e0e1f6d6b96bf5ea6d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/TimeUtils.h",
+      "sha256": "90df310568e509d686986d14591e49154afa8831c4a047cbeb3a06797337e797"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Window.cpp",
+      "sha256": "bffeca415ed27d4823e357fadfb0c292d2c0a7519a5ed17feafbffa6fd5c24e5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/Windows/Window.h",
+      "sha256": "724c85b5e7e8bf6930232a9f0698434c1fa5abf2f7fdcff885c49e4e1b3a681c"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/7zC.txt",
+      "sha256": "e5cc6089348474fc82631365932b1aa09df26a8cfc9f320bbb2509a7b3fc7a0c"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/7zFormat.txt",
+      "sha256": "0eb0161df0decc4998f121830414fa859f0a81b16dc2a2bd15b5e128656cc2a8"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/Methods.txt",
+      "sha256": "200baa959f0a95c51c4a00a04314fef5c3c227368ea6acfec6cd31182300be42"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/installer.txt",
+      "sha256": "db28a01292806cfa2e2522801f4f5b662209b6a0d0b1af8ac8007d08012acf95"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/lzma-history.txt",
+      "sha256": "8338eeb1def27d0d8919a4559f69a5060261a704f46312e30585598860a41321"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/lzma-sdk.txt",
+      "sha256": "92b680dc41560dade14d7e51cd7b162effa6e7905b03befc043d17ec5b4fa857"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/lzma-specification.txt",
+      "sha256": "6a4d441c2fa1d8d37b0189c7147a4b5424d5cdb122a7fc1fbebd022864ed54fb"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/lzma.txt",
+      "sha256": "afa8e67fdadfa492587f7df8f416f16aedf6ee3d2c0f731d79f66d050c95d2af"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/Nsis7z.sln",
+      "sha256": "3cc4b1d9ecd3d7f0b1cbb902d3e6dcd98b43b99bcd61aa0265f8af410d376a18"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/Nsis7z.vcxproj",
+      "sha256": "ed8545f916c43ea36762d17941e77af4719bd22b78e0dafcfa42a94d87cf5675"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/Nsis7z.vcxproj.filters",
+      "sha256": "0b712f6ee20aef5344a8f930149961feb6466606807d88cbc7cb98b2ba46b28b"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/StdAfx.h",
+      "sha256": "54f9da0a0b398e82cb073eed405c34f46fc11b6d1db3aa55044f0034be2ba194"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/StdAfx2.cpp",
+      "sha256": "fa3f80e78b3078cefe58363b47223b43374c1e13fdb2594f4caf0ff3cb3db2c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/afxres.h",
+      "sha256": "dee7c14ee1dd137d46f6dee45364a2233b33240c451623d2bd752d061497e589"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/api.h",
+      "sha256": "98c9fb425c8f81cea1979f480b9192189b19843590185091761d2434ec9804a3"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/nsis7z.cpp",
+      "sha256": "6e99ce3cef822ef32da6d3bf0827cd6c6c71af4e090759035094d12c17e631cd"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/nsis_tchar.h",
+      "sha256": "67deaa036a55cef07fd3ced024365a0979b6b8676db0ec1238475afe0de469df"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/pluginapi.cpp",
+      "sha256": "01e7ccc4c0fe7ea7a87da05dc0b996137d0d9a038bd4fef8a758181ffcb483a5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/pluginapi.h",
+      "sha256": "87e8c4d29f092e2fc2f49ac9bcd80fdd960477851c131c2ec22325c4e050b141"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/resource.h",
+      "sha256": "97e44b8c874ddc9bad8c7b72e779b794c5f2c44d89d0bfa5add7f97f979a27f4"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/Bundles/Nsis7z/resource.rc",
+      "sha256": "db28cc36eeedd9e2aa85de32de55aeb222b3de3bba702efeaa1002cdc43ac09f"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/ExtractCallbackConsole.cpp",
+      "sha256": "84fd853b5fceb1e402798e30a7468e191d86ad36d064f5592418dc1f9a9cb8ff"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/ExtractCallbackConsole.h",
+      "sha256": "dc3a94d70228dc77b1f3306a8503c050a720fc16f2ce9630e6b97f2114d48eb9"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/Main.cpp",
+      "sha256": "f0a1844b9dd0ca1d97e594fc68a21f378a24ae7a78cdaf14dd4669cfdabb730d"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/MainAr.cpp",
+      "sha256": "c21c4a85426d3fa350385e32eaead8a720c067c20b9804ccc4e3bc32af93d1c1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/NSISBreak.cpp",
+      "sha256": "1fbc7c546898f2b6712b8412ba46d44478f21633d32b62eaf6450d6e252ce7b5"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/NSISBreak.h",
+      "sha256": "9695a694e01aa28143ffafb43df78f3ca9197f0e74fea9a2d76db7f44945c0f6"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/StdAfx.h",
+      "sha256": "56905cbc49f75c9b38d8558b114f3e0ef2a8817b6385e958c3d4ae5cf692fae1"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/UserInputUtils2.cpp",
+      "sha256": "9c9719fd020d1f6e9fd08bd877e02d37b4f313af16da865411c56b993414836c"
+    },
+    {
+      "name": "Nsis7z-19.00/CPP/7zip/UI/NSIS/UserInputUtils2.h",
+      "sha256": "d5893a3d387b6f6e7770d6304407c5fcddfb21186302adf91f7a37bcbb0bfe68"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/License.txt",
+      "sha256": "63fcfe54826809b5a9f9df8a8ff53c04330122319ec67a2dd815085586adaf0e"
+    },
+    {
+      "name": "Nsis7z-19.00/DOC/nsis7z.txt",
+      "sha256": "881f8ba4da0a0c30e281d324408baa596f14211b03d1f3bf99fe18c4621916c3"
+    },
+    {
+      "name": "NOTICE.txt",
+      "sha256": "344121a00c570225345325174bf5794f396132dba4ca167f61c96cbe53f59ac9"
+    },
+    {
+      "name": "BUILDING.txt",
+      "sha256": "c980a98babc5f40a0b4d1213ba0a99317ff26bf7210d0bc88cab96ab8c484af2"
+    },
+    {
+      "name": "LGPL-2.1.txt",
+      "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531"
+    },
+    {
+      "name": "StdUtils-LGPL-clarification.txt",
+      "sha256": "ae0ab3f49b4473152181c1fe5670435faaca079eda0b261ee31a51a6180bc9e7"
+    },
+    {
+      "name": "Nsis7z-19.00-upstream.txt",
+      "sha256": "881f8ba4da0a0c30e281d324408baa596f14211b03d1f3bf99fe18c4621916c3"
+    },
+    {
+      "name": "LZMA-SDK-LICENSE.txt",
+      "sha256": "63fcfe54826809b5a9f9df8a8ff53c04330122319ec67a2dd815085586adaf0e"
+    },
+    {
+      "name": "NSIS-COPYING.txt",
+      "sha256": "3c8de989f6504d52f5f8dfafedb6668cd47201f5d01f1319570727c091425dd6"
+    },
+    {
+      "name": "TEMPLATE_OVERRIDES.txt",
+      "sha256": "9cad78ad22adcaa71f060942a1bef647b6df6a01229760455949f1c6f16ea417"
+    },
+    {
+      "name": "PROJECT-MIT-LICENSE.txt",
+      "sha256": "1353d7ce28c1e10221bfc431cbe6e21b2978b8cb2308813a0d74156f93d3924d"
+    },
+    {
+      "name": "LICENSES/StdUtils-LGPL-2.1.txt",
+      "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531"
+    },
+    {
+      "name": "LICENSES/StdUtils-clarification.txt",
+      "sha256": "ae0ab3f49b4473152181c1fe5670435faaca079eda0b261ee31a51a6180bc9e7"
+    },
+    {
+      "name": "LICENSES/Nsis7z-wrapper.txt",
+      "sha256": "881f8ba4da0a0c30e281d324408baa596f14211b03d1f3bf99fe18c4621916c3"
+    },
+    {
+      "name": "LICENSES/LZMA-SDK-19.txt",
+      "sha256": "63fcfe54826809b5a9f9df8a8ff53c04330122319ec67a2dd815085586adaf0e"
+    },
+    {
+      "name": "LICENSES/NSIS-core-System.txt",
+      "sha256": "3c8de989f6504d52f5f8dfafedb6668cd47201f5d01f1319570727c091425dd6"
+    },
+    {
+      "name": "LICENSES/Unicode-NSIS-pluginapi.txt",
+      "sha256": "83fd69ebd7ac3d373d6df266f87a0efd3af2d3f21a9044128fa21698a36eff3f"
+    },
+    {
+      "name": "LICENSES/RHash.txt",
+      "sha256": "842fef4921191943e531c6cc939b0334f1c2658c9204e30dd35d13f51fdf70dd"
+    },
+    {
+      "name": "LICENSES/BLAKE2-CC0.txt",
+      "sha256": "f4e7f373b9b996950337e8d41a4a2939c2d90b7725e9baf3d5084a22717ad328"
+    },
+    {
+      "name": "LICENSES/electron-builder-MIT.txt",
+      "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce"
+    }
+  ],
+  "omitted": [
+    "proprietary msvcrt_vc6.lib: obtain from a licensed Microsoft toolchain",
+    "NSIS prebuilt .lib files: corresponding API C/header sources supplied",
+    "Date.exe and Zip.exe: optional upstream release-packing tools",
+    "generated IDE caches/settings"
+  ],
+  "verificationLimits": [
+    "No native source build or byte-for-byte reconstruction performed.",
+    "This is an upstream source and build-input package, not a legal opinion.",
+    "Nsis7z wrapper is conservatively handled under its documented LGPL statement; the SDK public-domain text is not attributed to the whole wrapper."
+  ]
+}

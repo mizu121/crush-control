@@ -1,0 +1,26 @@
+{
+  "package": "app-builder-lib",
+  "version": "26.18.0",
+  "license": "MIT",
+  "source": "https://github.com/electron-userland/electron-builder/tree/master/packages/app-builder-lib/templates/nsis",
+  "exactLocalInputsSha256": {
+    "installer.nsi": "8811964416d122612c3e7601728af5d3f998d677918df829a4e8b4c739c8b9f8",
+    "installSection.nsh": "74c4dbb4163cdd90ca4850b75d304e916235c882d6af7b5cdad63bffbc977072",
+    "uninstaller.nsh": "9ee2dac4593478083e8aa6f8487287ce9401006ccd50ecc538871d133ea4a42c",
+    "include/installer.nsh": "0e319437dd01dcbf911f3f48f664fde0cefbaef704f1cdb1739f63d563f5d4a0",
+    "multiUser.nsh": "9aca256695c289ec8a875143101fae8c6236bc8c6a7cf369bbe8b4986e09c9cb"
+  },
+  "outputsSha256": {
+    "installSection.nsh": "11c1c9d9cf16d26f0a36e3d09824961482302c2ce5263e67d43a84ae8d5bef0a",
+    "installer-app-files.nsh": "ff59b10c07114433c8a0a1f7a8870fd06d722d147949cd0fc63cf9287ea84914",
+    "uninstaller.nsh": "c23a0b23bab7e5849299da44dc4d6ed6a6ac4685ef54627bc62f80d0e2eef6b7",
+    "multiUser.nsh": "9aca256695c289ec8a875143101fae8c6236bc8c6a7cf369bbe8b4986e09c9cb",
+    "LICENSE.electron-builder.txt": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce"
+  },
+  "modifications": [
+    "default entry script and two-pass build retained; project include uses documented !cd/include lookup for three overrides and an unchanged multiUser template to resolve compiler-name collision",
+    "standard MUI progress replaces decorative SpiderBanner",
+    "first packaged app launch applies verified-shortcut AUMI instead of WinShell",
+    "automatic Windows pin/Jump List cleanup removed; existing exact shortcut file operations preserved"
+  ]
+}
